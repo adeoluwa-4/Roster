@@ -2,51 +2,49 @@
 
 import { FormEvent, useEffect, useMemo, useRef, useState } from "react";
 
-type Tier = "Legend" | "MVP" | "All-Star" | "Starter";
-type Player = { id: string; name: string; debut: number; position: string; conference: "East" | "West"; team: string; nationality: string; continent: string; height: number; tier: Tier };
+type Player = { id: string; name: string; debut: number; position: string; conference: "East" | "West"; team: string; nationality: string; continent: string; height: number };
 type Match = "exact" | "close" | "miss";
 
-const rawPlayers: Array<[string, number, string, "East" | "West", string, string, string, number, Tier]> = [
-  ["LeBron James",2003,"Forward","West","Lakers","USA","North America",81,"Legend"],
-  ["Stephen Curry",2009,"Guard","West","Warriors","USA","North America",74,"MVP"],
-  ["Kevin Durant",2007,"Forward","West","Rockets","USA","North America",83,"MVP"],
-  ["Giannis Antetokounmpo",2013,"Forward","East","Bucks","Greece","Europe",83,"MVP"],
-  ["Nikola Jokic",2015,"Center","West","Nuggets","Serbia","Europe",83,"MVP"],
-  ["Luka Doncic",2018,"Guard / Forward","West","Lakers","Slovenia","Europe",78,"All-Star"],
-  ["Jayson Tatum",2017,"Forward","East","Celtics","USA","North America",80,"All-Star"],
-  ["Shai Gilgeous-Alexander",2018,"Guard","West","Thunder","Canada","North America",78,"MVP"],
-  ["Anthony Edwards",2020,"Guard","West","Timberwolves","USA","North America",76,"All-Star"],
-  ["Victor Wembanyama",2023,"Center / Forward","West","Spurs","France","Europe",88,"All-Star"],
-  ["Joel Embiid",2016,"Center","East","76ers","Cameroon","Africa",84,"MVP"],
-  ["Devin Booker",2015,"Guard","West","Suns","USA","North America",78,"All-Star"],
-  ["Donovan Mitchell",2017,"Guard","East","Cavaliers","USA","North America",75,"All-Star"],
-  ["Ja Morant",2019,"Guard","West","Grizzlies","USA","North America",74,"All-Star"],
-  ["Jimmy Butler",2011,"Forward","West","Warriors","USA","North America",79,"All-Star"],
-  ["Kawhi Leonard",2011,"Forward","West","Clippers","USA","North America",79,"All-Star"],
-  ["Damian Lillard",2012,"Guard","East","Bucks","USA","North America",74,"All-Star"],
-  ["Jalen Brunson",2018,"Guard","East","Knicks","USA","North America",74,"All-Star"],
-  ["Bam Adebayo",2017,"Center","East","Heat","USA","North America",81,"All-Star"],
-  ["Pascal Siakam",2016,"Forward","East","Pacers","Cameroon","Africa",80,"All-Star"],
-  ["Karl-Anthony Towns",2015,"Center","East","Knicks","Dominican Republic","North America",84,"All-Star"],
-  ["Trae Young",2018,"Guard","East","Hawks","USA","North America",73,"All-Star"],
-  ["Paolo Banchero",2022,"Forward","East","Magic","USA","North America",82,"Starter"],
-  ["Cade Cunningham",2021,"Guard","East","Pistons","USA","North America",78,"All-Star"],
-  ["Michael Jordan",1984,"Guard","East","Bulls","USA","North America",78,"Legend"],
-  ["Kobe Bryant",1996,"Guard","West","Lakers","USA","North America",78,"Legend"],
-  ["Shaquille O'Neal",1992,"Center","West","Lakers","USA","North America",85,"Legend"],
-  ["Magic Johnson",1979,"Guard","West","Lakers","USA","North America",81,"Legend"],
-  ["Larry Bird",1979,"Forward","East","Celtics","USA","North America",81,"Legend"],
-  ["Tim Duncan",1997,"Forward / Center","West","Spurs","US Virgin Islands","North America",83,"Legend"],
-  ["Dirk Nowitzki",1998,"Forward","West","Mavericks","Germany","Europe",84,"Legend"],
-  ["Hakeem Olajuwon",1984,"Center","West","Rockets","Nigeria","Africa",84,"Legend"],
-  ["Steve Nash",1996,"Guard","West","Suns","Canada","North America",75,"Legend"],
-  ["Yao Ming",2002,"Center","West","Rockets","China","Asia",90,"Legend"],
-  ["Manu Ginobili",2002,"Guard","West","Spurs","Argentina","South America",78,"Legend"],
-  ["Dwyane Wade",2003,"Guard","East","Heat","USA","North America",76,"Legend"],
+const rawPlayers: Array<[string, number, string, "East" | "West", string, string, string, number]> = [
+  ["LeBron James",2003,"Forward","West","Lakers","USA","North America",81],
+  ["Stephen Curry",2009,"Guard","West","Warriors","USA","North America",74],
+  ["Kevin Durant",2007,"Forward","West","Rockets","USA","North America",83],
+  ["Giannis Antetokounmpo",2013,"Forward","East","Bucks","Greece","Europe",83],
+  ["Nikola Jokic",2015,"Center","West","Nuggets","Serbia","Europe",83],
+  ["Luka Doncic",2018,"Guard / Forward","West","Lakers","Slovenia","Europe",78],
+  ["Jayson Tatum",2017,"Forward","East","Celtics","USA","North America",80],
+  ["Shai Gilgeous-Alexander",2018,"Guard","West","Thunder","Canada","North America",78],
+  ["Anthony Edwards",2020,"Guard","West","Timberwolves","USA","North America",76],
+  ["Victor Wembanyama",2023,"Center / Forward","West","Spurs","France","Europe",88],
+  ["Joel Embiid",2016,"Center","East","76ers","Cameroon","Africa",84],
+  ["Devin Booker",2015,"Guard","West","Suns","USA","North America",78],
+  ["Donovan Mitchell",2017,"Guard","East","Cavaliers","USA","North America",75],
+  ["Ja Morant",2019,"Guard","West","Grizzlies","USA","North America",74],
+  ["Jimmy Butler",2011,"Forward","West","Warriors","USA","North America",79],
+  ["Kawhi Leonard",2011,"Forward","West","Clippers","USA","North America",79],
+  ["Damian Lillard",2012,"Guard","East","Bucks","USA","North America",74],
+  ["Jalen Brunson",2018,"Guard","East","Knicks","USA","North America",74],
+  ["Bam Adebayo",2017,"Center","East","Heat","USA","North America",81],
+  ["Pascal Siakam",2016,"Forward","East","Pacers","Cameroon","Africa",80],
+  ["Karl-Anthony Towns",2015,"Center","East","Knicks","Dominican Republic","North America",84],
+  ["Trae Young",2018,"Guard","East","Hawks","USA","North America",73],
+  ["Paolo Banchero",2022,"Forward","East","Magic","USA","North America",82],
+  ["Cade Cunningham",2021,"Guard","East","Pistons","USA","North America",78],
+  ["Michael Jordan",1984,"Guard","East","Bulls","USA","North America",78],
+  ["Kobe Bryant",1996,"Guard","West","Lakers","USA","North America",78],
+  ["Shaquille O'Neal",1992,"Center","West","Lakers","USA","North America",85],
+  ["Magic Johnson",1979,"Guard","West","Lakers","USA","North America",81],
+  ["Larry Bird",1979,"Forward","East","Celtics","USA","North America",81],
+  ["Tim Duncan",1997,"Forward / Center","West","Spurs","US Virgin Islands","North America",83],
+  ["Dirk Nowitzki",1998,"Forward","West","Mavericks","Germany","Europe",84],
+  ["Hakeem Olajuwon",1984,"Center","West","Rockets","Nigeria","Africa",84],
+  ["Steve Nash",1996,"Guard","West","Suns","Canada","North America",75],
+  ["Yao Ming",2002,"Center","West","Rockets","China","Asia",90],
+  ["Manu Ginobili",2002,"Guard","West","Spurs","Argentina","South America",78],
+  ["Dwyane Wade",2003,"Guard","East","Heat","USA","North America",76],
 ];
 
-const players: Player[] = rawPlayers.map(([name,debut,position,conference,team,nationality,continent,height,tier]) => ({ id: name.toLowerCase().replace(/[^a-z0-9]+/g,"-"), name,debut,position,conference,team,nationality,continent,height,tier }));
-const tiers: Tier[] = ["Starter","All-Star","MVP","Legend"];
+const players: Player[] = rawPlayers.map(([name,debut,position,conference,team,nationality,continent,height]) => ({ id: name.toLowerCase().replace(/[^a-z0-9]+/g,"-"), name,debut,position,conference,team,nationality,continent,height }));
 const initials = (name: string) => name.split(/[ -]/).filter(Boolean).map(word => word[0]).slice(0,3).join("");
 const height = (value: number) => `${Math.floor(value / 12)}'${value % 12}\"`;
 const todayKey = () => new Date().toISOString().slice(0,10);
@@ -55,7 +53,6 @@ const position = (guess: string, answer: string): Match => guess === answer ? "e
 
 function clues(guess: Player, answer: Player) {
   const year = numeric(guess.debut,answer.debut,3), size = numeric(guess.height,answer.height,2);
-  const tierGap = Math.abs(tiers.indexOf(guess.tier)-tiers.indexOf(answer.tier));
   return [
     ["Debut",String(guess.debut),year.state,year.arrow,year.arrow === "↑" ? "Later" : "Earlier"],
     ["Position",guess.position,position(guess.position,answer.position),"","Position"],
@@ -63,7 +60,6 @@ function clues(guess: Player, answer: Player) {
     ["Team",guess.team,guess.team === answer.team ? "exact" : "miss","","Team"],
     ["Nationality",guess.nationality,guess.nationality === answer.nationality ? "exact" : guess.continent === answer.continent ? "close" : "miss","",guess.continent === answer.continent ? "Same region" : "Different region"],
     ["Height",height(guess.height),size.state,size.arrow,size.arrow === "↑" ? "Taller" : "Shorter"],
-    ["Career tier",guess.tier,guess.tier === answer.tier ? "exact" : tierGap === 1 ? "close" : "miss","","Career tier"],
   ] as Array<[string,string,Match,string,string]>;
 }
 
@@ -111,7 +107,7 @@ export default function Home() {
     <section className="hero" id="game">
       <aside className="intro">
         <p className="eyebrow"><span />Today&apos;s challenge</p><h1>KNOW THE<br/><em>PLAYER.</em></h1>
-        <p className="intro-copy">One mystery NBA athlete. Seven clues per guess. Ten shots to find the name.</p>
+        <p className="intro-copy">One mystery NBA athlete. Six clues per guess. Ten shots to find the name.</p>
         <div className="attempts"><strong>{String(10-guesses.length).padStart(2,"0")}</strong><span>GUESSES<br/>REMAINING</span></div>
         <div className="legend"><span><i className="exact"/>Exact</span><span><i className="close"/>Close</span><span><i className="miss"/>No match</span></div>
       </aside>
