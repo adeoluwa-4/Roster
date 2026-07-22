@@ -12,8 +12,8 @@ export async function generateMetadata(): Promise<Metadata> {
     description: "Guess the mystery NBA athlete in ten tries using career clues, teams, height, nationality, and more.",
     applicationName: "ROSTER",
     keywords: ["NBA", "basketball", "daily game", "athlete trivia", "guessing game"],
-    openGraph: { title: "ROSTER — Know the player", description: "One mystery NBA athlete. Seven clues per guess. Ten shots to find the name.", type: "website", images: [{ url: image, width: 1733, height: 909, alt: "ROSTER — Know the player" }] },
-    twitter: { card: "summary_large_image", title: "ROSTER — Know the player", description: "One mystery NBA athlete. Seven clues per guess. Ten shots to find the name.", images: [image] },
+    openGraph: { title: "ROSTER — Know the player", description: "One mystery NBA athlete. Six clues per guess. Ten shots to find the name.", type: "website", images: [{ url: image, width: 1733, height: 909, alt: "ROSTER — Know the player" }] },
+    twitter: { card: "summary_large_image", title: "ROSTER — Know the player", description: "One mystery NBA athlete. Six clues per guess. Ten shots to find the name.", images: [image] },
   };
 }
 
