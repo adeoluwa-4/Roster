@@ -26,12 +26,13 @@ test("server-renders the ROSTER daily game", async () => {
   assert.doesNotMatch(html, /codex-preview|react-loading-skeleton/i);
 });
 
-test("uses seven athlete clues and excludes division", async () => {
+test("uses six athlete clues and excludes division and career tier", async () => {
   const page = await readFile(new URL("../app/page.tsx", import.meta.url), "utf8");
-  for (const clue of ["Debut", "Position", "Conference", "Team", "Nationality", "Height", "Career tier"]) {
+  for (const clue of ["Debut", "Position", "Conference", "Team", "Nationality", "Height"]) {
     assert.match(page, new RegExp(`\\[\"${clue}\"`));
   }
   assert.doesNotMatch(page, /\["Division"/);
+  assert.doesNotMatch(page, /Career tier|\btier\b/i);
   assert.match(page, /next\.length === 10/);
   assert.match(page, /localStorage\.setItem\("roster-stats"/);
   await assert.rejects(access(new URL("../app/_sites-preview/SkeletonPreview.tsx", import.meta.url)));
