@@ -8,12 +8,13 @@ export async function generateMetadata(): Promise<Metadata> {
   const protocol = requestHeaders.get("x-forwarded-proto") ?? (host.startsWith("localhost") ? "http" : "https");
   const image = `${protocol}://${host}/og.png`;
   return {
-    title: "ROSTER — Daily NBA Athlete Guessing Game",
+    title: "Guess the Athlete — Daily NBA Guessing Game",
     description: "Guess the mystery NBA athlete in ten tries using career clues, teams, height, nationality, and more.",
-    applicationName: "ROSTER",
+    applicationName: "Guess the Athlete",
+    icons: { icon: "/guess-the-athlete-icon.png", shortcut: "/guess-the-athlete-icon.png", apple: "/guess-the-athlete-icon.png" },
     keywords: ["NBA", "basketball", "daily game", "athlete trivia", "guessing game"],
-    openGraph: { title: "ROSTER — Know the player", description: "One mystery NBA athlete. Six clues per guess. Ten shots to find the name.", type: "website", images: [{ url: image, width: 1733, height: 909, alt: "ROSTER — Know the player" }] },
-    twitter: { card: "summary_large_image", title: "ROSTER — Know the player", description: "One mystery NBA athlete. Six clues per guess. Ten shots to find the name.", images: [image] },
+    openGraph: { title: "Guess the Athlete — Know the player", description: "One mystery NBA athlete. Six clues per guess. Ten shots to find the name.", type: "website", images: [{ url: image, width: 1733, height: 909, alt: "Guess the Athlete — Know the player" }] },
+    twitter: { card: "summary_large_image", title: "Guess the Athlete — Know the player", description: "One mystery NBA athlete. Six clues per guess. Ten shots to find the name.", images: [image] },
   };
 }
 
