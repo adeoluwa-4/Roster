@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build the all-time 500 plus the current NBA top 150 from historical CSV files."""
+"""Build the all-time 200 plus the current NBA top 150 from historical CSV files."""
 
 from __future__ import annotations
 
@@ -11,6 +11,10 @@ import re
 import unicodedata
 from collections import defaultdict
 from pathlib import Path
+
+
+ALL_TIME_LIMIT = 200
+CURRENT_LIMIT = 150
 
 
 FRANCHISES = {
@@ -166,7 +170,7 @@ def main() -> None:
             current_by_name[key] = (score, row)
     current_rows = [value[1] for value in current_by_name.values()]
     current_rows.sort(key=lambda row: (-float(row["ws"]), -float(row.get("vorp") or 0), -int(row["g"]), row["player"]))
-    current_top = current_rows[:150]
+    current_top = current_rows[:CURRENT_LIMIT]
     current_rank = {normalized(row["player"]): rank for rank, row in enumerate(current_top, start=1)}
     current_stats = {normalized(row["player"]): row for row in current_top}
 
@@ -175,7 +179,7 @@ def main() -> None:
         if row["WS"] and row["Debut"] and row["Height"] and normalized(row["Name"]) in games_by_player
     ]
     eligible.sort(key=lambda row: (-float(row["WS"]), -int(row["G"]), row["Name"]))
-    top = eligible[:500]
+    top = eligible[:ALL_TIME_LIMIT]
     candidates_by_name = {normalized(row["Name"]): row for row in candidates}
 
     output = []
@@ -298,7 +302,7 @@ def main() -> None:
     args.output.parent.mkdir(parents=True, exist_ok=True)
     args.output.write_text(json.dumps(output, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     print(f"Wrote {len(output)} players to {args.output}")
-    print(f"All-time players: 500")
+    print(f"All-time players: {ALL_TIME_LIMIT}")
     print(f"Current-season top players represented: {len(current_rank)} ({current_season})")
     print(f"Country fallback (USA): {len(missing_country)}")
     print(f"Missing team history: {len(missing_teams)}")
