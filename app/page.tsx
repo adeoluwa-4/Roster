@@ -8,10 +8,11 @@ type Match = "exact" | "close" | "miss";
 
 const players = playerData as Player[];
 const storageKeys = {
-  game: (date: string) => `guess-athlete-v3-game-${date}`,
-  done: (date: string) => `guess-athlete-v3-done-${date}`,
-  stats: "guess-athlete-v3-stats",
-  last: "guess-athlete-v3-last",
+  game: (date: string) => `guess-athlete-v4-game-${date}`,
+  done: (date: string) => `guess-athlete-v4-done-${date}`,
+  stats: "guess-athlete-v4-stats",
+  last: "guess-athlete-v4-last",
+  instructions: "guess-nba-player-instructions-v1",
 };
 const initials = (name: string) => name.split(/[ -]/).filter(Boolean).map(word => word[0]).slice(0,3).join("");
 const height = (value: number) => `${Math.floor(value / 12)}'${value % 12}\"`;
@@ -41,7 +42,9 @@ export default function Home() {
   const [message,setMessage] = useState("");
   const [ready,setReady] = useState(false);
   const [stats,setStats] = useState({played:0,wins:0,streak:0});
+  const [instructionsOpen,setInstructionsOpen] = useState(false);
   const input = useRef<HTMLInputElement>(null);
+  const instructionsClose = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
     const game = localStorage.getItem(storageKeys.game(today)), savedStats = localStorage.getItem(storageKeys.stats);
@@ -58,6 +61,23 @@ export default function Home() {
     }
     setReady(true);
   },[today]);
+  useEffect(() => {
+    if (!localStorage.getItem(storageKeys.instructions)) setInstructionsOpen(true);
+  },[]);
+  useEffect(() => {
+    if (!instructionsOpen) return;
+    const previousOverflow = document.body.style.overflow;
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") closeInstructions();
+    };
+    document.body.style.overflow = "hidden";
+    window.addEventListener("keydown",onKeyDown);
+    instructionsClose.current?.focus();
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      window.removeEventListener("keydown",onKeyDown);
+    };
+  },[instructionsOpen]);
   useEffect(() => { if (ready) localStorage.setItem(storageKeys.game(today),JSON.stringify({guesses,status})); },[ready,guesses,status,today]);
   useEffect(() => {
     if (!ready || status === "playing" || localStorage.getItem(storageKeys.done(today))) return;
@@ -74,17 +94,21 @@ export default function Home() {
     if (player.id === answer.id) setStatus("won"); else if (next.length === 10) setStatus("lost"); else setTimeout(() => input.current?.focus(),0);
   };
   const submit = (event: FormEvent) => { event.preventDefault(); const player = players.find(item => item.name.toLowerCase() === query.trim().toLowerCase()); if (player) pick(player); else { setMessage("Choose an athlete from the list."); setOpen(true); } };
+  const closeInstructions = () => {
+    localStorage.setItem(storageKeys.instructions,"seen");
+    setInstructionsOpen(false);
+    setTimeout(() => input.current?.focus(),0);
+  };
   const share = async () => {
     const rows = guesses.flatMap(id => { const player = players.find(item => item.id === id); return player ? [clues(player,answer).map(clue => clue[2] === "exact" ? "🟩" : clue[2] === "close" ? "🟨" : "⬛").join("")] : []; });
-    try { await navigator.clipboard.writeText(`GUESS THE ATHLETE ${today} ${status === "won" ? guesses.length : "X"}/10\n${rows.join("\n")}\n\nCan you name today's athlete?`); setMessage("Result copied — no spoilers."); } catch { setMessage("Sharing is unavailable in this browser."); }
+    try { await navigator.clipboard.writeText(`GUESS THE NBA PLAYER ${today} ${status === "won" ? guesses.length : "X"}/10\n${rows.join("\n")}\n\nCan you name today's NBA player?`); setMessage("Result copied — no spoilers."); } catch { setMessage("Sharing is unavailable in this browser."); }
   };
 
   return <main className="site-shell">
-    <header className="topbar"><a className="brand" href="#game" aria-label="Guess the Athlete home"><img className="brand-logo" src="/guess-the-athlete-logo.png" alt="Guess the Athlete" /></a><div className="topbar-meta"><b>NBA EDITION</b><i />{today}</div></header>
+    <header className="topbar"><a className="brand" href="#game" aria-label="Guess the NBA Player home"><img className="brand-logo" src="/guess-the-athlete-logo.png" alt="Guess the NBA Player" /></a><div className="topbar-actions"><button className="how-to-play" onClick={() => setInstructionsOpen(true)}>HOW TO PLAY</button><div className="topbar-meta"><b>NBA EDITION</b><i />{today}</div></div></header>
     <section className="hero" id="game">
       <aside className="intro">
         <p className="eyebrow"><span />Today&apos;s challenge</p><h1>KNOW THE<br/><em>PLAYER.</em></h1>
-        <p className="intro-copy">One mystery player from the all-time 500 and today&apos;s top stars. Six clues per guess. Ten shots to find the name.</p>
         <div className="attempts"><strong>{String(10-guesses.length).padStart(2,"0")}</strong><span>GUESSES<br/>REMAINING</span></div>
         <div className="legend"><span><i className="exact"/>Exact</span><span><i className="close"/>Close</span><span><i className="miss"/>No match</span></div>
       </aside>
@@ -101,7 +125,7 @@ export default function Home() {
           <p>{status === "won" ? `Solved in ${guesses.length} ${guesses.length === 1 ? "guess" : "guesses"}. Game-winning knowledge.` : "Ten shots taken. Come back tomorrow for a fresh matchup."}</p><button onClick={share}>COPY RESULT ↗</button>
           <div className="stats"><span><b>{stats.played}</b>Played</span><span><b>{stats.played ? Math.round(stats.wins/stats.played*100) : 0}%</b>Win rate</span><span><b>{stats.streak}</b>Streak</span></div><p className="message active">{message}</p>
         </section>}
-        <div className="history">{guesses.length === 0 ? <div className="empty"><b>01</b><span><strong>TAKE YOUR FIRST SHOT</strong><p>Search all-time legends and the current top 150 to reveal your first clues.</p></span></div> : [...guesses].reverse().map((id,index) => {
+        <div className="history">{guesses.length === 0 ? <div className="empty"><b>01</b><span><strong>TAKE YOUR FIRST SHOT</strong><p>Search the top 200 all time players and the current top 150 to reveal your first clues.</p></span></div> : [...guesses].reverse().map((id,index) => {
           const player = players.find(item => item.id === id); if (!player) return null; const number = guesses.length-index;
           return <article className="guess" key={id}><header><div className="player"><b>{initials(player.name)}</b><span><small>Guess {String(number).padStart(2,"0")}</small><h2>{player.name}</h2></span></div>{id === answer.id && <mark>CORRECT</mark>}</header>
             <div className="clues">{clues(player,answer).map(([label,value,state,arrow,hint]) => <div className={`clue ${state}`} key={label} aria-label={`${label}: ${value}, ${state}, ${hint}`}><small>{label}</small><strong>{value} {arrow && <b>{arrow}</b>}</strong><span>{state === "exact" ? "EXACT" : state === "close" ? "CLOSE" : hint.toUpperCase()}</span></div>)}</div>
@@ -109,6 +133,26 @@ export default function Home() {
         })}</div>
       </div>
     </section>
-    <footer><p>Green is exact. Amber is close. Arrows point toward the mystery athlete.</p><span>GUESS THE ATHLETE · DAILY NBA TRIVIA</span></footer>
+    <footer><p>Green is exact. Amber is close. Arrows point toward the mystery player.</p><span>GUESS THE NBA PLAYER · DAILY NBA TRIVIA</span></footer>
+    {instructionsOpen && <div className="instructions-backdrop" onMouseDown={event => { if (event.target === event.currentTarget) closeInstructions(); }}>
+      <section className="instructions" role="dialog" aria-modal="true" aria-labelledby="instructions-title">
+        <header><p>HOW TO PLAY</p><button ref={instructionsClose} onClick={closeInstructions} aria-label="Close instructions">×</button></header>
+        <h2 id="instructions-title">GUESS THE NBA PLAYER</h2>
+        <p className="instructions-lead">Find the mystery NBA player in ten guesses.</p>
+        <ol>
+          <li>Type a player name and choose a result from the list.</li>
+          <li>Each guess reveals debut year, position, conference, team, nationality, and height.</li>
+          <li>Use the colors and arrows to guide your next guess.</li>
+        </ol>
+        <div className="instruction-example" aria-label="Clue color examples">
+          <span className="exact"><b>GREEN</b><small>Exact match</small></span>
+          <span className="close"><b>AMBER</b><small>Close match</small></span>
+          <span className="miss"><b>GRAY</b><small>No match</small></span>
+        </div>
+        <p className="arrow-help"><strong>↑ ↓</strong> Arrows show whether the mystery player&apos;s debut year or height is higher or lower.</p>
+        <div className="daily-note"><strong>A NEW PLAYER EVERY DAY</strong><p>Your stats and streak are saved on this device.</p></div>
+        <button className="play-button" onClick={closeInstructions}>PLAY</button>
+      </section>
+    </div>}
   </main>;
 }
