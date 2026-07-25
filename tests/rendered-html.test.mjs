@@ -14,12 +14,12 @@ async function render() {
   );
 }
 
-test("server-renders the ROSTER daily game", async () => {
+test("server-renders the Guess the Athlete daily game", async () => {
   const response = await render();
   assert.equal(response.status, 200);
   assert.match(response.headers.get("content-type") ?? "", /^text\/html\b/i);
   const html = await response.text();
-  assert.match(html, /ROSTER/);
+  assert.match(html, /Guess the Athlete/);
   assert.match(html, /KNOW THE/);
   assert.match(html, /PLAYER/);
   assert.match(html, /GUESSES/);
@@ -34,7 +34,34 @@ test("uses six athlete clues and excludes division and career tier", async () =>
   assert.doesNotMatch(page, /\["Division"/);
   assert.doesNotMatch(page, /Career tier|\btier\b/i);
   assert.match(page, /next\.length === 10/);
-  assert.match(page, /localStorage\.setItem\("roster-stats"/);
+  assert.match(page, /guess-athlete-v3-stats/);
+  assert.match(page, /if \(!player\) return null/);
   await assert.rejects(access(new URL("../app/_sites-preview/SkeletonPreview.tsx", import.meta.url)));
   await access(new URL("../public/og.png", import.meta.url));
+  await access(new URL("../public/guess-the-athlete-logo.png", import.meta.url));
+  await access(new URL("../public/guess-the-athlete-icon.png", import.meta.url));
+});
+
+test("uses the all-time 500 plus the complete current top 150", async () => {
+  const players = JSON.parse(await readFile(new URL("../data/players.json", import.meta.url), "utf8"));
+  assert.ok(players.length >= 500 && players.length <= 650);
+  assert.equal(new Set(players.map(player => player.id)).size, players.length);
+  assert.deepEqual(players.map(player => player.rank), Array.from({ length: players.length }, (_, index) => index + 1));
+  const allTime = players.filter(player => player.allTimeRank !== null);
+  const current = players.filter(player => player.currentRank !== null);
+  assert.equal(allTime.length, 500);
+  assert.equal(current.length, 150);
+  assert.deepEqual(allTime.map(player => player.allTimeRank), Array.from({ length: 500 }, (_, index) => index + 1));
+  assert.deepEqual([...current].sort((a, b) => a.currentRank - b.currentRank).map(player => player.currentRank), Array.from({ length: 150 }, (_, index) => index + 1));
+  assert.ok(current.some(player => player.name === "Victor Wembanyama"));
+  for (const player of players) {
+    assert.ok(player.name);
+    assert.ok(player.debut >= 1947);
+    assert.ok(["East", "West"].includes(player.conference));
+    assert.ok(player.team);
+    assert.ok(player.teams.length >= 1);
+    assert.equal(player.team, player.teams[0].team);
+    assert.ok(player.height > 60);
+    assert.ok(player.winShares > 0);
+  }
 });
