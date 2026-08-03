@@ -3,7 +3,7 @@
 import { FormEvent, useEffect, useMemo, useRef, useState } from "react";
 import playerData from "../data/players.json";
 
-type Player = { id: string; rank: number; allTimeRank: number | null; currentRank: number | null; name: string; debut: number; position: string; conference: "East" | "West"; team: string; teams: Array<{ team: string; games: number }>; nationality: string; continent: string; height: number; games: number; winShares: number; currentWinShares: number | null };
+type Player = { id: string; rank: number; allTimeRank: number | null; currentRank: number | null; name: string; debut: number; position: string; conference: "East" | "West"; team: string; teams: Array<{ team: string; games: number }>; nationality: string; continent: string; height: number; games: number; winShares: number; currentWinShares: number | null; nbaId: number };
 type Match = "exact" | "close" | "miss";
 
 const players = playerData as Player[];
@@ -19,6 +19,13 @@ const height = (value: number) => `${Math.floor(value / 12)}'${value % 12}\"`;
 const todayKey = () => new Date().toISOString().slice(0,10);
 const numeric = (guess: number, answer: number, range: number) => ({ state: (guess === answer ? "exact" : Math.abs(guess-answer) <= range ? "close" : "miss") as Match, arrow: guess === answer ? "" : answer > guess ? "↑" : "↓" });
 const position = (guess: string, answer: string): Match => guess === answer ? "exact" : answer.split(" / ").some(part => guess.split(" / ").includes(part)) ? "close" : "miss";
+
+function PlayerAvatar({ player, size = "standard" }: { player: Player; size?: "small" | "standard" | "large" }) {
+  return <span className={`player-avatar avatar-${size}`} aria-hidden="true">
+    <b>{initials(player.name)}</b>
+    <img src={`https://cdn.nba.com/headshots/nba/latest/260x190/${player.nbaId}.png`} alt="" loading="lazy" decoding="async" onError={event => { event.currentTarget.style.display = "none"; }} />
+  </span>;
+}
 
 function clues(guess: Player, answer: Player) {
   const year = numeric(guess.debut,answer.debut,3), size = numeric(guess.height,answer.height,2);
@@ -117,17 +124,17 @@ export default function Home() {
           <label htmlFor="athlete">Guess an NBA athlete</label><form className="search-form" onSubmit={submit}>
             <input id="athlete" ref={input} value={query} onFocus={() => setOpen(true)} onChange={event => {setQuery(event.target.value);setOpen(true);setMessage("");}} placeholder="Type a player name..." autoComplete="off" aria-expanded={open && suggestions.length > 0}/><button>GUESS <span>↗</span></button>
           </form>
-          {open && suggestions.length > 0 && <ul className="suggestions">{suggestions.map(player => <li key={player.id}><button onClick={() => pick(player)}><b>{initials(player.name)}</b><span><strong>{player.name}</strong><small>{player.position} · {player.team}</small></span></button></li>)}</ul>}
+          {open && suggestions.length > 0 && <ul className="suggestions">{suggestions.map(player => <li key={player.id}><button onClick={() => pick(player)}><PlayerAvatar player={player} size="small"/><span><strong>{player.name}</strong><small>{player.position} · {player.team}</small></span></button></li>)}</ul>}
           <p className={`message ${message ? "active" : ""}`} aria-live="polite">{message || "Start typing to search the player pool."}</p>
         </div> : <section className={`result ${status}`}>
           <p className="eyebrow"><span />{status === "won" ? "Buzzer beater" : "Final whistle"}</p><h2>{status === "won" ? "YOU GOT IT." : "NOT THIS TIME."}</h2>
-          <div className="answer"><b>{initials(answer.name)}</b><span><small>Today&apos;s athlete</small><strong>{answer.name}</strong></span></div>
+          <div className="answer"><PlayerAvatar player={answer} size="large"/><span><small>Today&apos;s athlete</small><strong>{answer.name}</strong></span></div>
           <p>{status === "won" ? `Solved in ${guesses.length} ${guesses.length === 1 ? "guess" : "guesses"}. Game-winning knowledge.` : "Ten shots taken. Come back tomorrow for a fresh matchup."}</p><button onClick={share}>COPY RESULT ↗</button>
           <div className="stats"><span><b>{stats.played}</b>Played</span><span><b>{stats.played ? Math.round(stats.wins/stats.played*100) : 0}%</b>Win rate</span><span><b>{stats.streak}</b>Streak</span></div><p className="message active">{message}</p>
         </section>}
         <div className="history">{guesses.length === 0 ? <div className="empty"><b>01</b><span><strong>TAKE YOUR FIRST SHOT</strong><p>Search the top 200 all time players and the current top 150 to reveal your first clues.</p></span></div> : [...guesses].reverse().map((id,index) => {
           const player = players.find(item => item.id === id); if (!player) return null; const number = guesses.length-index;
-          return <article className="guess" key={id}><header><div className="player"><b>{initials(player.name)}</b><span><small>Guess {String(number).padStart(2,"0")}</small><h2>{player.name}</h2></span></div>{id === answer.id && <mark>CORRECT</mark>}</header>
+          return <article className="guess" key={id}><header><div className="player"><PlayerAvatar player={player}/><span><small>Guess {String(number).padStart(2,"0")}</small><h2>{player.name}</h2></span></div>{id === answer.id && <mark>CORRECT</mark>}</header>
             <div className="clues">{clues(player,answer).map(([label,value,state,arrow,hint]) => <div className={`clue ${state}`} key={label} aria-label={`${label}: ${value}, ${state}, ${hint}`}><small>{label}</small><strong>{value} {arrow && <b>{arrow}</b>}</strong><span>{state === "exact" ? "EXACT" : state === "close" ? "CLOSE" : hint.toUpperCase()}</span></div>)}</div>
           </article>;
         })}</div>
