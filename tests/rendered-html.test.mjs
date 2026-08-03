@@ -58,8 +58,25 @@ test("uses the all-time 200 plus the complete current top 150", async () => {
   assert.deepEqual(allTime.map(player => player.allTimeRank), Array.from({ length: 200 }, (_, index) => index + 1));
   assert.deepEqual([...current].sort((a, b) => a.currentRank - b.currentRank).map(player => player.currentRank), Array.from({ length: 150 }, (_, index) => index + 1));
   assert.ok(current.some(player => player.name === "Victor Wembanyama"));
+  assert.ok(players.filter(player => player.active).length >= 150);
+  const expectedCurrentTeams = {
+    "LeBron James": "Philadelphia 76ers",
+    "Kevin Durant": "Houston Rockets",
+    "Giannis Antetokounmpo": "Miami Heat",
+    "Luka Dončić": "Los Angeles Lakers",
+    "Jimmy Butler": "Golden State Warriors",
+  };
+  for (const [name, team] of Object.entries(expectedCurrentTeams)) {
+    const player = players.find(item => item.name === name);
+    assert.equal(player?.team, team);
+    assert.equal(player?.active, true);
+    assert.equal(player?.rosterSeason, "2026-27");
+  }
   for (const player of players) {
     assert.ok(player.name);
+    assert.ok(Number.isInteger(player.nbaId) && player.nbaId > 0);
+    assert.equal(typeof player.active, "boolean");
+    assert.equal(player.rosterSeason, player.active ? "2026-27" : null);
     assert.ok(player.debut >= 1947);
     assert.ok(["East", "West"].includes(player.conference));
     assert.ok(player.team);
