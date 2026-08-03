@@ -120,6 +120,97 @@ def continent(country: str) -> str:
     return "North America" if country == "USA" else "Other"
 
 
+def load_nba_roster(path: Path) -> list[dict]:
+    raw = path.read_text(encoding="utf-8")
+    try:
+        payload = json.loads(raw)
+    except json.JSONDecodeError:
+        match = re.search(
+            r'<script id="__NEXT_DATA__" type="application/json">([\s\S]*?)</script>',
+            raw,
+        )
+        if not match:
+            raise ValueError(f"Could not find NBA roster data in {path}")
+        payload = json.loads(match.group(1))
+
+    if isinstance(payload, list):
+        rows = payload
+    elif isinstance(payload.get("players"), list):
+        rows = payload["players"]
+    else:
+        rows = payload.get("props", {}).get("pageProps", {}).get("players", [])
+    if not rows:
+        raise ValueError(f"NBA roster data is empty in {path}")
+    return rows
+
+
+def apply_current_roster(
+    players: list[dict],
+    roster_rows: list[dict],
+    existing_nba_ids: dict[str, int],
+    roster_season: str,
+) -> tuple[int, int]:
+    active_rows = [
+        row for row in roster_rows
+        if row.get("ROSTER_STATUS") == 1 and row.get("TEAM_ABBREVIATION")
+    ]
+    roster_by_id = {int(row["PERSON_ID"]): row for row in active_rows}
+    roster_by_name = {
+        normalized(f'{row.get("PLAYER_FIRST_NAME", "")} {row.get("PLAYER_LAST_NAME", "")}'): row
+        for row in active_rows
+    }
+    matched = 0
+    team_updates = 0
+
+    for player in players:
+        roster_row = None
+        nba_id = existing_nba_ids.get(player["id"])
+        if nba_id is not None:
+            roster_row = roster_by_id.get(nba_id)
+        if roster_row is None:
+            name_match = roster_by_name.get(normalized(player["name"]))
+            if name_match is not None:
+                nba_id = int(name_match["PERSON_ID"])
+                roster_row = name_match
+        if nba_id is None:
+            raise ValueError(f'Missing NBA ID for player: {player["name"]}')
+
+        player["nbaId"] = nba_id
+        player["active"] = roster_row is not None
+        player["rosterSeason"] = roster_season if roster_row is not None else None
+        if roster_row is None:
+            continue
+
+        matched += 1
+        abbreviation = roster_row["TEAM_ABBREVIATION"]
+        fallback_team = f'{roster_row.get("TEAM_CITY", "")} {roster_row.get("TEAM_NAME", "")}'.strip()
+        team, conference = FRANCHISES.get(abbreviation, (fallback_team, ""))
+        if not conference:
+            conference = "East" if abbreviation in EAST_LEGACY else "West"
+        if player["team"] != team:
+            team_updates += 1
+
+        current_team = next(
+            (entry for entry in player["teams"] if entry["team"] == team),
+            {"team": team, "games": 0},
+        )
+        player["teams"] = [current_team] + [
+            entry for entry in player["teams"] if entry["team"] != team
+        ]
+        player["team"] = team
+        player["conference"] = conference
+        player["position"] = current_position_label(roster_row.get("POSITION", ""))
+        if roster_row.get("HEIGHT"):
+            player["height"] = height_inches(roster_row["HEIGHT"])
+        country = roster_row.get("COUNTRY", "").strip()
+        if country:
+            country = COUNTRY_ALIASES.get(country, country)
+            player["nationality"] = country
+            player["continent"] = continent(country)
+
+    return matched, team_updates
+
+
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--players", required=True, type=Path)
@@ -127,8 +218,20 @@ def main() -> None:
     parser.add_argument("--seasons", required=True, type=Path)
     parser.add_argument("--advanced", required=True, type=Path)
     parser.add_argument("--teams", required=True, type=Path)
+    parser.add_argument("--roster", required=True, type=Path)
+    parser.add_argument("--roster-season", default="2026-27")
     parser.add_argument("--output", default=Path("data/players.json"), type=Path)
     args = parser.parse_args()
+
+    existing_nba_ids = {}
+    if args.output.exists():
+        existing_players = json.loads(args.output.read_text(encoding="utf-8"))
+        existing_nba_ids = {
+            player["id"]: int(player["nbaId"])
+            for player in existing_players
+            if player.get("nbaId") is not None
+        }
+    roster_rows = load_nba_roster(args.roster)
 
     with args.players.open(newline="", encoding="utf-8-sig") as handle:
         candidates = list(csv.DictReader(handle))
@@ -299,6 +402,13 @@ def main() -> None:
         })
         existing_ids.add(identifier)
 
+    active_matches, team_updates = apply_current_roster(
+        output,
+        roster_rows,
+        existing_nba_ids,
+        args.roster_season,
+    )
+
     args.output.parent.mkdir(parents=True, exist_ok=True)
     args.output.write_text(json.dumps(output, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     print(f"Wrote {len(output)} players to {args.output}")
@@ -306,6 +416,8 @@ def main() -> None:
     print(f"Current-season top players represented: {len(current_rank)} ({current_season})")
     print(f"Country fallback (USA): {len(missing_country)}")
     print(f"Missing team history: {len(missing_teams)}")
+    print(f"Current roster matches: {active_matches} ({args.roster_season})")
+    print(f"Current team overrides: {team_updates}")
 
 
 if __name__ == "__main__":
