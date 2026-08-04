@@ -38,6 +38,10 @@ test("uses six athlete clues and excludes division and career tier", async () =>
   assert.match(page, /guess-nba-player-instructions-v1/);
   assert.match(page, /HOW TO PLAY/);
   assert.match(page, /role="dialog"/);
+  assert.match(page, /type PlayerFilter = "all" \| "active" \| "retired"/);
+  assert.match(page, /aria-label="Filter players by career status"/);
+  assert.match(page, /playerFilter === "active" \? player\.active : !player\.active/);
+  assert.match(page, /player\.active \? "Active" : "Retired"/);
   assert.doesNotMatch(page, /One mystery player from the all-time 500/);
   assert.match(page, /if \(!player\) return null/);
   await assert.rejects(access(new URL("../app/_sites-preview/SkeletonPreview.tsx", import.meta.url)));
@@ -71,6 +75,19 @@ test("uses the all-time 200 plus the complete current top 150", async () => {
     assert.equal(player?.team, team);
     assert.equal(player?.active, true);
     assert.equal(player?.rosterSeason, "2026-27");
+  }
+  const expectedLegendTeams = {
+    "Michael Jordan": "Chicago Bulls",
+    "Kobe Bryant": "Los Angeles Lakers",
+    "Shaquille O'Neal": "Los Angeles Lakers",
+    "Dwyane Wade": "Miami Heat",
+    "Dirk Nowitzki": "Dallas Mavericks",
+  };
+  for (const [name, team] of Object.entries(expectedLegendTeams)) {
+    const player = players.find(item => item.name === name);
+    assert.equal(player?.team, team);
+    assert.equal(player?.active, false);
+    assert.equal(player?.teams[0].games, Math.max(...player.teams.map(entry => entry.games)));
   }
   for (const player of players) {
     assert.ok(player.name);
