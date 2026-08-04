@@ -18,6 +18,8 @@ const storageKeys = {
 const initials = (name: string) => name.split(/[ -]/).filter(Boolean).map(word => word[0]).slice(0,3).join("");
 const height = (value: number) => `${Math.floor(value / 12)}'${value % 12}\"`;
 const todayKey = () => new Date().toISOString().slice(0,10);
+const puzzleNumberForDate = (date: string) => Math.floor((Date.parse(`${date}T00:00:00Z`) - Date.UTC(2026,0,1)) / 86400000) + 1;
+const answerForDate = (date: string) => players[(puzzleNumberForDate(date) - 1 + players.length) % players.length];
 const numeric = (guess: number, answer: number, range: number) => ({ state: (guess === answer ? "exact" : Math.abs(guess-answer) <= range ? "close" : "miss") as Match, arrow: guess === answer ? "" : answer > guess ? "↑" : "↓" });
 const position = (guess: string, answer: string): Match => guess === answer ? "exact" : answer.split(" / ").some(part => guess.split(" / ").includes(part)) ? "close" : "miss";
 const confettiPieces = Array.from({length:60},(_,index) => ({
@@ -62,7 +64,8 @@ function clues(guess: Player, answer: Player) {
 
 export default function Home() {
   const today = useMemo(todayKey,[]);
-  const answer = players[(Math.floor((Date.parse(`${today}T00:00:00Z`)-Date.UTC(2026,0,1))/86400000)+players.length)%players.length];
+  const puzzleNumber = useMemo(() => puzzleNumberForDate(today),[today]);
+  const answer = useMemo(() => answerForDate(today),[today]);
   const [query,setQuery] = useState("");
   const [guesses,setGuesses] = useState<string[]>([]);
   const [status,setStatus] = useState<"playing"|"won"|"lost">("playing");
@@ -129,7 +132,25 @@ export default function Home() {
   };
   const share = async () => {
     const rows = guesses.flatMap(id => { const player = players.find(item => item.id === id); return player ? [clues(player,answer).map(clue => clue[2] === "exact" ? "🟩" : clue[2] === "close" ? "🟨" : "⬛").join("")] : []; });
-    try { await navigator.clipboard.writeText(`GUESS THE NBA PLAYER ${today} ${status === "won" ? guesses.length : "X"}/10\n${rows.join("\n")}\n\nCan you name today's NBA player?`); setMessage("Result copied — no spoilers."); } catch { setMessage("Sharing is unavailable in this browser."); }
+    const score = status === "won" ? guesses.length : "X";
+    const title = "Guess the NBA Player";
+    const text = `${title} #${puzzleNumber} ${score}/10\n${rows.join("\n")}`;
+    const url = window.location.origin;
+    if (typeof navigator.share === "function") {
+      try {
+        await navigator.share({ title, text, url });
+        setMessage("Result shared.");
+        return;
+      } catch (error) {
+        if (error instanceof DOMException && error.name === "AbortError") return;
+      }
+    }
+    try {
+      await navigator.clipboard.writeText(`${text}\n\nPlay: ${url}`);
+      setMessage("Result copied with the game link.");
+    } catch {
+      setMessage("Sharing is unavailable in this browser.");
+    }
   };
 
   return <main className="site-shell">
@@ -151,7 +172,7 @@ export default function Home() {
         </div> : <section className={`result ${status}`}>
           <p className="eyebrow"><span />{status === "won" ? "Buzzer beater" : "Final whistle"}</p><h2>{status === "won" ? "YOU GOT IT." : "NOT THIS TIME."}</h2>
           <div className="answer"><PlayerAvatar player={answer} size="large"/><span><small>Today&apos;s athlete</small><strong>{answer.name}</strong></span></div>
-          <p>{status === "won" ? `Solved in ${guesses.length} ${guesses.length === 1 ? "guess" : "guesses"}. Game-winning knowledge.` : "Ten shots taken. Come back tomorrow for a fresh matchup."}</p><button onClick={share}>COPY RESULT ↗</button>
+          <p>{status === "won" ? `Solved in ${guesses.length} ${guesses.length === 1 ? "guess" : "guesses"}. Game-winning knowledge.` : "Ten shots taken. Come back tomorrow for a fresh matchup."}</p><button onClick={share}>SHARE RESULT ↗</button>
           <div className="stats"><span><b>{stats.played}</b>Played</span><span><b>{stats.played ? Math.round(stats.wins/stats.played*100) : 0}%</b>Win rate</span><span><b>{stats.streak}</b>Streak</span></div><p className="message active">{message}</p>
         </section>}
         <div className="history">{guesses.length === 0 ? <div className="empty"><b>01</b><span><strong>TAKE YOUR FIRST SHOT</strong><p>Search the top 200 all time players and the current top 150 to reveal your first clues.</p></span></div> : [...guesses].reverse().map((id,index) => {
