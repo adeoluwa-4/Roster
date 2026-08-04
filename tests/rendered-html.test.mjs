@@ -41,6 +41,12 @@ test("uses six athlete clues, draft years, and victory confetti", async () => {
   assert.match(page, /function VictoryConfetti/);
   assert.match(page, /status === "won" && <VictoryConfetti\/>/);
   assert.match(page, /guess\.draftYear === null \? "Undrafted"/);
+  assert.match(page, /const puzzleNumber = useMemo\(\(\) => puzzleNumberForDate\(today\),\[today\]\)/);
+  assert.match(page, /const text = `\$\{title\} #\$\{puzzleNumber\} \$\{score\}\/10\\n\$\{rows\.join\("\\n"\)\}`/);
+  assert.match(page, /typeof navigator\.share === "function"/);
+  assert.match(page, /await navigator\.share\(\{ title, text, url \}\)/);
+  assert.match(page, /await navigator\.clipboard\.writeText\(`\$\{text\}\\n\\nPlay: \$\{url\}`\)/);
+  assert.match(page, /SHARE RESULT ↗/);
   assert.doesNotMatch(page, /PlayerFilter|player-filter|Filter players by career status/);
   assert.doesNotMatch(page, /\bdebut\b/i);
   assert.doesNotMatch(page, /One mystery player from the all-time 500/);
