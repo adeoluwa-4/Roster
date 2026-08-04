@@ -3,8 +3,9 @@
 import { FormEvent, useEffect, useMemo, useRef, useState } from "react";
 import playerData from "../data/players.json";
 
-type Player = { id: string; rank: number; allTimeRank: number | null; currentRank: number | null; name: string; debut: number; position: string; conference: "East" | "West"; team: string; teams: Array<{ team: string; games: number }>; nationality: string; continent: string; height: number; games: number; winShares: number; currentWinShares: number | null; nbaId: number };
+type Player = { id: string; rank: number; allTimeRank: number | null; currentRank: number | null; name: string; debut: number; position: string; conference: "East" | "West"; team: string; teams: Array<{ team: string; games: number }>; nationality: string; continent: string; height: number; games: number; winShares: number; currentWinShares: number | null; nbaId: number; active: boolean; rosterSeason: string | null };
 type Match = "exact" | "close" | "miss";
+type PlayerFilter = "all" | "active" | "retired";
 
 const players = playerData as Player[];
 const storageKeys = {
@@ -50,6 +51,7 @@ export default function Home() {
   const [ready,setReady] = useState(false);
   const [stats,setStats] = useState({played:0,wins:0,streak:0});
   const [instructionsOpen,setInstructionsOpen] = useState(false);
+  const [playerFilter,setPlayerFilter] = useState<PlayerFilter>("all");
   const input = useRef<HTMLInputElement>(null);
   const instructionsClose = useRef<HTMLButtonElement>(null);
 
@@ -94,13 +96,18 @@ export default function Home() {
     setStats(next); localStorage.setItem(storageKeys.stats,JSON.stringify(next)); localStorage.setItem(storageKeys.last,today); localStorage.setItem(storageKeys.done(today),"1");
   },[ready,status,today,stats]);
 
-  const suggestions = players.filter(player => query.trim() && player.name.toLowerCase().includes(query.toLowerCase()) && !guesses.includes(player.id)).slice(0,6);
+  const filteredPlayers = players.filter(player => playerFilter === "all" || (playerFilter === "active" ? player.active : !player.active));
+  const suggestions = filteredPlayers.filter(player => query.trim() && player.name.toLowerCase().includes(query.toLowerCase()) && !guesses.includes(player.id)).slice(0,6);
   const pick = (player: Player) => {
     if (status !== "playing" || guesses.includes(player.id)) return;
     const next = [...guesses,player.id]; setGuesses(next); setQuery(""); setOpen(false); setMessage("");
     if (player.id === answer.id) setStatus("won"); else if (next.length === 10) setStatus("lost"); else setTimeout(() => input.current?.focus(),0);
   };
-  const submit = (event: FormEvent) => { event.preventDefault(); const player = players.find(item => item.name.toLowerCase() === query.trim().toLowerCase()); if (player) pick(player); else { setMessage("Choose an athlete from the list."); setOpen(true); } };
+  const submit = (event: FormEvent) => { event.preventDefault(); const player = filteredPlayers.find(item => item.name.toLowerCase() === query.trim().toLowerCase()); if (player) pick(player); else { setMessage(`Choose a${playerFilter === "all" ? "n" : playerFilter === "active" ? "n active" : " retired"} athlete from the list.`); setOpen(true); } };
+  const changePlayerFilter = (nextFilter: PlayerFilter) => {
+    setPlayerFilter(nextFilter); setQuery(""); setOpen(false); setMessage("");
+    setTimeout(() => input.current?.focus(),0);
+  };
   const closeInstructions = () => {
     localStorage.setItem(storageKeys.instructions,"seen");
     setInstructionsOpen(false);
@@ -121,10 +128,13 @@ export default function Home() {
       </aside>
       <div className="game-column">
         {status === "playing" ? <div className="search-block">
-          <label htmlFor="athlete">Guess an NBA athlete</label><form className="search-form" onSubmit={submit}>
-            <input id="athlete" ref={input} value={query} onFocus={() => setOpen(true)} onChange={event => {setQuery(event.target.value);setOpen(true);setMessage("");}} placeholder="Type a player name..." autoComplete="off" aria-expanded={open && suggestions.length > 0}/><button>GUESS <span>↗</span></button>
+          <div className="search-heading"><label htmlFor="athlete">Guess an NBA athlete</label><div className="player-filter" role="group" aria-label="Filter players by career status">
+            {(["all","active","retired"] as PlayerFilter[]).map(filter => <button type="button" key={filter} aria-pressed={playerFilter === filter} onClick={() => changePlayerFilter(filter)}><span>{filter}</span><small>{filter === "all" ? players.length : players.filter(player => filter === "active" ? player.active : !player.active).length}</small></button>)}
+          </div></div>
+          <div className="search-entry"><form className="search-form" onSubmit={submit}>
+            <input id="athlete" ref={input} value={query} onFocus={() => setOpen(true)} onChange={event => {setQuery(event.target.value);setOpen(true);setMessage("");}} placeholder={`Search ${playerFilter === "all" ? "all players" : playerFilter === "active" ? "active players" : "retired legends"}...`} autoComplete="off" aria-expanded={open && suggestions.length > 0}/><button>GUESS <span>↗</span></button>
           </form>
-          {open && suggestions.length > 0 && <ul className="suggestions">{suggestions.map(player => <li key={player.id}><button onClick={() => pick(player)}><PlayerAvatar player={player} size="small"/><span><strong>{player.name}</strong><small>{player.position} · {player.team}</small></span></button></li>)}</ul>}
+          {open && suggestions.length > 0 && <ul className="suggestions">{suggestions.map(player => <li key={player.id}><button onClick={() => pick(player)}><PlayerAvatar player={player} size="small"/><span><strong>{player.name}</strong><small><b>{player.active ? "Active" : "Retired"}</b> · {player.position} · {player.team}</small></span></button></li>)}</ul>}</div>
           <p className={`message ${message ? "active" : ""}`} aria-live="polite">{message || "Start typing to search the player pool."}</p>
         </div> : <section className={`result ${status}`}>
           <p className="eyebrow"><span />{status === "won" ? "Buzzer beater" : "Final whistle"}</p><h2>{status === "won" ? "YOU GOT IT." : "NOT THIS TIME."}</h2>
