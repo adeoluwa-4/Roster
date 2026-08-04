@@ -1,11 +1,11 @@
 "use client";
 
 import { FormEvent, useEffect, useMemo, useRef, useState } from "react";
+import type { CSSProperties } from "react";
 import playerData from "../data/players.json";
 
-type Player = { id: string; rank: number; allTimeRank: number | null; currentRank: number | null; name: string; debut: number; position: string; conference: "East" | "West"; team: string; teams: Array<{ team: string; games: number }>; nationality: string; continent: string; height: number; games: number; winShares: number; currentWinShares: number | null; nbaId: number; active: boolean; rosterSeason: string | null };
+type Player = { id: string; rank: number; allTimeRank: number | null; currentRank: number | null; name: string; draftYear: number | null; position: string; conference: "East" | "West"; team: string; teams: Array<{ team: string; games: number }>; nationality: string; continent: string; height: number; games: number; winShares: number; currentWinShares: number | null; nbaId: number; active: boolean; rosterSeason: string | null };
 type Match = "exact" | "close" | "miss";
-type PlayerFilter = "all" | "active" | "retired";
 
 const players = playerData as Player[];
 const storageKeys = {
@@ -20,6 +20,14 @@ const height = (value: number) => `${Math.floor(value / 12)}'${value % 12}\"`;
 const todayKey = () => new Date().toISOString().slice(0,10);
 const numeric = (guess: number, answer: number, range: number) => ({ state: (guess === answer ? "exact" : Math.abs(guess-answer) <= range ? "close" : "miss") as Match, arrow: guess === answer ? "" : answer > guess ? "↑" : "↓" });
 const position = (guess: string, answer: string): Match => guess === answer ? "exact" : answer.split(" / ").some(part => guess.split(" / ").includes(part)) ? "close" : "miss";
+const confettiPieces = Array.from({length:60},(_,index) => ({
+  id: index,
+  x: `${(index * 37) % 101}%`,
+  drift: `${((index * 29) % 35) - 17}vw`,
+  delay: `${(index % 12) * .045}s`,
+  duration: `${2.25 + (index % 7) * .16}s`,
+  color: ["#f4a72c","#5fa56d","#f3eddf","#d85d4a","#6fa8dc"][index % 5],
+}));
 
 function PlayerAvatar({ player, size = "standard" }: { player: Player; size?: "small" | "standard" | "large" }) {
   return <span className={`player-avatar avatar-${size}`} aria-hidden="true">
@@ -28,10 +36,22 @@ function PlayerAvatar({ player, size = "standard" }: { player: Player; size?: "s
   </span>;
 }
 
+function VictoryConfetti() {
+  return <div className="confetti-burst" aria-hidden="true">{confettiPieces.map(piece => <i key={piece.id} style={{"--x":piece.x,"--drift":piece.drift,"--delay":piece.delay,"--duration":piece.duration,"--confetti":piece.color} as CSSProperties}/>)}</div>;
+}
+
+function draftClue(guess: number | null, answer: number | null) {
+  if (guess === answer) return { state: "exact" as Match, arrow: "", hint: "Exact" };
+  if (guess === null) return { state: "miss" as Match, arrow: "", hint: "Drafted" };
+  if (answer === null) return { state: "miss" as Match, arrow: "", hint: "Undrafted" };
+  const comparison = numeric(guess,answer,3);
+  return { ...comparison, hint: comparison.arrow === "↑" ? "Later" : "Earlier" };
+}
+
 function clues(guess: Player, answer: Player) {
-  const year = numeric(guess.debut,answer.debut,3), size = numeric(guess.height,answer.height,2);
+  const year = draftClue(guess.draftYear,answer.draftYear), size = numeric(guess.height,answer.height,2);
   return [
-    ["Debut",String(guess.debut),year.state,year.arrow,year.arrow === "↑" ? "Later" : "Earlier"],
+    ["Draft",guess.draftYear === null ? "Undrafted" : String(guess.draftYear),year.state,year.arrow,year.hint],
     ["Position",guess.position,position(guess.position,answer.position),"","Position"],
     ["Conference",guess.conference,guess.conference === answer.conference ? "exact" : "miss","","Conference"],
     ["Team",guess.team,guess.team === answer.team ? "exact" : "miss","","Team"],
@@ -51,7 +71,6 @@ export default function Home() {
   const [ready,setReady] = useState(false);
   const [stats,setStats] = useState({played:0,wins:0,streak:0});
   const [instructionsOpen,setInstructionsOpen] = useState(false);
-  const [playerFilter,setPlayerFilter] = useState<PlayerFilter>("all");
   const input = useRef<HTMLInputElement>(null);
   const instructionsClose = useRef<HTMLButtonElement>(null);
 
@@ -96,18 +115,13 @@ export default function Home() {
     setStats(next); localStorage.setItem(storageKeys.stats,JSON.stringify(next)); localStorage.setItem(storageKeys.last,today); localStorage.setItem(storageKeys.done(today),"1");
   },[ready,status,today,stats]);
 
-  const filteredPlayers = players.filter(player => playerFilter === "all" || (playerFilter === "active" ? player.active : !player.active));
-  const suggestions = filteredPlayers.filter(player => query.trim() && player.name.toLowerCase().includes(query.toLowerCase()) && !guesses.includes(player.id)).slice(0,6);
+  const suggestions = players.filter(player => query.trim() && player.name.toLowerCase().includes(query.toLowerCase()) && !guesses.includes(player.id)).slice(0,6);
   const pick = (player: Player) => {
     if (status !== "playing" || guesses.includes(player.id)) return;
     const next = [...guesses,player.id]; setGuesses(next); setQuery(""); setOpen(false); setMessage("");
     if (player.id === answer.id) setStatus("won"); else if (next.length === 10) setStatus("lost"); else setTimeout(() => input.current?.focus(),0);
   };
-  const submit = (event: FormEvent) => { event.preventDefault(); const player = filteredPlayers.find(item => item.name.toLowerCase() === query.trim().toLowerCase()); if (player) pick(player); else { setMessage(`Choose a${playerFilter === "all" ? "n" : playerFilter === "active" ? "n active" : " retired"} athlete from the list.`); setOpen(true); } };
-  const changePlayerFilter = (nextFilter: PlayerFilter) => {
-    setPlayerFilter(nextFilter); setQuery(""); setOpen(false); setMessage("");
-    setTimeout(() => input.current?.focus(),0);
-  };
+  const submit = (event: FormEvent) => { event.preventDefault(); const player = players.find(item => item.name.toLowerCase() === query.trim().toLowerCase()); if (player) pick(player); else { setMessage("Choose an athlete from the list."); setOpen(true); } };
   const closeInstructions = () => {
     localStorage.setItem(storageKeys.instructions,"seen");
     setInstructionsOpen(false);
@@ -119,6 +133,7 @@ export default function Home() {
   };
 
   return <main className="site-shell">
+    {status === "won" && <VictoryConfetti/>}
     <header className="topbar"><a className="brand" href="#game" aria-label="Guess the NBA Player home"><img className="brand-logo" src="/guess-the-athlete-logo.png" alt="Guess the NBA Player" /></a><div className="topbar-actions"><button className="how-to-play" onClick={() => setInstructionsOpen(true)}>HOW TO PLAY</button><div className="topbar-meta"><b>NBA EDITION</b><i />{today}</div></div></header>
     <section className="hero" id="game">
       <aside className="intro">
@@ -128,13 +143,10 @@ export default function Home() {
       </aside>
       <div className="game-column">
         {status === "playing" ? <div className="search-block">
-          <div className="search-heading"><label htmlFor="athlete">Guess an NBA athlete</label><div className="player-filter" role="group" aria-label="Filter players by career status">
-            {(["all","active","retired"] as PlayerFilter[]).map(filter => <button type="button" key={filter} aria-pressed={playerFilter === filter} onClick={() => changePlayerFilter(filter)}><span>{filter}</span><small>{filter === "all" ? players.length : players.filter(player => filter === "active" ? player.active : !player.active).length}</small></button>)}
-          </div></div>
-          <div className="search-entry"><form className="search-form" onSubmit={submit}>
-            <input id="athlete" ref={input} value={query} onFocus={() => setOpen(true)} onChange={event => {setQuery(event.target.value);setOpen(true);setMessage("");}} placeholder={`Search ${playerFilter === "all" ? "all players" : playerFilter === "active" ? "active players" : "retired legends"}...`} autoComplete="off" aria-expanded={open && suggestions.length > 0}/><button>GUESS <span>↗</span></button>
+          <label htmlFor="athlete">Guess an NBA athlete</label><form className="search-form" onSubmit={submit}>
+            <input id="athlete" ref={input} value={query} onFocus={() => setOpen(true)} onChange={event => {setQuery(event.target.value);setOpen(true);setMessage("");}} placeholder="Type a player name..." autoComplete="off" aria-expanded={open && suggestions.length > 0}/><button>GUESS <span>↗</span></button>
           </form>
-          {open && suggestions.length > 0 && <ul className="suggestions">{suggestions.map(player => <li key={player.id}><button onClick={() => pick(player)}><PlayerAvatar player={player} size="small"/><span><strong>{player.name}</strong><small><b>{player.active ? "Active" : "Retired"}</b> · {player.position} · {player.team}</small></span></button></li>)}</ul>}</div>
+          {open && suggestions.length > 0 && <ul className="suggestions">{suggestions.map(player => <li key={player.id}><button onClick={() => pick(player)}><PlayerAvatar player={player} size="small"/><span><strong>{player.name}</strong><small>{player.position} · {player.team}</small></span></button></li>)}</ul>}
           <p className={`message ${message ? "active" : ""}`} aria-live="polite">{message || "Start typing to search the player pool."}</p>
         </div> : <section className={`result ${status}`}>
           <p className="eyebrow"><span />{status === "won" ? "Buzzer beater" : "Final whistle"}</p><h2>{status === "won" ? "YOU GOT IT." : "NOT THIS TIME."}</h2>
@@ -158,7 +170,7 @@ export default function Home() {
         <p className="instructions-lead">Find the mystery NBA player in ten guesses.</p>
         <ol>
           <li>Type a player name and choose a result from the list.</li>
-          <li>Each guess reveals debut year, position, conference, team, nationality, and height.</li>
+          <li>Each guess reveals draft year, position, conference, team, nationality, and height.</li>
           <li>Use the colors and arrows to guide your next guess.</li>
         </ol>
         <div className="instruction-example" aria-label="Clue color examples">
@@ -166,7 +178,7 @@ export default function Home() {
           <span className="close"><b>AMBER</b><small>Close match</small></span>
           <span className="miss"><b>GRAY</b><small>No match</small></span>
         </div>
-        <p className="arrow-help"><strong>↑ ↓</strong> Arrows show whether the mystery player&apos;s debut year or height is higher or lower.</p>
+        <p className="arrow-help"><strong>↑ ↓</strong> Arrows show whether the mystery player&apos;s draft year or height is higher or lower.</p>
         <div className="daily-note"><strong>A NEW PLAYER EVERY DAY</strong><p>Your stats and streak are saved on this device.</p></div>
         <button className="play-button" onClick={closeInstructions}>PLAY</button>
       </section>
