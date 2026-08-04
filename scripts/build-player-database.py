@@ -113,6 +113,15 @@ def height_inches(raw: str) -> int:
     return int(feet) * 12 + int(inches)
 
 
+def draft_year(raw: object, name: str) -> int | None:
+    value = str(raw or "").strip()
+    if value.casefold() == "undrafted":
+        return None
+    if re.fullmatch(r"\d{4}", value):
+        return int(value)
+    raise ValueError(f"Missing or invalid draft year for player: {name}")
+
+
 def continent(country: str) -> str:
     for name, members in CONTINENTS.items():
         if country in members:
@@ -279,7 +288,7 @@ def main() -> None:
 
     eligible = [
         row for row in candidates
-        if row["WS"] and row["Debut"] and row["Height"] and normalized(row["Name"]) in games_by_player
+        if row["WS"] and row["Height"] and normalized(row["Name"]) in games_by_player
     ]
     eligible.sort(key=lambda row: (-float(row["WS"]), -int(row["G"]), row["Name"]))
     top = eligible[:ALL_TIME_LIMIT]
@@ -323,7 +332,7 @@ def main() -> None:
             "allTimeRank": rank,
             "currentRank": current_rank.get(key),
             "name": row["Name"],
-            "debut": int(row["Debut"]),
+            "draftYear": draft_year(info.get("DRAFT_YEAR"), row["Name"]),
             "position": position_label(row["Position"]),
             "conference": conference,
             "team": team,
@@ -370,13 +379,11 @@ def main() -> None:
             "East" if team_games[0][0] in EAST_LEGACY else "West",
         )
         if identity:
-            debut = int(identity["Debut"])
             position = position_label(identity["Position"])
             height = int(identity["Height"])
             games = int(identity["G"])
             career_win_shares = float(identity["WS"])
         else:
-            debut = int(float(info["FROM_YEAR"]))
             position = info.get("POSITION", "").strip() or current_position_label(row["pos"])
             height = height_inches(info["HEIGHT"])
             games = sum(games for _, games in team_games)
@@ -388,7 +395,7 @@ def main() -> None:
             "allTimeRank": None,
             "currentRank": current_rank[key],
             "name": name,
-            "debut": debut,
+            "draftYear": draft_year(info.get("DRAFT_YEAR"), name),
             "position": position,
             "conference": conference,
             "team": team,
