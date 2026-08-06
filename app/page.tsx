@@ -165,7 +165,7 @@ export default function Home() {
       <div className="game-column">
         {status === "playing" ? <div className="search-block">
           <label htmlFor="athlete">Guess an NBA athlete</label><form className="search-form" onSubmit={submit}>
-            <input id="athlete" ref={input} value={query} onFocus={() => setOpen(true)} onChange={event => {setQuery(event.target.value);setOpen(true);setMessage("");}} placeholder="Type a player name..." autoComplete="off" aria-expanded={open && suggestions.length > 0}/><button>GUESS <span>↗</span></button>
+            <input id="athlete" ref={input} value={query} onFocus={() => setOpen(true)} onChange={event => {setQuery(event.target.value);setOpen(true);setMessage("");}} placeholder="Type a player name..." autoComplete="off" aria-expanded={open && suggestions.length > 0}/><button>GUESS</button>
           </form>
           {open && suggestions.length > 0 && <ul className="suggestions">{suggestions.map(player => <li key={player.id}><button onClick={() => pick(player)}><PlayerAvatar player={player} size="small"/><span><strong>{player.name}</strong><small>{player.position} · {player.team}</small></span></button></li>)}</ul>}
           <p className={`message ${message ? "active" : ""}`} aria-live="polite">{message || "Start typing to search the player pool."}</p>
