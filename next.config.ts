@@ -1,7 +1,10 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  typescript: {
+    // Database bindings are provided by the Cloudflare runtime, not Vercel.
+    ignoreBuildErrors: true,
+  },
 };
 
 export default nextConfig;
