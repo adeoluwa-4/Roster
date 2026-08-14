@@ -4,15 +4,15 @@ import { FormEvent, useEffect, useMemo, useRef, useState } from "react";
 import type { CSSProperties } from "react";
 import playerData from "../data/players.json";
 
-type Player = { id: string; rank: number; allTimeRank: number | null; currentRank: number | null; name: string; draftYear: number | null; position: string; conference: "East" | "West"; team: string; teams: Array<{ team: string; games: number }>; nationality: string; continent: string; height: number; games: number; winShares: number; currentWinShares: number | null; nbaId: number; active: boolean; rosterSeason: string | null };
+type Player = { id: string; rank: number; allTimeRank: number | null; currentRank: number | null; name: string; draftYear: number | null; position: string; conference: "East" | "West"; team: string; teams: Array<{ team: string; games: number }>; nationality: string; continent: string; height: number; weight: number; games: number; winShares: number; currentWinShares: number | null; nbaId: number | null; espnId: number | null; twoKRating: number; active: boolean; rosterSeason: string | null };
 type Match = "exact" | "close" | "miss";
 
 const players = playerData as Player[];
 const storageKeys = {
-  game: (date: string) => `guess-athlete-v4-game-${date}`,
-  done: (date: string) => `guess-athlete-v4-done-${date}`,
-  stats: "guess-athlete-v4-stats",
-  last: "guess-athlete-v4-last",
+  game: (date: string) => `guess-athlete-v5-game-${date}`,
+  done: (date: string) => `guess-athlete-v5-done-${date}`,
+  stats: "guess-athlete-v5-stats",
+  last: "guess-athlete-v5-last",
   instructions: "guess-nba-player-instructions-v1",
 };
 const initials = (name: string) => name.split(/[ -]/).filter(Boolean).map(word => word[0]).slice(0,3).join("");
@@ -32,9 +32,12 @@ const confettiPieces = Array.from({length:60},(_,index) => ({
 }));
 
 function PlayerAvatar({ player, size = "standard" }: { player: Player; size?: "small" | "standard" | "large" }) {
+  const src = player.nbaId
+    ? `https://cdn.nba.com/headshots/nba/latest/260x190/${player.nbaId}.png`
+    : player.espnId ? `https://a.espncdn.com/i/headshots/nba/players/full/${player.espnId}.png` : null;
   return <span className={`player-avatar avatar-${size}`} aria-hidden="true">
     <b>{initials(player.name)}</b>
-    <img src={`https://cdn.nba.com/headshots/nba/latest/260x190/${player.nbaId}.png`} alt="" loading="lazy" decoding="async" onError={event => { event.currentTarget.style.display = "none"; }} />
+    {src && <img src={src} alt="" loading="lazy" decoding="async" onError={event => { event.currentTarget.style.display = "none"; }} />}
   </span>;
 }
 
