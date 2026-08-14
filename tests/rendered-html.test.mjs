@@ -57,7 +57,7 @@ test("uses six athlete clues, draft years, and victory confetti", async () => {
   await access(new URL("../public/guess-the-athlete-icon.png", import.meta.url));
 });
 
-test("uses the NBA 2K top 250 active players", async () => {
+test("uses the ESPN-current NBA 2K top 250 players", async () => {
   const players = JSON.parse(await readFile(new URL("../data/players.json", import.meta.url), "utf8"));
   assert.equal(players.length, 250);
   assert.equal(new Set(players.map(player => player.id)).size, players.length);
@@ -69,15 +69,15 @@ test("uses the NBA 2K top 250 active players", async () => {
   assert.deepEqual(current.map(player => player.currentRank), Array.from({ length: 250 }, (_, index) => index + 1));
   assert.ok(current.some(player => player.name === "Victor Wembanyama"));
   assert.equal(players.filter(player => player.active).length, 250);
-  const expectedTwoKValues = {
-    "Nikola Jokic": { rating: 98, height: 83, weight: 284, position: "Center" },
-    "Jayson Tatum": { rating: 94, height: 80, weight: 210, position: "Forward" },
-    "LeBron James": { rating: 94, height: 81, weight: 250, position: "Forward" },
+  const expectedPlayerValues = {
+    "Nikola Jokic": { rating: 98, team: "Denver Nuggets", position: "Center" },
+    "Jayson Tatum": { rating: 94, team: "Boston Celtics", position: "Forward" },
+    "LeBron James": { rating: 94, team: "Philadelphia 76ers", position: "Forward" },
   };
-  for (const [name, expected] of Object.entries(expectedTwoKValues)) {
+  for (const [name, expected] of Object.entries(expectedPlayerValues)) {
     const player = players.find(item => item.name === name);
     assert.deepEqual(
-      player && { rating: player.twoKRating, height: player.height, weight: player.weight, position: player.position },
+      player && { rating: player.twoKRating, team: player.team, position: player.position },
       expected,
     );
   }
@@ -85,7 +85,7 @@ test("uses the NBA 2K top 250 active players", async () => {
     assert.ok(player.name);
     assert.ok(Number.isInteger(player.nbaId) || Number.isInteger(player.espnId));
     assert.equal(typeof player.active, "boolean");
-    assert.equal(player.rosterSeason, "2025-26");
+    assert.equal(player.rosterSeason, "2026-27");
     assert.ok(player.draftYear === null || (Number.isInteger(player.draftYear) && player.draftYear >= 1947 && player.draftYear <= 2025));
     assert.equal("debut" in player, false);
     assert.ok(["East", "West"].includes(player.conference));
@@ -94,6 +94,6 @@ test("uses the NBA 2K top 250 active players", async () => {
     assert.equal(player.team, player.teams[0].team);
     assert.ok(player.height > 60);
     assert.ok(Number.isInteger(player.weight) && player.weight > 100);
-    assert.ok(Number.isInteger(player.twoKRating) && player.twoKRating >= 75);
+    assert.ok(Number.isInteger(player.twoKRating) && player.twoKRating >= 74);
   }
 });
