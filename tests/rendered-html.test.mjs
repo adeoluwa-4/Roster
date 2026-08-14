@@ -34,7 +34,7 @@ test("uses six athlete clues, draft years, and victory confetti", async () => {
   assert.doesNotMatch(page, /\["Division"/);
   assert.doesNotMatch(page, /Career tier|\btier\b/i);
   assert.match(page, /next\.length === 10/);
-  assert.match(page, /guess-athlete-v4-stats/);
+  assert.match(page, /guess-athlete-v5-stats/);
   assert.match(page, /guess-nba-player-instructions-v1/);
   assert.match(page, /HOW TO PLAY/);
   assert.match(page, /role="dialog"/);
@@ -57,62 +57,35 @@ test("uses six athlete clues, draft years, and victory confetti", async () => {
   await access(new URL("../public/guess-the-athlete-icon.png", import.meta.url));
 });
 
-test("uses the all-time 200 plus the complete current top 150", async () => {
+test("uses the NBA 2K top 250 active players", async () => {
   const players = JSON.parse(await readFile(new URL("../data/players.json", import.meta.url), "utf8"));
-  assert.ok(players.length >= 200 && players.length <= 350);
+  assert.equal(players.length, 250);
   assert.equal(new Set(players.map(player => player.id)).size, players.length);
   assert.deepEqual(players.map(player => player.rank), Array.from({ length: players.length }, (_, index) => index + 1));
   const allTime = players.filter(player => player.allTimeRank !== null);
   const current = players.filter(player => player.currentRank !== null);
-  assert.equal(allTime.length, 200);
-  assert.equal(current.length, 150);
-  assert.deepEqual(allTime.map(player => player.allTimeRank), Array.from({ length: 200 }, (_, index) => index + 1));
-  assert.deepEqual([...current].sort((a, b) => a.currentRank - b.currentRank).map(player => player.currentRank), Array.from({ length: 150 }, (_, index) => index + 1));
+  assert.equal(allTime.length, 0);
+  assert.equal(current.length, 250);
+  assert.deepEqual(current.map(player => player.currentRank), Array.from({ length: 250 }, (_, index) => index + 1));
   assert.ok(current.some(player => player.name === "Victor Wembanyama"));
-  assert.ok(players.filter(player => player.active).length >= 150);
-  const expectedCurrentTeams = {
-    "LeBron James": "Philadelphia 76ers",
-    "Kevin Durant": "Houston Rockets",
-    "Giannis Antetokounmpo": "Miami Heat",
-    "Luka Dončić": "Los Angeles Lakers",
-    "Jimmy Butler": "Golden State Warriors",
+  assert.equal(players.filter(player => player.active).length, 250);
+  const expectedTwoKValues = {
+    "Nikola Jokic": { rating: 98, height: 83, weight: 284, position: "Center" },
+    "Jayson Tatum": { rating: 94, height: 80, weight: 210, position: "Forward" },
+    "LeBron James": { rating: 94, height: 81, weight: 250, position: "Forward" },
   };
-  const expectedDraftYears = {
-    "Michael Jordan": 1984,
-    "LeBron James": 2003,
-    "Stephen Curry": 2009,
-    "Nikola Jokić": 2014,
-    "Victor Wembanyama": 2023,
-    "Cooper Flagg": 2025,
-  };
-  for (const [name, draftYear] of Object.entries(expectedDraftYears)) {
-    assert.equal(players.find(player => player.name === name)?.draftYear, draftYear);
-  }
-  assert.equal(players.find(player => player.name === "Ben Wallace")?.draftYear, null);
-  for (const [name, team] of Object.entries(expectedCurrentTeams)) {
+  for (const [name, expected] of Object.entries(expectedTwoKValues)) {
     const player = players.find(item => item.name === name);
-    assert.equal(player?.team, team);
-    assert.equal(player?.active, true);
-    assert.equal(player?.rosterSeason, "2026-27");
-  }
-  const expectedLegendTeams = {
-    "Michael Jordan": "Chicago Bulls",
-    "Kobe Bryant": "Los Angeles Lakers",
-    "Shaquille O'Neal": "Los Angeles Lakers",
-    "Dwyane Wade": "Miami Heat",
-    "Dirk Nowitzki": "Dallas Mavericks",
-  };
-  for (const [name, team] of Object.entries(expectedLegendTeams)) {
-    const player = players.find(item => item.name === name);
-    assert.equal(player?.team, team);
-    assert.equal(player?.active, false);
-    assert.equal(player?.teams[0].games, Math.max(...player.teams.map(entry => entry.games)));
+    assert.deepEqual(
+      player && { rating: player.twoKRating, height: player.height, weight: player.weight, position: player.position },
+      expected,
+    );
   }
   for (const player of players) {
     assert.ok(player.name);
-    assert.ok(Number.isInteger(player.nbaId) && player.nbaId > 0);
+    assert.ok(Number.isInteger(player.nbaId) || Number.isInteger(player.espnId));
     assert.equal(typeof player.active, "boolean");
-    assert.equal(player.rosterSeason, player.active ? "2026-27" : null);
+    assert.equal(player.rosterSeason, "2025-26");
     assert.ok(player.draftYear === null || (Number.isInteger(player.draftYear) && player.draftYear >= 1947 && player.draftYear <= 2025));
     assert.equal("debut" in player, false);
     assert.ok(["East", "West"].includes(player.conference));
@@ -120,6 +93,7 @@ test("uses the all-time 200 plus the complete current top 150", async () => {
     assert.ok(player.teams.length >= 1);
     assert.equal(player.team, player.teams[0].team);
     assert.ok(player.height > 60);
-    assert.ok(player.winShares > 0);
+    assert.ok(Number.isInteger(player.weight) && player.weight > 100);
+    assert.ok(Number.isInteger(player.twoKRating) && player.twoKRating >= 75);
   }
 });
