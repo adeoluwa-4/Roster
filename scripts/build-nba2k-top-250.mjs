@@ -88,13 +88,18 @@ const oldByName = new Map(oldPlayers.map((player) => [normalize(player.name), pl
 const nbaPlayersSource = await (await fetch(NBA_PLAYERS)).text();
 const nbaIdByName = new Map([...nbaPlayersSource.matchAll(/\[(\d+),\s+"[^"]+",\s+"[^"]+",\s+"([^"]+)",\s+(?:True|False)\]/g)].map(([, id, name]) => [normalize(name), Number(id)]));
 const ratings = await fetchJson(NBA_2K_ROSTER);
+const teams = await fetchJson(ESPN_TEAMS);
+const espnRosters = await mapPool(teams.sports[0].leagues[0].teams, async ({ team }) => {
+  const roster = await fetchJson(ESPN_ROSTER(team.id));
+  return { season: roster.season.displayName, team: roster.team.displayName, athletes: roster.athletes };
+});
+const rosterSeason = new Set(espnRosters.map((roster) => roster.season));
+if (rosterSeason.size !== 1) throw new Error(`ESPN roster seasons disagree: ${[...rosterSeason].join(", ")}`);
+const espnByName = new Map(espnRosters.flatMap((roster) => roster.athletes.map((athlete) => [normalize(athlete.displayName), { ...athlete, currentTeam: roster.team }])));
 const top250 = ratings
+  .filter((player) => espnByName.has(normalize(`${player.first_name} ${player.last_name}`)))
   .sort((left, right) => right.rating - left.rating || `${left.first_name} ${left.last_name}`.localeCompare(`${right.first_name} ${right.last_name}`))
   .slice(0, 250);
-
-const teams = await fetchJson(ESPN_TEAMS);
-const espnRosters = await mapPool(teams.sports[0].leagues[0].teams, async ({ team }) => (await fetchJson(ESPN_ROSTER(team.id))).athletes);
-const espnByName = new Map(espnRosters.flat().map((athlete) => [normalize(athlete.displayName), athlete]));
 const profiles = await mapPool(top250, async (player) => {
   const athlete = espnByName.get(normalize(`${player.first_name} ${player.last_name}`));
   if (!athlete) return null;
@@ -110,7 +115,7 @@ const players = top250.map((twoK, index) => {
   const profile = profileByName.get(key);
   const name = athlete?.displayName ?? canonicalNames.get(normalize(sourceName)) ?? previous?.name ?? sourceName;
   const nationality = previous?.nationality ?? athlete?.birthPlace?.country ?? "USA";
-  const team = twoK.team;
+  const team = athlete.currentTeam;
   return {
     id: slug(name),
     rank: index + 1,
@@ -124,7 +129,7 @@ const players = top250.map((twoK, index) => {
     teams: [{ team, games: previous?.teams?.[0]?.games ?? 0 }],
     nationality,
     continent: previous?.continent ?? continent(nationality),
-    height: height(twoK.height),
+    height: athlete.height,
     weight: twoK.weight,
     games: previous?.games ?? 0,
     winShares: previous?.winShares ?? 0,
@@ -133,7 +138,7 @@ const players = top250.map((twoK, index) => {
     espnId: athlete ? Number(athlete.id) : null,
     twoKRating: twoK.rating,
     active: true,
-    rosterSeason: "2025-26",
+    rosterSeason: [...rosterSeason][0],
   };
 });
 
@@ -143,4 +148,4 @@ if (players.length !== 250 || players.some((player) => !Number.isInteger(player.
 }
 
 await writeFile(output, `${JSON.stringify(players, null, 2)}\n`);
-console.log(`Wrote ${players.length} NBA 2K top-rated active players. Rating floor: ${players.at(-1).twoKRating}. ${unmatched.length} players retain their previous data when available.`);
+console.log(`Wrote ${players.length} ESPN-current NBA 2K players. Rating floor: ${players.at(-1).twoKRating}. Roster season: ${[...rosterSeason][0]}.`);
