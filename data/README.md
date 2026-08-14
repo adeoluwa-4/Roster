@@ -1,25 +1,20 @@
 # NBA player database
 
-`players.json` is the local game pool for Guess the NBA Player. It contains the all-time top 200 NBA/BAA players plus every missing player from the current season's top 150.
+`players.json` is the local game pool for Guess the NBA Player. It contains the 250 highest-rated active NBA players in the NBA 2K26 roster snapshot.
 
 ## Sources
 
-- [V2 NBA Player Database](https://www.kaggle.com/datasets/flynn28/v2-nba-player-database): career Win Shares, position, height, and games played.
-- [NBA Stats (1947-present)](https://www.kaggle.com/datasets/sumitrodatta/nba-aba-baa-stats): season-by-season team and games-played history.
-- [NBA Players Dataset](https://www.kaggle.com/datasets/romainmorleghem/nba-players-info-and-headlinestats-up-to-2025): country and official draft-year information sourced from the NBA API `CommonPlayerInfo` records.
-- [NBA League Roster](https://www.nba.com/players): official current team, position, height, and country for active players. The current snapshot is for the 2026-27 season.
+- [NBA2KLab NBA 2K26 player ratings](https://www.nba2klab.com/nba2k-player-ratings): the ranking, NBA 2K overall rating, height, and position for the full player pool.
+- [NBA2KLab NBA 2K26 team rosters](https://www.nba2klab.com/teams): the NBA 2K-listed player weights.
+- Public roster and player-profile metadata is used only to retain draft year, nationality, and player-photo fallback identifiers when a player was not already in the previous game data. Height, weight, and position always come from the NBA 2K dataset.
 
 ## Game rules
 
-- The all-time pool includes the 200 eligible NBA/BAA players with the most career Win Shares.
-- The current pool ranks the latest NBA season's top 150 by Win Shares, using VORP, games, and name as deterministic tie-breakers. Players already in the all-time 200 are not duplicated.
-- `allTimeRank` and `currentRank` show which list or lists include each player.
-- For an active player, `team` is the player’s current team on the official NBA league roster. For an inactive player, it is the franchise for which the player appeared in the most regular-season games.
-- `teams` preserves every NBA/BAA franchise the player represented. An active player’s current team is first, followed by career teams ordered by games played; a newly joined team may have zero recorded games before the season begins.
-- `active` and `rosterSeason` identify records updated from the current official roster.
-- `draftYear` is the NBA draft year. It is `null` for players the NBA identifies as undrafted, which the game displays as “Undrafted.”
-- Historical franchise names are grouped into their current franchise, such as Minneapolis and Los Angeles Lakers.
-- `conference` follows the current conference of that franchise. Defunct franchises use their historical geography.
-- Country values unavailable from the NBA information dataset fall back to USA; the build script reports the fallback count.
+- The game pool is exactly 250 active players, sorted by NBA 2K overall rating. Ties are sorted by player name so the daily puzzle order is stable.
+- `twoKRating` records the overall rating that selected each player for the pool.
+- `height`, `weight`, and `position` are NBA 2K values. Height is stored in inches and weight in pounds.
+- `team` and `conference` follow the NBA 2K roster snapshot; `teams` retains the current team as the first entry for compatibility with the game.
+- `draftYear` is the NBA draft year. It is `null` for undrafted players, which the game displays as “Undrafted.”
+- `active` is always `true` and `rosterSeason` is `2025-26` for this NBA 2K26 snapshot.
 
-Regenerate the file with `scripts/build-player-database.py` after downloading the source datasets and the official NBA league roster page. Pass the saved roster page with `--roster` and its season with `--roster-season`.
+Regenerate the file with `node scripts/build-nba2k-top-250.mjs`. The script downloads the public NBA 2K roster feed and supplements only the non-physical game metadata.
