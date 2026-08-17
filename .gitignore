@@ -41,3 +41,6 @@ next-env.d.ts
 /.wrangler/
 /outputs/
 /work/
+
+# Private game content: keep the full player list out of the public repository.
+/data/players.json
