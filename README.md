@@ -1,11 +1,5 @@
 # Daily Roster
 
-[Play Daily Roster](https://playdailyroster.app)
+[Daily Roster](https://playdailyroster.app) is a basketball guessing game. Players get 10 tries to find the mystery NBA player, and each guess gives clues such as team, height, position, draft year, and nationality.
 
-Daily Roster is a basketball guessing game. You get 10 tries to guess the mystery NBA player.
-
-Each guess gives you clues about the player, like their team, height, position, draft year, and nationality.
-
-## This code
-
-This repo has the website code. The real player list is kept private, so it is not included here.
+I built the website, game screen, clue system, player data tools, tests, and database structure. The real player list stays private, but this repository shows the code that runs the game.
