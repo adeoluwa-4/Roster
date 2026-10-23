@@ -1,0 +1,15 @@
+name: daily_roster_warehouse
+version: "1.0.0"
+config-version: 2
+profile: daily_roster_warehouse
+
+model-paths: ["models"]
+test-paths: ["tests"]
+target-path: "target"
+clean-targets: ["target", "logs"]
+
+models:
+  daily_roster_warehouse:
+    +materialized: table
+    +schema: analytics
+    +tags: ["daily_roster"]
