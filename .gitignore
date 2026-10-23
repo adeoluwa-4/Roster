@@ -41,6 +41,13 @@ next-env.d.ts
 /.wrangler/
 /outputs/
 /work/
+/warehouse/target/
+/warehouse/logs/
+/warehouse/*.duckdb
+/warehouse/*.duckdb.wal
+/.venv/
 
-# Private game content: keep the full player list out of the public repository.
-/data/players.json
+# These exports are reproducible pipeline products and remain versioned because
+# the public game imports them during a clean build.
+!/data/players.json
+!/data/puzzles.json
