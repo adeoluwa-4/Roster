@@ -1,0 +1,23 @@
+version: 2
+
+sources:
+  - name: raw
+    schema: raw
+    tables:
+      - name: source_snapshot
+      - name: player_record
+  - name: core
+    schema: core
+    tables:
+      - name: player_identity
+      - name: player_alias
+      - name: identity_resolution_event
+      - name: quarantine_player_record
+      - name: player_history
+      - name: roster_history
+      - name: rating_history
+  - name: ops
+    schema: ops
+    tables:
+      - name: daily_puzzle
+      - name: pipeline_run
