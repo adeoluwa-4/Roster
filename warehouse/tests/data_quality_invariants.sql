@@ -74,7 +74,8 @@ with violations as (
         union all
         select rating_id, source_snapshot_id from {{ source('core', 'rating_history') }}
     ) as history
-    left join {{ source('raw', 'source_snapshot') }} as snapshot using (source_snapshot_id)
+    left join {{ source('raw', 'source_snapshot') }} as snapshot
+      on history.source_snapshot_id = snapshot.snapshot_id
     where snapshot.snapshot_id is null
 
     union all
