@@ -1,0 +1,102 @@
+version: 2
+
+models:
+  - name: dim_player
+    description: Stable internal player identities with source identifiers retained separately.
+    columns:
+      - name: player_id
+        tests: [not_null, unique]
+      - name: game_player_id
+        tests: [not_null, unique]
+  - name: dim_team
+    columns:
+      - name: team_id
+        tests: [not_null, unique]
+      - name: conference
+        tests:
+          - accepted_values:
+              arguments:
+                values: [East, West]
+  - name: dim_season
+    columns:
+      - name: season_id
+        tests: [not_null, unique]
+  - name: dim_country
+    columns:
+      - name: country_id
+        tests: [not_null, unique]
+  - name: dim_position
+    columns:
+      - name: position_id
+        tests: [not_null, unique]
+  - name: fact_player_snapshot
+    columns:
+      - name: snapshot_id
+        tests: [not_null, unique]
+      - name: player_id
+        tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_player')
+                field: player_id
+      - name: source_snapshot_id
+        tests: [not_null]
+  - name: fact_player_rating
+    columns:
+      - name: rating_id
+        tests: [not_null, unique]
+      - name: player_id
+        tests:
+          - relationships:
+              arguments:
+                to: ref('dim_player')
+                field: player_id
+  - name: fact_roster_membership
+    columns:
+      - name: membership_id
+        tests: [not_null, unique]
+      - name: team_id
+        tests:
+          - relationships:
+              arguments:
+                to: ref('dim_team')
+                field: team_id
+  - name: fact_daily_puzzle
+    columns:
+      - name: puzzle_date
+        tests: [not_null, unique]
+      - name: player_id
+        tests:
+          - relationships:
+              arguments:
+                to: ref('dim_player')
+                field: player_id
+      - name: selection_hash
+        tests: [not_null]
+  - name: fact_pipeline_run
+    columns:
+      - name: run_id
+        tests: [not_null, unique]
+      - name: status
+        tests:
+          - accepted_values:
+              arguments:
+                values: [running, success, failed]
+  - name: mart_current_player_pool
+    columns:
+      - name: player_id
+        tests: [not_null, unique]
+      - name: game_player_id
+        tests: [not_null, unique]
+      - name: position
+        tests:
+          - accepted_values:
+              arguments:
+                values: [Guard, Forward, Center, Guard / Forward, Forward / Guard, Forward / Center, Center / Forward]
+      - name: source_snapshot_id
+        tests: [not_null]
+  - name: mart_daily_puzzle_candidates
+    columns:
+      - name: player_id
+        tests: [not_null, unique]
