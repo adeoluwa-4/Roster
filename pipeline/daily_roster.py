@@ -317,7 +317,8 @@ def source_identifiers(record: dict[str, Any]) -> list[tuple[str, str]]:
         identifiers.append(("nba_id", str(record["nbaId"])))
     if record.get("espnId") is not None:
         identifiers.append(("espn_id", str(record["espnId"])))
-    identifiers.append(("fixture", str(record.get("id", ""))))
+    if record.get("id") not in (None, ""):
+        identifiers.append(("fixture", str(record["id"])))
     return [(source, value) for source, value in identifiers if value]
 
 
@@ -431,9 +432,13 @@ def load_snapshot(connection: duckdb.DuckDBPyConnection, snapshot_path: Path, me
     captured_at = datetime.fromisoformat(str(payload["captured_at"]).replace("Z", "+00:00"))
     exists = connection.execute("SELECT 1 FROM raw.source_snapshot WHERE snapshot_id = ?", [snapshot_id]).fetchone()
     if not exists:
+        try:
+            source_path = str(snapshot_path.resolve().relative_to(ROOT))
+        except ValueError:
+            source_path = str(snapshot_path.resolve())
         connection.execute("""
             INSERT INTO raw.source_snapshot VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
-        """, [snapshot_id, source_name, captured_at, effective_date, checksum, SCHEMA_VERSION, str(snapshot_path.relative_to(ROOT)), len(records), utc_now()])
+        """, [snapshot_id, source_name, captured_at, effective_date, checksum, SCHEMA_VERSION, source_path, len(records), utc_now()])
 
     seen: set[str] = set()
     metrics.records_fetched += len(records)
