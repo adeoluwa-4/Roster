@@ -1,0 +1,7252 @@
+[
+  {
+    "id": "nikola-jokic",
+    "rank": 1,
+    "allTimeRank": null,
+    "currentRank": 1,
+    "name": "Nikola Jokic",
+    "draftYear": 2014,
+    "position": "Center",
+    "conference": "West",
+    "team": "Denver Nuggets",
+    "teams": [
+      {
+        "team": "Denver Nuggets",
+        "games": 745
+      }
+    ],
+    "nationality": "Serbia",
+    "continent": "Europe",
+    "height": 83,
+    "weight": 284,
+    "games": 745,
+    "winShares": 128.0,
+    "currentWinShares": 14.9,
+    "nbaId": 203999,
+    "espnId": 3112335,
+    "twoKRating": 98,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "shai-gilgeous-alexander",
+    "rank": 2,
+    "allTimeRank": null,
+    "currentRank": 2,
+    "name": "Shai Gilgeous-Alexander",
+    "draftYear": 2018,
+    "position": "Guard",
+    "conference": "West",
+    "team": "Oklahoma City Thunder",
+    "teams": [
+      {
+        "team": "Oklahoma City Thunder",
+        "games": 462
+      }
+    ],
+    "nationality": "Canada",
+    "continent": "North America",
+    "height": 78,
+    "weight": 195,
+    "games": 462,
+    "winShares": 60.4,
+    "currentWinShares": 15.2,
+    "nbaId": 1628983,
+    "espnId": 4278073,
+    "twoKRating": 98,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "giannis-antetokounmpo",
+    "rank": 3,
+    "allTimeRank": null,
+    "currentRank": 3,
+    "name": "Giannis Antetokounmpo",
+    "draftYear": 2013,
+    "position": "Forward / Center",
+    "conference": "East",
+    "team": "Miami Heat",
+    "teams": [
+      {
+        "team": "Miami Heat",
+        "games": 859
+      }
+    ],
+    "nationality": "Greece",
+    "continent": "Europe",
+    "height": 83,
+    "weight": 243,
+    "games": 859,
+    "winShares": 120.8,
+    "currentWinShares": 5.0,
+    "nbaId": 203507,
+    "espnId": 3032977,
+    "twoKRating": 97,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "anthony-edwards",
+    "rank": 4,
+    "allTimeRank": null,
+    "currentRank": 4,
+    "name": "Anthony Edwards",
+    "draftYear": 2020,
+    "position": "Guard / Forward",
+    "conference": "West",
+    "team": "Minnesota Timberwolves",
+    "teams": [
+      {
+        "team": "Minnesota Timberwolves",
+        "games": 381
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 76,
+    "weight": 225,
+    "games": 381,
+    "winShares": 24.8,
+    "currentWinShares": 6.5,
+    "nbaId": 1630162,
+    "espnId": 4594268,
+    "twoKRating": 95,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "luka-doncic",
+    "rank": 5,
+    "allTimeRank": null,
+    "currentRank": 5,
+    "name": "Luka Doncic",
+    "draftYear": 2018,
+    "position": "Guard",
+    "conference": "West",
+    "team": "Los Angeles Lakers",
+    "teams": [
+      {
+        "team": "Los Angeles Lakers",
+        "games": 450
+      }
+    ],
+    "nationality": "Slovenia",
+    "continent": "Europe",
+    "height": 80,
+    "weight": 230,
+    "games": 450,
+    "winShares": 57.1,
+    "currentWinShares": 9.5,
+    "nbaId": 1629029,
+    "espnId": 3945274,
+    "twoKRating": 95,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "jayson-tatum",
+    "rank": 6,
+    "allTimeRank": null,
+    "currentRank": 6,
+    "name": "Jayson Tatum",
+    "draftYear": 2017,
+    "position": "Forward",
+    "conference": "East",
+    "team": "Boston Celtics",
+    "teams": [
+      {
+        "team": "Boston Celtics",
+        "games": 601
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 80,
+    "weight": 210,
+    "games": 601,
+    "winShares": 77.0,
+    "currentWinShares": null,
+    "nbaId": 1628369,
+    "espnId": 4065648,
+    "twoKRating": 94,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "lebron-james",
+    "rank": 7,
+    "allTimeRank": null,
+    "currentRank": 7,
+    "name": "LeBron James",
+    "draftYear": 2003,
+    "position": "Forward",
+    "conference": "East",
+    "team": "Philadelphia 76ers",
+    "teams": [
+      {
+        "team": "Philadelphia 76ers",
+        "games": 1562
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 81,
+    "weight": 250,
+    "games": 1562,
+    "winShares": 271.4,
+    "currentWinShares": 5.4,
+    "nbaId": 2544,
+    "espnId": 1966,
+    "twoKRating": 94,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "stephen-curry",
+    "rank": 8,
+    "allTimeRank": null,
+    "currentRank": 8,
+    "name": "Stephen Curry",
+    "draftYear": 2009,
+    "position": "Guard",
+    "conference": "West",
+    "team": "Golden State Warriors",
+    "teams": [
+      {
+        "team": "Golden State Warriors",
+        "games": 1026
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 74,
+    "weight": 185,
+    "games": 1026,
+    "winShares": 143.1,
+    "currentWinShares": 4.1,
+    "nbaId": 201939,
+    "espnId": 3975,
+    "twoKRating": 94,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "victor-wembanyama",
+    "rank": 9,
+    "allTimeRank": null,
+    "currentRank": 9,
+    "name": "Victor Wembanyama",
+    "draftYear": 2023,
+    "position": "Forward / Center",
+    "conference": "West",
+    "team": "San Antonio Spurs",
+    "teams": [
+      {
+        "team": "San Antonio Spurs",
+        "games": 117
+      }
+    ],
+    "nationality": "France",
+    "continent": "Europe",
+    "height": 88,
+    "weight": 235,
+    "games": 117,
+    "winShares": 7.5,
+    "currentWinShares": 10.0,
+    "nbaId": 1641705,
+    "espnId": 5104157,
+    "twoKRating": 94,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "anthony-davis",
+    "rank": 10,
+    "allTimeRank": null,
+    "currentRank": 10,
+    "name": "Anthony Davis",
+    "draftYear": 2012,
+    "position": "Forward / Center",
+    "conference": "East",
+    "team": "Washington Wizards",
+    "teams": [
+      {
+        "team": "Washington Wizards",
+        "games": 787
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 82,
+    "weight": 253,
+    "games": 787,
+    "winShares": 118.8,
+    "currentWinShares": null,
+    "nbaId": 203076,
+    "espnId": 6583,
+    "twoKRating": 93,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "donovan-mitchell",
+    "rank": 11,
+    "allTimeRank": null,
+    "currentRank": 11,
+    "name": "Donovan Mitchell",
+    "draftYear": 2017,
+    "position": "Guard",
+    "conference": "East",
+    "team": "Cleveland Cavaliers",
+    "teams": [
+      {
+        "team": "Cleveland Cavaliers",
+        "games": 539
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 74,
+    "weight": 215,
+    "games": 539,
+    "winShares": 51.9,
+    "currentWinShares": 8.2,
+    "nbaId": 1628378,
+    "espnId": 3908809,
+    "twoKRating": 93,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "jalen-brunson",
+    "rank": 12,
+    "allTimeRank": null,
+    "currentRank": 12,
+    "name": "Jalen Brunson",
+    "draftYear": 2018,
+    "position": "Guard",
+    "conference": "East",
+    "team": "New York Knicks",
+    "teams": [
+      {
+        "team": "New York Knicks",
+        "games": 487
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 74,
+    "weight": 190,
+    "games": 487,
+    "winShares": 45.5,
+    "currentWinShares": 8.8,
+    "nbaId": 1628973,
+    "espnId": 3934672,
+    "twoKRating": 93,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "kevin-durant",
+    "rank": 13,
+    "allTimeRank": null,
+    "currentRank": 13,
+    "name": "Kevin Durant",
+    "draftYear": 2007,
+    "position": "Forward",
+    "conference": "West",
+    "team": "Houston Rockets",
+    "teams": [
+      {
+        "team": "Houston Rockets",
+        "games": 1123
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 83,
+    "weight": 240,
+    "games": 1123,
+    "winShares": 175.4,
+    "currentWinShares": 10.7,
+    "nbaId": 201142,
+    "espnId": 3202,
+    "twoKRating": 93,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "tyrese-haliburton",
+    "rank": 14,
+    "allTimeRank": null,
+    "currentRank": 14,
+    "name": "Tyrese Haliburton",
+    "draftYear": 2020,
+    "position": "Guard",
+    "conference": "East",
+    "team": "Indiana Pacers",
+    "teams": [
+      {
+        "team": "Indiana Pacers",
+        "games": 0
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 77,
+    "weight": 185,
+    "games": 0,
+    "winShares": 0.0,
+    "currentWinShares": null,
+    "nbaId": 1630169,
+    "espnId": 4396993,
+    "twoKRating": 93,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "cade-cunningham",
+    "rank": 15,
+    "allTimeRank": null,
+    "currentRank": 15,
+    "name": "Cade Cunningham",
+    "draftYear": 2021,
+    "position": "Guard",
+    "conference": "East",
+    "team": "Detroit Pistons",
+    "teams": [
+      {
+        "team": "Detroit Pistons",
+        "games": 208
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 78,
+    "weight": 220,
+    "games": 208,
+    "winShares": 7.0,
+    "currentWinShares": 7.9,
+    "nbaId": 1630595,
+    "espnId": 4432166,
+    "twoKRating": 92,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "joel-embiid",
+    "rank": 16,
+    "allTimeRank": null,
+    "currentRank": 16,
+    "name": "Joel Embiid",
+    "draftYear": 2014,
+    "position": "Center",
+    "conference": "East",
+    "team": "Philadelphia 76ers",
+    "teams": [
+      {
+        "team": "Philadelphia 76ers",
+        "games": 452
+      }
+    ],
+    "nationality": "Cameroon",
+    "continent": "Africa",
+    "height": 84,
+    "weight": 280,
+    "games": 452,
+    "winShares": 64.9,
+    "currentWinShares": 4.1,
+    "nbaId": 203954,
+    "espnId": 3059318,
+    "twoKRating": 92,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "karl-anthony-towns",
+    "rank": 17,
+    "allTimeRank": null,
+    "currentRank": 17,
+    "name": "Karl-Anthony Towns",
+    "draftYear": 2015,
+    "position": "Forward / Center",
+    "conference": "East",
+    "team": "New York Knicks",
+    "teams": [
+      {
+        "team": "New York Knicks",
+        "games": 645
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 84,
+    "weight": 248,
+    "games": 645,
+    "winShares": 85.1,
+    "currentWinShares": 9.5,
+    "nbaId": 1626157,
+    "espnId": 3136195,
+    "twoKRating": 92,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "kawhi-leonard",
+    "rank": 18,
+    "allTimeRank": null,
+    "currentRank": 18,
+    "name": "Kawhi Leonard",
+    "draftYear": 2011,
+    "position": "Forward",
+    "conference": "West",
+    "team": "LA Clippers",
+    "teams": [
+      {
+        "team": "LA Clippers",
+        "games": 733
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 78,
+    "weight": 225,
+    "games": 733,
+    "winShares": 102.7,
+    "currentWinShares": 9.2,
+    "nbaId": 202695,
+    "espnId": 6450,
+    "twoKRating": 92,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "devin-booker",
+    "rank": 19,
+    "allTimeRank": null,
+    "currentRank": 19,
+    "name": "Devin Booker",
+    "draftYear": 2015,
+    "position": "Guard",
+    "conference": "West",
+    "team": "Phoenix Suns",
+    "teams": [
+      {
+        "team": "Phoenix Suns",
+        "games": 673
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 77,
+    "weight": 206,
+    "games": 673,
+    "winShares": 51.5,
+    "currentWinShares": 6.5,
+    "nbaId": 1626164,
+    "espnId": 3136193,
+    "twoKRating": 91,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "ja-morant",
+    "rank": 20,
+    "allTimeRank": null,
+    "currentRank": 20,
+    "name": "Ja Morant",
+    "draftYear": 2019,
+    "position": "Guard",
+    "conference": "West",
+    "team": "Portland Trail Blazers",
+    "teams": [
+      {
+        "team": "Portland Trail Blazers",
+        "games": 0
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 74,
+    "weight": 174,
+    "games": 0,
+    "winShares": 0.0,
+    "currentWinShares": null,
+    "nbaId": 1629630,
+    "espnId": 4279888,
+    "twoKRating": 91,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "jalen-williams",
+    "rank": 21,
+    "allTimeRank": null,
+    "currentRank": 21,
+    "name": "Jalen Williams",
+    "draftYear": 2022,
+    "position": "Forward",
+    "conference": "West",
+    "team": "Oklahoma City Thunder",
+    "teams": [
+      {
+        "team": "Oklahoma City Thunder",
+        "games": 0
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 77,
+    "weight": 211,
+    "games": 0,
+    "winShares": 0.0,
+    "currentWinShares": null,
+    "nbaId": 1631114,
+    "espnId": 4593803,
+    "twoKRating": 90,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "jaylen-brown",
+    "rank": 22,
+    "allTimeRank": null,
+    "currentRank": 22,
+    "name": "Jaylen Brown",
+    "draftYear": 2016,
+    "position": "Guard / Forward",
+    "conference": "East",
+    "team": "Philadelphia 76ers",
+    "teams": [
+      {
+        "team": "Philadelphia 76ers",
+        "games": 603
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 78,
+    "weight": 223,
+    "games": 603,
+    "winShares": 40.6,
+    "currentWinShares": 6.9,
+    "nbaId": 1627759,
+    "espnId": 3917376,
+    "twoKRating": 90,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "kyrie-irving",
+    "rank": 23,
+    "allTimeRank": null,
+    "currentRank": 23,
+    "name": "Kyrie Irving",
+    "draftYear": 2011,
+    "position": "Guard",
+    "conference": "West",
+    "team": "Dallas Mavericks",
+    "teams": [
+      {
+        "team": "Dallas Mavericks",
+        "games": 779
+      }
+    ],
+    "nationality": "Australia",
+    "continent": "Oceania",
+    "height": 74,
+    "weight": 195,
+    "games": 779,
+    "winShares": 91.0,
+    "currentWinShares": null,
+    "nbaId": 202681,
+    "espnId": 6442,
+    "twoKRating": 90,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "paolo-banchero",
+    "rank": 24,
+    "allTimeRank": null,
+    "currentRank": 24,
+    "name": "Paolo Banchero",
+    "draftYear": 2022,
+    "position": "Forward",
+    "conference": "East",
+    "team": "Orlando Magic",
+    "teams": [
+      {
+        "team": "Orlando Magic",
+        "games": 198
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 82,
+    "weight": 250,
+    "games": 198,
+    "winShares": 11.1,
+    "currentWinShares": 5.0,
+    "nbaId": 1631094,
+    "espnId": 4432573,
+    "twoKRating": 90,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "trae-young",
+    "rank": 25,
+    "allTimeRank": null,
+    "currentRank": 25,
+    "name": "Trae Young",
+    "draftYear": 2018,
+    "position": "Guard",
+    "conference": "East",
+    "team": "Washington Wizards",
+    "teams": [
+      {
+        "team": "Washington Wizards",
+        "games": 0
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 74,
+    "weight": 164,
+    "games": 0,
+    "winShares": 0.0,
+    "currentWinShares": null,
+    "nbaId": 1629027,
+    "espnId": 4277905,
+    "twoKRating": 90,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "evan-mobley",
+    "rank": 26,
+    "allTimeRank": null,
+    "currentRank": 26,
+    "name": "Evan Mobley",
+    "draftYear": 2021,
+    "position": "Forward / Center",
+    "conference": "East",
+    "team": "Cleveland Cavaliers",
+    "teams": [
+      {
+        "team": "Cleveland Cavaliers",
+        "games": 269
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 83,
+    "weight": 215,
+    "games": 269,
+    "winShares": 28.3,
+    "currentWinShares": 6.5,
+    "nbaId": 1630596,
+    "espnId": 4432158,
+    "twoKRating": 89,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "james-harden",
+    "rank": 27,
+    "allTimeRank": null,
+    "currentRank": 27,
+    "name": "James Harden",
+    "draftYear": 2009,
+    "position": "Guard",
+    "conference": "East",
+    "team": "Cleveland Cavaliers",
+    "teams": [
+      {
+        "team": "Cleveland Cavaliers",
+        "games": 1151
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 77,
+    "weight": 220,
+    "games": 1151,
+    "winShares": 174.7,
+    "currentWinShares": 7.7,
+    "nbaId": 201935,
+    "espnId": 3992,
+    "twoKRating": 89,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "jaren-jackson-jr",
+    "rank": 28,
+    "allTimeRank": null,
+    "currentRank": 28,
+    "name": "Jaren Jackson Jr.",
+    "draftYear": 2018,
+    "position": "Forward / Center",
+    "conference": "West",
+    "team": "Utah Jazz",
+    "teams": [
+      {
+        "team": "Utah Jazz",
+        "games": 0
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 82,
+    "weight": 242,
+    "games": 0,
+    "winShares": 0.0,
+    "currentWinShares": null,
+    "nbaId": 1628991,
+    "espnId": 4277961,
+    "twoKRating": 89,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "pascal-siakam",
+    "rank": 29,
+    "allTimeRank": null,
+    "currentRank": 29,
+    "name": "Pascal Siakam",
+    "draftYear": 2016,
+    "position": "Forward / Center",
+    "conference": "East",
+    "team": "Indiana Pacers",
+    "teams": [
+      {
+        "team": "Indiana Pacers",
+        "games": 0
+      }
+    ],
+    "nationality": "Cameroon",
+    "continent": "Africa",
+    "height": 80,
+    "weight": 245,
+    "games": 0,
+    "winShares": 0.0,
+    "currentWinShares": null,
+    "nbaId": 1627783,
+    "espnId": 3149673,
+    "twoKRating": 89,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "bam-adebayo",
+    "rank": 30,
+    "allTimeRank": null,
+    "currentRank": 30,
+    "name": "Bam Adebayo",
+    "draftYear": 2017,
+    "position": "Forward / Center",
+    "conference": "East",
+    "team": "Miami Heat",
+    "teams": [
+      {
+        "team": "Miami Heat",
+        "games": 567
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 81,
+    "weight": 255,
+    "games": 567,
+    "winShares": 57.6,
+    "currentWinShares": 6.4,
+    "nbaId": 1628389,
+    "espnId": 4066261,
+    "twoKRating": 88,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "chet-holmgren",
+    "rank": 31,
+    "allTimeRank": null,
+    "currentRank": 31,
+    "name": "Chet Holmgren",
+    "draftYear": 2022,
+    "position": "Forward / Center",
+    "conference": "West",
+    "team": "Oklahoma City Thunder",
+    "teams": [
+      {
+        "team": "Oklahoma City Thunder",
+        "games": 114
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 85,
+    "weight": 208,
+    "games": 114,
+    "winShares": 12.1,
+    "currentWinShares": 9.1,
+    "nbaId": 1631096,
+    "espnId": 4433255,
+    "twoKRating": 88,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "damian-lillard",
+    "rank": 32,
+    "allTimeRank": null,
+    "currentRank": 32,
+    "name": "Damian Lillard",
+    "draftYear": 2012,
+    "position": "Guard",
+    "conference": "West",
+    "team": "Portland Trail Blazers",
+    "teams": [
+      {
+        "team": "Portland Trail Blazers",
+        "games": 900
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 74,
+    "weight": 195,
+    "games": 900,
+    "winShares": 118.4,
+    "currentWinShares": null,
+    "nbaId": 203081,
+    "espnId": 6606,
+    "twoKRating": 88,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "alperen-sengun",
+    "rank": 33,
+    "allTimeRank": null,
+    "currentRank": 33,
+    "name": "Alperen Sengun",
+    "draftYear": 2021,
+    "position": "Center",
+    "conference": "West",
+    "team": "Houston Rockets",
+    "teams": [
+      {
+        "team": "Houston Rockets",
+        "games": 286
+      }
+    ],
+    "nationality": "Turkey",
+    "continent": "Asia",
+    "height": 83,
+    "weight": 243,
+    "games": 286,
+    "winShares": 22.5,
+    "currentWinShares": 8.0,
+    "nbaId": 1630578,
+    "espnId": 4871144,
+    "twoKRating": 87,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "amen-thompson",
+    "rank": 34,
+    "allTimeRank": null,
+    "currentRank": 34,
+    "name": "Amen Thompson",
+    "draftYear": 2023,
+    "position": "Guard / Forward",
+    "conference": "West",
+    "team": "Houston Rockets",
+    "teams": [
+      {
+        "team": "Houston Rockets",
+        "games": 131
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 79,
+    "weight": 200,
+    "games": 131,
+    "winShares": 12.3,
+    "currentWinShares": 10.3,
+    "nbaId": 1641708,
+    "espnId": 4684740,
+    "twoKRating": 87,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "darius-garland",
+    "rank": 35,
+    "allTimeRank": null,
+    "currentRank": 35,
+    "name": "Darius Garland",
+    "draftYear": 2019,
+    "position": "Guard",
+    "conference": "West",
+    "team": "LA Clippers",
+    "teams": [
+      {
+        "team": "LA Clippers",
+        "games": 0
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 73,
+    "weight": 192,
+    "games": 0,
+    "winShares": 0.0,
+    "currentWinShares": null,
+    "nbaId": 1629636,
+    "espnId": 4396907,
+    "twoKRating": 87,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "derrick-white",
+    "rank": 36,
+    "allTimeRank": null,
+    "currentRank": 36,
+    "name": "Derrick White",
+    "draftYear": 2017,
+    "position": "Guard",
+    "conference": "East",
+    "team": "Boston Celtics",
+    "teams": [
+      {
+        "team": "Boston Celtics",
+        "games": 494
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 76,
+    "weight": 190,
+    "games": 494,
+    "winShares": 39.7,
+    "currentWinShares": 7.0,
+    "nbaId": 1628401,
+    "espnId": 3078576,
+    "twoKRating": 87,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "domantas-sabonis",
+    "rank": 37,
+    "allTimeRank": null,
+    "currentRank": 37,
+    "name": "Domantas Sabonis",
+    "draftYear": 2016,
+    "position": "Center",
+    "conference": "West",
+    "team": "Sacramento Kings",
+    "teams": [
+      {
+        "team": "Sacramento Kings",
+        "games": 0
+      }
+    ],
+    "nationality": "Lithuania",
+    "continent": "Europe",
+    "height": 82,
+    "weight": 240,
+    "games": 0,
+    "winShares": 0.0,
+    "currentWinShares": null,
+    "nbaId": 1627734,
+    "espnId": 3155942,
+    "twoKRating": 87,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "lamelo-ball",
+    "rank": 38,
+    "allTimeRank": null,
+    "currentRank": 38,
+    "name": "LaMelo Ball",
+    "draftYear": 2020,
+    "position": "Guard",
+    "conference": "West",
+    "team": "Minnesota Timberwolves",
+    "teams": [
+      {
+        "team": "Minnesota Timberwolves",
+        "games": 231
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 79,
+    "weight": 180,
+    "games": 231,
+    "winShares": 13.6,
+    "currentWinShares": 6.2,
+    "nbaId": 1630163,
+    "espnId": 4432816,
+    "twoKRating": 87,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "ivica-zubac",
+    "rank": 39,
+    "allTimeRank": null,
+    "currentRank": 39,
+    "name": "Ivica Zubac",
+    "draftYear": 2016,
+    "position": "Center",
+    "conference": "East",
+    "team": "Indiana Pacers",
+    "teams": [
+      {
+        "team": "Indiana Pacers",
+        "games": 0
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 84,
+    "weight": 240,
+    "games": 0,
+    "winShares": 0.0,
+    "currentWinShares": null,
+    "nbaId": 1627826,
+    "espnId": 4017837,
+    "twoKRating": 87,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "zion-williamson",
+    "rank": 40,
+    "allTimeRank": null,
+    "currentRank": 40,
+    "name": "Zion Williamson",
+    "draftYear": 2019,
+    "position": "Forward",
+    "conference": "West",
+    "team": "New Orleans Pelicans",
+    "teams": [
+      {
+        "team": "New Orleans Pelicans",
+        "games": 214
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 78,
+    "weight": 284,
+    "games": 214,
+    "winShares": 24.2,
+    "currentWinShares": 6.1,
+    "nbaId": 1629627,
+    "espnId": 4395628,
+    "twoKRating": 87,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "franz-wagner",
+    "rank": 41,
+    "allTimeRank": null,
+    "currentRank": 41,
+    "name": "Franz Wagner",
+    "draftYear": 2021,
+    "position": "Guard / Forward",
+    "conference": "East",
+    "team": "Orlando Magic",
+    "teams": [
+      {
+        "team": "Orlando Magic",
+        "games": 0
+      }
+    ],
+    "nationality": "Germany",
+    "continent": "Europe",
+    "height": 82,
+    "weight": 220,
+    "games": 0,
+    "winShares": 0.0,
+    "currentWinShares": null,
+    "nbaId": 1630532,
+    "espnId": 4566434,
+    "twoKRating": 86,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "jamal-murray",
+    "rank": 42,
+    "allTimeRank": null,
+    "currentRank": 42,
+    "name": "Jamal Murray",
+    "draftYear": 2016,
+    "position": "Guard",
+    "conference": "West",
+    "team": "Denver Nuggets",
+    "teams": [
+      {
+        "team": "Denver Nuggets",
+        "games": 536
+      }
+    ],
+    "nationality": "Canada",
+    "continent": "North America",
+    "height": 76,
+    "weight": 215,
+    "games": 536,
+    "winShares": 38.1,
+    "currentWinShares": 9.5,
+    "nbaId": 1627750,
+    "espnId": 3936299,
+    "twoKRating": 86,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "julius-randle",
+    "rank": 43,
+    "allTimeRank": null,
+    "currentRank": 43,
+    "name": "Julius Randle",
+    "draftYear": 2014,
+    "position": "Forward / Center",
+    "conference": "East",
+    "team": "Brooklyn Nets",
+    "teams": [
+      {
+        "team": "Brooklyn Nets",
+        "games": 710
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 81,
+    "weight": 250,
+    "games": 710,
+    "winShares": 49.6,
+    "currentWinShares": 7.4,
+    "nbaId": 203944,
+    "espnId": 3064514,
+    "twoKRating": 86,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "tyler-herro",
+    "rank": 44,
+    "allTimeRank": null,
+    "currentRank": 44,
+    "name": "Tyler Herro",
+    "draftYear": 2019,
+    "position": "Guard",
+    "conference": "East",
+    "team": "Milwaukee Bucks",
+    "teams": [
+      {
+        "team": "Milwaukee Bucks",
+        "games": 0
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 77,
+    "weight": 195,
+    "games": 0,
+    "winShares": 0.0,
+    "currentWinShares": null,
+    "nbaId": 1629639,
+    "espnId": 4395725,
+    "twoKRating": 86,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "tyrese-maxey",
+    "rank": 45,
+    "allTimeRank": null,
+    "currentRank": 45,
+    "name": "Tyrese Maxey",
+    "draftYear": 2020,
+    "position": "Guard",
+    "conference": "East",
+    "team": "Philadelphia 76ers",
+    "teams": [
+      {
+        "team": "Philadelphia 76ers",
+        "games": 318
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 74,
+    "weight": 200,
+    "games": 318,
+    "winShares": 26.5,
+    "currentWinShares": 8.7,
+    "nbaId": 1630178,
+    "espnId": 4431678,
+    "twoKRating": 86,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "austin-reaves",
+    "rank": 46,
+    "allTimeRank": null,
+    "currentRank": 46,
+    "name": "Austin Reaves",
+    "draftYear": null,
+    "position": "Guard",
+    "conference": "West",
+    "team": "Los Angeles Lakers",
+    "teams": [
+      {
+        "team": "Los Angeles Lakers",
+        "games": 280
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 77,
+    "weight": 197,
+    "games": 280,
+    "winShares": 21.9,
+    "currentWinShares": 5.6,
+    "nbaId": 1630559,
+    "espnId": 4066457,
+    "twoKRating": 85,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "de-aaron-fox",
+    "rank": 47,
+    "allTimeRank": null,
+    "currentRank": 47,
+    "name": "De'Aaron Fox",
+    "draftYear": 2017,
+    "position": "Guard",
+    "conference": "West",
+    "team": "San Antonio Spurs",
+    "teams": [
+      {
+        "team": "San Antonio Spurs",
+        "games": 531
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 75,
+    "weight": 185,
+    "games": 531,
+    "winShares": 33.9,
+    "currentWinShares": 6.4,
+    "nbaId": 1628368,
+    "espnId": 4066259,
+    "twoKRating": 85,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "kristaps-porzingis",
+    "rank": 48,
+    "allTimeRank": null,
+    "currentRank": 48,
+    "name": "Kristaps Porzingis",
+    "draftYear": 2015,
+    "position": "Forward / Center",
+    "conference": "West",
+    "team": "Golden State Warriors",
+    "teams": [
+      {
+        "team": "Golden State Warriors",
+        "games": 0
+      }
+    ],
+    "nationality": "Latvia",
+    "continent": "Europe",
+    "height": 86,
+    "weight": 240,
+    "games": 0,
+    "winShares": 0.0,
+    "currentWinShares": null,
+    "nbaId": 204001,
+    "espnId": 3102531,
+    "twoKRating": 85,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "og-anunoby",
+    "rank": 49,
+    "allTimeRank": null,
+    "currentRank": 49,
+    "name": "OG Anunoby",
+    "draftYear": 2017,
+    "position": "Forward",
+    "conference": "East",
+    "team": "New York Knicks",
+    "teams": [
+      {
+        "team": "New York Knicks",
+        "games": 492
+      }
+    ],
+    "nationality": "United Kingdom",
+    "continent": "Europe",
+    "height": 79,
+    "weight": 240,
+    "games": 492,
+    "winShares": 31.4,
+    "currentWinShares": 6.3,
+    "nbaId": 1628384,
+    "espnId": 3934719,
+    "twoKRating": 85,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "scottie-barnes",
+    "rank": 50,
+    "allTimeRank": null,
+    "currentRank": 50,
+    "name": "Scottie Barnes",
+    "draftYear": 2021,
+    "position": "Guard / Forward",
+    "conference": "East",
+    "team": "Toronto Raptors",
+    "teams": [
+      {
+        "team": "Toronto Raptors",
+        "games": 276
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 80,
+    "weight": 237,
+    "games": 276,
+    "winShares": 19.4,
+    "currentWinShares": 7.8,
+    "nbaId": 1630567,
+    "espnId": 4433134,
+    "twoKRating": 85,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "zach-lavine",
+    "rank": 51,
+    "allTimeRank": null,
+    "currentRank": 51,
+    "name": "Zach LaVine",
+    "draftYear": 2014,
+    "position": "Guard / Forward",
+    "conference": "West",
+    "team": "Sacramento Kings",
+    "teams": [
+      {
+        "team": "Sacramento Kings",
+        "games": 0
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 77,
+    "weight": 200,
+    "games": 0,
+    "winShares": 0.0,
+    "currentWinShares": null,
+    "nbaId": 203897,
+    "espnId": 3064440,
+    "twoKRating": 85,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "brandon-ingram",
+    "rank": 52,
+    "allTimeRank": null,
+    "currentRank": 52,
+    "name": "Brandon Ingram",
+    "draftYear": 2016,
+    "position": "Forward",
+    "conference": "East",
+    "team": "Toronto Raptors",
+    "teams": [
+      {
+        "team": "Toronto Raptors",
+        "games": 495
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 80,
+    "weight": 190,
+    "games": 495,
+    "winShares": 27.3,
+    "currentWinShares": 4.6,
+    "nbaId": 1627742,
+    "espnId": 3913176,
+    "twoKRating": 84,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "jarrett-allen",
+    "rank": 53,
+    "allTimeRank": null,
+    "currentRank": 53,
+    "name": "Jarrett Allen",
+    "draftYear": 2017,
+    "position": "Center",
+    "conference": "East",
+    "team": "Cleveland Cavaliers",
+    "teams": [
+      {
+        "team": "Cleveland Cavaliers",
+        "games": 568
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 81,
+    "weight": 243,
+    "games": 568,
+    "winShares": 66.7,
+    "currentWinShares": 6.4,
+    "nbaId": 1628386,
+    "espnId": 4066328,
+    "twoKRating": 84,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "lauri-markkanen",
+    "rank": 54,
+    "allTimeRank": null,
+    "currentRank": 54,
+    "name": "Lauri Markkanen",
+    "draftYear": 2017,
+    "position": "Forward",
+    "conference": "West",
+    "team": "Utah Jazz",
+    "teams": [
+      {
+        "team": "Utah Jazz",
+        "games": 450
+      }
+    ],
+    "nationality": "Finland",
+    "continent": "Europe",
+    "height": 85,
+    "weight": 240,
+    "games": 450,
+    "winShares": 33.1,
+    "currentWinShares": 3.5,
+    "nbaId": 1628374,
+    "espnId": 4066336,
+    "twoKRating": 84,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "mikal-bridges",
+    "rank": 55,
+    "allTimeRank": null,
+    "currentRank": 55,
+    "name": "Mikal Bridges",
+    "draftYear": 2018,
+    "position": "Guard / Forward",
+    "conference": "East",
+    "team": "New York Knicks",
+    "teams": [
+      {
+        "team": "New York Knicks",
+        "games": 556
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 78,
+    "weight": 209,
+    "games": 556,
+    "winShares": 42.0,
+    "currentWinShares": 8.0,
+    "nbaId": 1628969,
+    "espnId": 3147657,
+    "twoKRating": 84,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "norman-powell",
+    "rank": 56,
+    "allTimeRank": null,
+    "currentRank": 56,
+    "name": "Norman Powell",
+    "draftYear": 2015,
+    "position": "Guard / Forward",
+    "conference": "East",
+    "team": "Chicago Bulls",
+    "teams": [
+      {
+        "team": "Chicago Bulls",
+        "games": 617
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 76,
+    "weight": 215,
+    "games": 617,
+    "winShares": 32.4,
+    "currentWinShares": 4.0,
+    "nbaId": 1626181,
+    "espnId": 2595516,
+    "twoKRating": 84,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "rudy-gobert",
+    "rank": 57,
+    "allTimeRank": null,
+    "currentRank": 57,
+    "name": "Rudy Gobert",
+    "draftYear": 2013,
+    "position": "Center",
+    "conference": "West",
+    "team": "Minnesota Timberwolves",
+    "teams": [
+      {
+        "team": "Minnesota Timberwolves",
+        "games": 829
+      }
+    ],
+    "nationality": "France",
+    "continent": "Europe",
+    "height": 85,
+    "weight": 258,
+    "games": 829,
+    "winShares": 116.1,
+    "currentWinShares": 8.7,
+    "nbaId": 203497,
+    "espnId": 3032976,
+    "twoKRating": 84,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "cameron-johnson",
+    "rank": 58,
+    "allTimeRank": null,
+    "currentRank": 58,
+    "name": "Cameron Johnson",
+    "draftYear": 2019,
+    "position": "Forward",
+    "conference": "West",
+    "team": "Denver Nuggets",
+    "teams": [
+      {
+        "team": "Denver Nuggets",
+        "games": 340
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 80,
+    "weight": 210,
+    "games": 340,
+    "winShares": 22.9,
+    "currentWinShares": 3.7,
+    "nbaId": 1629661,
+    "espnId": 3138196,
+    "twoKRating": 83,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "coby-white",
+    "rank": 59,
+    "allTimeRank": null,
+    "currentRank": 59,
+    "name": "Coby White",
+    "draftYear": 2019,
+    "position": "Guard",
+    "conference": "East",
+    "team": "Charlotte Hornets",
+    "teams": [
+      {
+        "team": "Charlotte Hornets",
+        "games": 0
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 76,
+    "weight": 195,
+    "games": 0,
+    "winShares": 0.0,
+    "currentWinShares": null,
+    "nbaId": 1629632,
+    "espnId": 4395651,
+    "twoKRating": 83,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "desmond-bane",
+    "rank": 60,
+    "allTimeRank": null,
+    "currentRank": 60,
+    "name": "Desmond Bane",
+    "draftYear": 2020,
+    "position": "Guard / Forward",
+    "conference": "East",
+    "team": "Orlando Magic",
+    "teams": [
+      {
+        "team": "Orlando Magic",
+        "games": 313
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 78,
+    "weight": 215,
+    "games": 313,
+    "winShares": 25.5,
+    "currentWinShares": 7.4,
+    "nbaId": 1630217,
+    "espnId": 4066320,
+    "twoKRating": 83,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "dyson-daniels",
+    "rank": 61,
+    "allTimeRank": null,
+    "currentRank": 61,
+    "name": "Dyson Daniels",
+    "draftYear": 2022,
+    "position": "Guard",
+    "conference": "East",
+    "team": "Atlanta Hawks",
+    "teams": [
+      {
+        "team": "Atlanta Hawks",
+        "games": 196
+      }
+    ],
+    "nationality": "Australia",
+    "continent": "Oceania",
+    "height": 79,
+    "weight": 199,
+    "games": 196,
+    "winShares": 9.2,
+    "currentWinShares": 6.6,
+    "nbaId": 1630700,
+    "espnId": 4869342,
+    "twoKRating": 83,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "jalen-green",
+    "rank": 62,
+    "allTimeRank": null,
+    "currentRank": 62,
+    "name": "Jalen Green",
+    "draftYear": 2021,
+    "position": "Guard",
+    "conference": "West",
+    "team": "Phoenix Suns",
+    "teams": [
+      {
+        "team": "Phoenix Suns",
+        "games": 0
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 76,
+    "weight": 186,
+    "games": 0,
+    "winShares": 0.0,
+    "currentWinShares": null,
+    "nbaId": 1630224,
+    "espnId": 4437244,
+    "twoKRating": 83,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "myles-turner",
+    "rank": 63,
+    "allTimeRank": null,
+    "currentRank": 63,
+    "name": "Myles Turner",
+    "draftYear": 2015,
+    "position": "Center",
+    "conference": "East",
+    "team": "Milwaukee Bucks",
+    "teams": [
+      {
+        "team": "Milwaukee Bucks",
+        "games": 0
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 83,
+    "weight": 250,
+    "games": 0,
+    "winShares": 0.0,
+    "currentWinShares": null,
+    "nbaId": 1626167,
+    "espnId": 3133628,
+    "twoKRating": 83,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "aaron-gordon",
+    "rank": 64,
+    "allTimeRank": null,
+    "currentRank": 64,
+    "name": "Aaron Gordon",
+    "draftYear": 2014,
+    "position": "Forward",
+    "conference": "West",
+    "team": "Denver Nuggets",
+    "teams": [
+      {
+        "team": "Denver Nuggets",
+        "games": 720
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 80,
+    "weight": 235,
+    "games": 720,
+    "winShares": 46.9,
+    "currentWinShares": 3.2,
+    "nbaId": 203932,
+    "espnId": 3064290,
+    "twoKRating": 82,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "brandon-miller",
+    "rank": 65,
+    "allTimeRank": null,
+    "currentRank": 65,
+    "name": "Brandon Miller",
+    "draftYear": 2023,
+    "position": "Guard / Forward",
+    "conference": "East",
+    "team": "Charlotte Hornets",
+    "teams": [
+      {
+        "team": "Charlotte Hornets",
+        "games": 101
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 79,
+    "weight": 200,
+    "games": 101,
+    "winShares": 1.2,
+    "currentWinShares": 4.5,
+    "nbaId": 1641706,
+    "espnId": 4433287,
+    "twoKRating": 82,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "cooper-flagg",
+    "rank": 66,
+    "allTimeRank": null,
+    "currentRank": 66,
+    "name": "Cooper Flagg",
+    "draftYear": 2025,
+    "position": "Forward",
+    "conference": "West",
+    "team": "Dallas Mavericks",
+    "teams": [
+      {
+        "team": "Dallas Mavericks",
+        "games": 70
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 81,
+    "weight": 221,
+    "games": 70,
+    "winShares": 3.8,
+    "currentWinShares": 3.8,
+    "nbaId": 1642843,
+    "espnId": 5041939,
+    "twoKRating": 82,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "deni-avdija",
+    "rank": 67,
+    "allTimeRank": null,
+    "currentRank": 67,
+    "name": "Deni Avdija",
+    "draftYear": 2020,
+    "position": "Guard / Forward",
+    "conference": "West",
+    "team": "Portland Trail Blazers",
+    "teams": [
+      {
+        "team": "Portland Trail Blazers",
+        "games": 359
+      }
+    ],
+    "nationality": "Israel",
+    "continent": "Asia",
+    "height": 80,
+    "weight": 240,
+    "games": 359,
+    "winShares": 14.7,
+    "currentWinShares": 7.0,
+    "nbaId": 1630166,
+    "espnId": 4683021,
+    "twoKRating": 82,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "isaiah-hartenstein",
+    "rank": 68,
+    "allTimeRank": null,
+    "currentRank": 68,
+    "name": "Isaiah Hartenstein",
+    "draftYear": 2017,
+    "position": "Center",
+    "conference": "West",
+    "team": "Oklahoma City Thunder",
+    "teams": [
+      {
+        "team": "Oklahoma City Thunder",
+        "games": 379
+      }
+    ],
+    "nationality": "Germany",
+    "continent": "Europe",
+    "height": 84,
+    "weight": 250,
+    "games": 379,
+    "winShares": 28.0,
+    "currentWinShares": 5.3,
+    "nbaId": 1628392,
+    "espnId": 4222252,
+    "twoKRating": 82,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "jaden-mcdaniels",
+    "rank": 69,
+    "allTimeRank": null,
+    "currentRank": 69,
+    "name": "Jaden McDaniels",
+    "draftYear": 2020,
+    "position": "Forward",
+    "conference": "West",
+    "team": "Minnesota Timberwolves",
+    "teams": [
+      {
+        "team": "Minnesota Timberwolves",
+        "games": 366
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 81,
+    "weight": 185,
+    "games": 366,
+    "winShares": 17.9,
+    "currentWinShares": 5.2,
+    "nbaId": 1630183,
+    "espnId": 4431671,
+    "twoKRating": 82,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "jalen-duren",
+    "rank": 70,
+    "allTimeRank": null,
+    "currentRank": 70,
+    "name": "Jalen Duren",
+    "draftYear": 2022,
+    "position": "Center",
+    "conference": "East",
+    "team": "Detroit Pistons",
+    "teams": [
+      {
+        "team": "Detroit Pistons",
+        "games": 206
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 82,
+    "weight": 250,
+    "games": 206,
+    "winShares": 18.6,
+    "currentWinShares": 11.0,
+    "nbaId": 1631105,
+    "espnId": 4433621,
+    "twoKRating": 82,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "jalen-suggs",
+    "rank": 71,
+    "allTimeRank": null,
+    "currentRank": 71,
+    "name": "Jalen Suggs",
+    "draftYear": 2021,
+    "position": "Guard",
+    "conference": "East",
+    "team": "Orlando Magic",
+    "teams": [
+      {
+        "team": "Orlando Magic",
+        "games": 0
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 77,
+    "weight": 205,
+    "games": 0,
+    "winShares": 0.0,
+    "currentWinShares": null,
+    "nbaId": 1630591,
+    "espnId": 4432165,
+    "twoKRating": 82,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "john-collins",
+    "rank": 72,
+    "allTimeRank": null,
+    "currentRank": 72,
+    "name": "John Collins",
+    "draftYear": 2017,
+    "position": "Forward / Center",
+    "conference": "East",
+    "team": "Detroit Pistons",
+    "teams": [
+      {
+        "team": "Detroit Pistons",
+        "games": 472
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 81,
+    "weight": 226,
+    "games": 472,
+    "winShares": 39.2,
+    "currentWinShares": 4.6,
+    "nbaId": 1628381,
+    "espnId": 3908845,
+    "twoKRating": 82,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "josh-giddey",
+    "rank": 73,
+    "allTimeRank": null,
+    "currentRank": 73,
+    "name": "Josh Giddey",
+    "draftYear": 2021,
+    "position": "Guard / Forward",
+    "conference": "East",
+    "team": "Chicago Bulls",
+    "teams": [
+      {
+        "team": "Chicago Bulls",
+        "games": 280
+      }
+    ],
+    "nationality": "Australia",
+    "continent": "Oceania",
+    "height": 79,
+    "weight": 216,
+    "games": 280,
+    "winShares": 13.9,
+    "currentWinShares": 3.2,
+    "nbaId": 1630581,
+    "espnId": 4871145,
+    "twoKRating": 82,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "michael-porter-jr",
+    "rank": 74,
+    "allTimeRank": null,
+    "currentRank": 74,
+    "name": "Michael Porter Jr.",
+    "draftYear": 2018,
+    "position": "Forward",
+    "conference": "East",
+    "team": "Brooklyn Nets",
+    "teams": [
+      {
+        "team": "Brooklyn Nets",
+        "games": 0
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 82,
+    "weight": 218,
+    "games": 0,
+    "winShares": 0.0,
+    "currentWinShares": null,
+    "nbaId": 1629008,
+    "espnId": 4278104,
+    "twoKRating": 82,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "naz-reid",
+    "rank": 75,
+    "allTimeRank": null,
+    "currentRank": 75,
+    "name": "Naz Reid",
+    "draftYear": null,
+    "position": "Forward / Center",
+    "conference": "East",
+    "team": "Charlotte Hornets",
+    "teams": [
+      {
+        "team": "Charlotte Hornets",
+        "games": 406
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 81,
+    "weight": 264,
+    "games": 406,
+    "winShares": 20.7,
+    "currentWinShares": 4.0,
+    "nbaId": 1629675,
+    "espnId": 4396971,
+    "twoKRating": 82,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "nikola-vucevic",
+    "rank": 76,
+    "allTimeRank": null,
+    "currentRank": 76,
+    "name": "Nikola Vucevic",
+    "draftYear": 2011,
+    "position": "Center",
+    "conference": "East",
+    "team": "Orlando Magic",
+    "teams": [
+      {
+        "team": "Orlando Magic",
+        "games": 972
+      }
+    ],
+    "nationality": "Montenegro",
+    "continent": "Europe",
+    "height": 81,
+    "weight": 260,
+    "games": 972,
+    "winShares": 79.9,
+    "currentWinShares": 4.4,
+    "nbaId": 202696,
+    "espnId": 6478,
+    "twoKRating": 82,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "rj-barrett",
+    "rank": 77,
+    "allTimeRank": null,
+    "currentRank": 77,
+    "name": "RJ Barrett",
+    "draftYear": 2019,
+    "position": "Guard / Forward",
+    "conference": "East",
+    "team": "Toronto Raptors",
+    "teams": [
+      {
+        "team": "Toronto Raptors",
+        "games": 387
+      }
+    ],
+    "nationality": "Canada",
+    "continent": "North America",
+    "height": 78,
+    "weight": 214,
+    "games": 387,
+    "winShares": 13.3,
+    "currentWinShares": 4.0,
+    "nbaId": 1629628,
+    "espnId": 4395625,
+    "twoKRating": 82,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "stephon-castle",
+    "rank": 78,
+    "allTimeRank": null,
+    "currentRank": 78,
+    "name": "Stephon Castle",
+    "draftYear": 2024,
+    "position": "Guard",
+    "conference": "West",
+    "team": "San Antonio Spurs",
+    "teams": [
+      {
+        "team": "San Antonio Spurs",
+        "games": 81
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 78,
+    "weight": 215,
+    "games": 81,
+    "winShares": 1.1,
+    "currentWinShares": 5.8,
+    "nbaId": 1642264,
+    "espnId": 4845367,
+    "twoKRating": 82,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "toumani-camara",
+    "rank": 79,
+    "allTimeRank": null,
+    "currentRank": 79,
+    "name": "Toumani Camara",
+    "draftYear": 2023,
+    "position": "Forward",
+    "conference": "West",
+    "team": "Portland Trail Blazers",
+    "teams": [
+      {
+        "team": "Portland Trail Blazers",
+        "games": 148
+      }
+    ],
+    "nationality": "Belgium",
+    "continent": "Europe",
+    "height": 79,
+    "weight": 229,
+    "games": 148,
+    "winShares": 7.2,
+    "currentWinShares": 4.8,
+    "nbaId": 1641739,
+    "espnId": 4431736,
+    "twoKRating": 82,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "trey-murphy-iii",
+    "rank": 80,
+    "allTimeRank": null,
+    "currentRank": 80,
+    "name": "Trey Murphy III",
+    "draftYear": 2021,
+    "position": "Guard / Forward",
+    "conference": "West",
+    "team": "New Orleans Pelicans",
+    "teams": [
+      {
+        "team": "New Orleans Pelicans",
+        "games": 251
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 80,
+    "weight": 206,
+    "games": 251,
+    "winShares": 18.4,
+    "currentWinShares": 6.0,
+    "nbaId": 1630530,
+    "espnId": 4397688,
+    "twoKRating": 82,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "walker-kessler",
+    "rank": 81,
+    "allTimeRank": null,
+    "currentRank": 81,
+    "name": "Walker Kessler",
+    "draftYear": 2022,
+    "position": "Center",
+    "conference": "West",
+    "team": "Los Angeles Lakers",
+    "teams": [
+      {
+        "team": "Los Angeles Lakers",
+        "games": 0
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 86,
+    "weight": 245,
+    "games": 0,
+    "winShares": 0.0,
+    "currentWinShares": null,
+    "nbaId": 1631117,
+    "espnId": 4433136,
+    "twoKRating": 82,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "aaron-nesmith",
+    "rank": 82,
+    "allTimeRank": null,
+    "currentRank": 82,
+    "name": "Aaron Nesmith",
+    "draftYear": 2020,
+    "position": "Forward",
+    "conference": "East",
+    "team": "Indiana Pacers",
+    "teams": [
+      {
+        "team": "Indiana Pacers",
+        "games": 0
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 77,
+    "weight": 215,
+    "games": 0,
+    "winShares": 0.0,
+    "currentWinShares": null,
+    "nbaId": 1630174,
+    "espnId": 4396909,
+    "twoKRating": 81,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "alex-sarr",
+    "rank": 83,
+    "allTimeRank": null,
+    "currentRank": 83,
+    "name": "Alex Sarr",
+    "draftYear": 2024,
+    "position": "Forward / Center",
+    "conference": "East",
+    "team": "Washington Wizards",
+    "teams": [
+      {
+        "team": "Washington Wizards",
+        "games": 0
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 84,
+    "weight": 205,
+    "games": 0,
+    "winShares": 0.0,
+    "currentWinShares": null,
+    "nbaId": 1642259,
+    "espnId": 5160992,
+    "twoKRating": 81,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "andrew-nembhard",
+    "rank": 84,
+    "allTimeRank": null,
+    "currentRank": 84,
+    "name": "Andrew Nembhard",
+    "draftYear": 2022,
+    "position": "Guard",
+    "conference": "East",
+    "team": "Indiana Pacers",
+    "teams": [
+      {
+        "team": "Indiana Pacers",
+        "games": 0
+      }
+    ],
+    "nationality": "Canada",
+    "continent": "North America",
+    "height": 76,
+    "weight": 191,
+    "games": 0,
+    "winShares": 0.0,
+    "currentWinShares": null,
+    "nbaId": 1629614,
+    "espnId": 4395712,
+    "twoKRating": 81,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "anfernee-simons",
+    "rank": 85,
+    "allTimeRank": null,
+    "currentRank": 85,
+    "name": "Anfernee Simons",
+    "draftYear": 2018,
+    "position": "Guard",
+    "conference": "East",
+    "team": "Philadelphia 76ers",
+    "teams": [
+      {
+        "team": "Philadelphia 76ers",
+        "games": 0
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 75,
+    "weight": 200,
+    "games": 0,
+    "winShares": 0.0,
+    "currentWinShares": null,
+    "nbaId": 1629014,
+    "espnId": 4351851,
+    "twoKRating": 81,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "ausar-thompson",
+    "rank": 86,
+    "allTimeRank": null,
+    "currentRank": 86,
+    "name": "Ausar Thompson",
+    "draftYear": 2023,
+    "position": "Forward",
+    "conference": "East",
+    "team": "Detroit Pistons",
+    "teams": [
+      {
+        "team": "Detroit Pistons",
+        "games": 122
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 79,
+    "weight": 205,
+    "games": 122,
+    "winShares": 5.6,
+    "currentWinShares": 5.7,
+    "nbaId": 1641709,
+    "espnId": 4684742,
+    "twoKRating": 81,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "bobby-portis",
+    "rank": 87,
+    "allTimeRank": null,
+    "currentRank": 87,
+    "name": "Bobby Portis",
+    "draftYear": 2015,
+    "position": "Forward / Center",
+    "conference": "East",
+    "team": "Miami Heat",
+    "teams": [
+      {
+        "team": "Miami Heat",
+        "games": 0
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 81,
+    "weight": 250,
+    "games": 0,
+    "winShares": 0.0,
+    "currentWinShares": null,
+    "nbaId": 1626171,
+    "espnId": 3064482,
+    "twoKRating": 81,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "cj-mccollum",
+    "rank": 88,
+    "allTimeRank": null,
+    "currentRank": 88,
+    "name": "CJ McCollum",
+    "draftYear": 2013,
+    "position": "Guard",
+    "conference": "East",
+    "team": "Atlanta Hawks",
+    "teams": [
+      {
+        "team": "Atlanta Hawks",
+        "games": 0
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 75,
+    "weight": 190,
+    "games": 0,
+    "winShares": 0.0,
+    "currentWinShares": null,
+    "nbaId": 203468,
+    "espnId": 2490149,
+    "twoKRating": 81,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "dejounte-murray",
+    "rank": 89,
+    "allTimeRank": null,
+    "currentRank": 89,
+    "name": "Dejounte Murray",
+    "draftYear": 2016,
+    "position": "Guard",
+    "conference": "West",
+    "team": "New Orleans Pelicans",
+    "teams": [
+      {
+        "team": "New Orleans Pelicans",
+        "games": 0
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 76,
+    "weight": 180,
+    "games": 0,
+    "winShares": 0.0,
+    "currentWinShares": null,
+    "nbaId": 1627749,
+    "espnId": 3907497,
+    "twoKRating": 81,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "devin-vassell",
+    "rank": 90,
+    "allTimeRank": null,
+    "currentRank": 90,
+    "name": "Devin Vassell",
+    "draftYear": 2020,
+    "position": "Guard / Forward",
+    "conference": "West",
+    "team": "San Antonio Spurs",
+    "teams": [
+      {
+        "team": "San Antonio Spurs",
+        "games": 303
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 77,
+    "weight": 200,
+    "games": 303,
+    "winShares": 11.9,
+    "currentWinShares": 4.9,
+    "nbaId": 1630170,
+    "espnId": 4395630,
+    "twoKRating": 81,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "draymond-green",
+    "rank": 91,
+    "allTimeRank": null,
+    "currentRank": 91,
+    "name": "Draymond Green",
+    "draftYear": 2012,
+    "position": "Forward / Center",
+    "conference": "West",
+    "team": "Golden State Warriors",
+    "teams": [
+      {
+        "team": "Golden State Warriors",
+        "games": 0
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 78,
+    "weight": 230,
+    "games": 0,
+    "winShares": 0.0,
+    "currentWinShares": null,
+    "nbaId": 203110,
+    "espnId": 6589,
+    "twoKRating": 81,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "herbert-jones",
+    "rank": 92,
+    "allTimeRank": null,
+    "currentRank": 92,
+    "name": "Herbert Jones",
+    "draftYear": 2021,
+    "position": "Forward",
+    "conference": "West",
+    "team": "New Orleans Pelicans",
+    "teams": [
+      {
+        "team": "New Orleans Pelicans",
+        "games": 0
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 79,
+    "weight": 206,
+    "games": 0,
+    "winShares": 0.0,
+    "currentWinShares": null,
+    "nbaId": 1630529,
+    "espnId": 4277813,
+    "twoKRating": 81,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "immanuel-quickley",
+    "rank": 93,
+    "allTimeRank": null,
+    "currentRank": 93,
+    "name": "Immanuel Quickley",
+    "draftYear": 2020,
+    "position": "Guard",
+    "conference": "East",
+    "team": "Toronto Raptors",
+    "teams": [
+      {
+        "team": "Toronto Raptors",
+        "games": 324
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 74,
+    "weight": 190,
+    "games": 324,
+    "winShares": 21.3,
+    "currentWinShares": 6.5,
+    "nbaId": 1630193,
+    "espnId": 4395724,
+    "twoKRating": 81,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "jalen-johnson",
+    "rank": 94,
+    "allTimeRank": null,
+    "currentRank": 94,
+    "name": "Jalen Johnson",
+    "draftYear": 2021,
+    "position": "Forward",
+    "conference": "East",
+    "team": "Atlanta Hawks",
+    "teams": [
+      {
+        "team": "Atlanta Hawks",
+        "games": 184
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 80,
+    "weight": 219,
+    "games": 184,
+    "winShares": 8.4,
+    "currentWinShares": 7.5,
+    "nbaId": 1630552,
+    "espnId": 4701230,
+    "twoKRating": 81,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "josh-hart",
+    "rank": 95,
+    "allTimeRank": null,
+    "currentRank": 95,
+    "name": "Josh Hart",
+    "draftYear": 2017,
+    "position": "Forward",
+    "conference": "East",
+    "team": "New York Knicks",
+    "teams": [
+      {
+        "team": "New York Knicks",
+        "games": 530
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 77,
+    "weight": 215,
+    "games": 530,
+    "winShares": 36.7,
+    "currentWinShares": 6.1,
+    "nbaId": 1628404,
+    "espnId": 3062679,
+    "twoKRating": 81,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "jrue-holiday",
+    "rank": 96,
+    "allTimeRank": null,
+    "currentRank": 96,
+    "name": "Jrue Holiday",
+    "draftYear": 2009,
+    "position": "Guard",
+    "conference": "West",
+    "team": "Portland Trail Blazers",
+    "teams": [
+      {
+        "team": "Portland Trail Blazers",
+        "games": 1037
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 76,
+    "weight": 205,
+    "games": 1037,
+    "winShares": 74.6,
+    "currentWinShares": 3.6,
+    "nbaId": 201950,
+    "espnId": 3995,
+    "twoKRating": 81,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "luguentz-dort",
+    "rank": 97,
+    "allTimeRank": null,
+    "currentRank": 97,
+    "name": "Luguentz Dort",
+    "draftYear": null,
+    "position": "Guard / Forward",
+    "conference": "East",
+    "team": "Atlanta Hawks",
+    "teams": [
+      {
+        "team": "Atlanta Hawks",
+        "games": 0
+      }
+    ],
+    "nationality": "Canada",
+    "continent": "North America",
+    "height": 76,
+    "weight": 220,
+    "games": 0,
+    "winShares": 0.0,
+    "currentWinShares": null,
+    "nbaId": 1629652,
+    "espnId": 4397020,
+    "twoKRating": 81,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "onyeka-okongwu",
+    "rank": 98,
+    "allTimeRank": null,
+    "currentRank": 98,
+    "name": "Onyeka Okongwu",
+    "draftYear": 2020,
+    "position": "Center",
+    "conference": "East",
+    "team": "Atlanta Hawks",
+    "teams": [
+      {
+        "team": "Atlanta Hawks",
+        "games": 307
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 82,
+    "weight": 240,
+    "games": 307,
+    "winShares": 24.9,
+    "currentWinShares": 6.0,
+    "nbaId": 1630168,
+    "espnId": 4431680,
+    "twoKRating": 81,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "paul-george",
+    "rank": 99,
+    "allTimeRank": null,
+    "currentRank": 99,
+    "name": "Paul George",
+    "draftYear": 2010,
+    "position": "Forward",
+    "conference": "East",
+    "team": "Boston Celtics",
+    "teams": [
+      {
+        "team": "Boston Celtics",
+        "games": 908
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 80,
+    "weight": 220,
+    "games": 908,
+    "winShares": 89.5,
+    "currentWinShares": null,
+    "nbaId": 202331,
+    "espnId": 4251,
+    "twoKRating": 81,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "shaedon-sharpe",
+    "rank": 100,
+    "allTimeRank": null,
+    "currentRank": 100,
+    "name": "Shaedon Sharpe",
+    "draftYear": 2022,
+    "position": "Guard / Forward",
+    "conference": "West",
+    "team": "Portland Trail Blazers",
+    "teams": [
+      {
+        "team": "Portland Trail Blazers",
+        "games": 0
+      }
+    ],
+    "nationality": "Canada",
+    "continent": "North America",
+    "height": 77,
+    "weight": 208,
+    "games": 0,
+    "winShares": 0.0,
+    "currentWinShares": null,
+    "nbaId": 1631101,
+    "espnId": 4914336,
+    "twoKRating": 81,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "alex-caruso",
+    "rank": 101,
+    "allTimeRank": null,
+    "currentRank": 101,
+    "name": "Alex Caruso",
+    "draftYear": null,
+    "position": "Guard / Forward",
+    "conference": "West",
+    "team": "Oklahoma City Thunder",
+    "teams": [
+      {
+        "team": "Oklahoma City Thunder",
+        "games": 0
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 77,
+    "weight": 186,
+    "games": 0,
+    "winShares": 0.0,
+    "currentWinShares": null,
+    "nbaId": 1627936,
+    "espnId": 2991350,
+    "twoKRating": 80,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "andrew-wiggins",
+    "rank": 102,
+    "allTimeRank": null,
+    "currentRank": 102,
+    "name": "Andrew Wiggins",
+    "draftYear": 2014,
+    "position": "Guard / Forward",
+    "conference": "East",
+    "team": "Miami Heat",
+    "teams": [
+      {
+        "team": "Miami Heat",
+        "games": 766
+      }
+    ],
+    "nationality": "Canada",
+    "continent": "North America",
+    "height": 79,
+    "weight": 197,
+    "games": 766,
+    "winShares": 33.1,
+    "currentWinShares": 4.6,
+    "nbaId": 203952,
+    "espnId": 3059319,
+    "twoKRating": 80,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "bradley-beal",
+    "rank": 103,
+    "allTimeRank": null,
+    "currentRank": 103,
+    "name": "Bradley Beal",
+    "draftYear": 2012,
+    "position": "Guard / Forward",
+    "conference": "West",
+    "team": "LA Clippers",
+    "teams": [
+      {
+        "team": "LA Clippers",
+        "games": 0
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 76,
+    "weight": 207,
+    "games": 0,
+    "winShares": 0.0,
+    "currentWinShares": null,
+    "nbaId": 203078,
+    "espnId": 6580,
+    "twoKRating": 80,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "brook-lopez",
+    "rank": 104,
+    "allTimeRank": null,
+    "currentRank": 104,
+    "name": "Brook Lopez",
+    "draftYear": 2008,
+    "position": "Center",
+    "conference": "West",
+    "team": "LA Clippers",
+    "teams": [
+      {
+        "team": "LA Clippers",
+        "games": 1105
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 85,
+    "weight": 282,
+    "games": 1105,
+    "winShares": 91.9,
+    "currentWinShares": null,
+    "nbaId": 201572,
+    "espnId": 3448,
+    "twoKRating": 80,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "christian-braun",
+    "rank": 105,
+    "allTimeRank": null,
+    "currentRank": 105,
+    "name": "Christian Braun",
+    "draftYear": 2022,
+    "position": "Guard / Forward",
+    "conference": "West",
+    "team": "Denver Nuggets",
+    "teams": [
+      {
+        "team": "Denver Nuggets",
+        "games": 0
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 78,
+    "weight": 220,
+    "games": 0,
+    "winShares": 0.0,
+    "currentWinShares": null,
+    "nbaId": 1631128,
+    "espnId": 4431767,
+    "twoKRating": 80,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "collin-sexton",
+    "rank": 106,
+    "allTimeRank": null,
+    "currentRank": 106,
+    "name": "Collin Sexton",
+    "draftYear": 2018,
+    "position": "Guard",
+    "conference": "West",
+    "team": "Los Angeles Lakers",
+    "teams": [
+      {
+        "team": "Los Angeles Lakers",
+        "games": 407
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 75,
+    "weight": 190,
+    "games": 407,
+    "winShares": 15.8,
+    "currentWinShares": 3.9,
+    "nbaId": 1629012,
+    "espnId": 4277811,
+    "twoKRating": 80,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "daniel-gafford",
+    "rank": 107,
+    "allTimeRank": null,
+    "currentRank": 107,
+    "name": "Daniel Gafford",
+    "draftYear": 2019,
+    "position": "Center",
+    "conference": "West",
+    "team": "Dallas Mavericks",
+    "teams": [
+      {
+        "team": "Dallas Mavericks",
+        "games": 378
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 82,
+    "weight": 234,
+    "games": 378,
+    "winShares": 31.1,
+    "currentWinShares": 4.1,
+    "nbaId": 1629655,
+    "espnId": 4278049,
+    "twoKRating": 80,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "de-andre-hunter",
+    "rank": 108,
+    "allTimeRank": null,
+    "currentRank": 108,
+    "name": "De'Andre Hunter",
+    "draftYear": 2019,
+    "position": "Forward",
+    "conference": "West",
+    "team": "Sacramento Kings",
+    "teams": [
+      {
+        "team": "Sacramento Kings",
+        "games": 0
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 79,
+    "weight": 221,
+    "games": 0,
+    "winShares": 0.0,
+    "currentWinShares": null,
+    "nbaId": 1629631,
+    "espnId": 4065732,
+    "twoKRating": 80,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "dereck-lively-ii",
+    "rank": 109,
+    "allTimeRank": null,
+    "currentRank": 109,
+    "name": "Dereck Lively II",
+    "draftYear": 2023,
+    "position": "Center",
+    "conference": "West",
+    "team": "Dallas Mavericks",
+    "teams": [
+      {
+        "team": "Dallas Mavericks",
+        "games": 0
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 85,
+    "weight": 230,
+    "games": 0,
+    "winShares": 0.0,
+    "currentWinShares": null,
+    "nbaId": 1641726,
+    "espnId": 4683688,
+    "twoKRating": 80,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "fred-vanvleet",
+    "rank": 110,
+    "allTimeRank": null,
+    "currentRank": 110,
+    "name": "Fred VanVleet",
+    "draftYear": null,
+    "position": "Guard",
+    "conference": "West",
+    "team": "Houston Rockets",
+    "teams": [
+      {
+        "team": "Houston Rockets",
+        "games": 0
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 72,
+    "weight": 197,
+    "games": 0,
+    "winShares": 0.0,
+    "currentWinShares": null,
+    "nbaId": 1627832,
+    "espnId": 2991230,
+    "twoKRating": 80,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "jabari-smith-jr",
+    "rank": 111,
+    "allTimeRank": null,
+    "currentRank": 111,
+    "name": "Jabari Smith Jr.",
+    "draftYear": 2022,
+    "position": "Forward / Center",
+    "conference": "West",
+    "team": "Houston Rockets",
+    "teams": [
+      {
+        "team": "Houston Rockets",
+        "games": 212
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 83,
+    "weight": 220,
+    "games": 212,
+    "winShares": 11.7,
+    "currentWinShares": 6.6,
+    "nbaId": 1631095,
+    "espnId": 4432639,
+    "twoKRating": 80,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "jakob-poeltl",
+    "rank": 112,
+    "allTimeRank": null,
+    "currentRank": 112,
+    "name": "Jakob Poeltl",
+    "draftYear": 2016,
+    "position": "Center",
+    "conference": "East",
+    "team": "Toronto Raptors",
+    "teams": [
+      {
+        "team": "Toronto Raptors",
+        "games": 595
+      }
+    ],
+    "nationality": "Austria",
+    "continent": "Europe",
+    "height": 84,
+    "weight": 260,
+    "games": 595,
+    "winShares": 44.2,
+    "currentWinShares": 4.3,
+    "nbaId": 1627751,
+    "espnId": 3134908,
+    "twoKRating": 80,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "jared-mccain",
+    "rank": 113,
+    "allTimeRank": null,
+    "currentRank": 113,
+    "name": "Jared McCain",
+    "draftYear": 2024,
+    "position": "Guard",
+    "conference": "West",
+    "team": "Oklahoma City Thunder",
+    "teams": [
+      {
+        "team": "Oklahoma City Thunder",
+        "games": 0
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 75,
+    "weight": 197,
+    "games": 0,
+    "winShares": 0.0,
+    "currentWinShares": null,
+    "nbaId": 1642272,
+    "espnId": 4683778,
+    "twoKRating": 80,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "jordan-poole",
+    "rank": 114,
+    "allTimeRank": null,
+    "currentRank": 114,
+    "name": "Jordan Poole",
+    "draftYear": 2019,
+    "position": "Guard",
+    "conference": "West",
+    "team": "New Orleans Pelicans",
+    "teams": [
+      {
+        "team": "New Orleans Pelicans",
+        "games": 0
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 76,
+    "weight": 194,
+    "games": 0,
+    "winShares": 0.0,
+    "currentWinShares": null,
+    "nbaId": 1629673,
+    "espnId": 4277956,
+    "twoKRating": 80,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "keegan-murray",
+    "rank": 115,
+    "allTimeRank": null,
+    "currentRank": 115,
+    "name": "Keegan Murray",
+    "draftYear": 2022,
+    "position": "Forward",
+    "conference": "West",
+    "team": "Sacramento Kings",
+    "teams": [
+      {
+        "team": "Sacramento Kings",
+        "games": 0
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 80,
+    "weight": 225,
+    "games": 0,
+    "winShares": 0.0,
+    "currentWinShares": null,
+    "nbaId": 1631099,
+    "espnId": 4594327,
+    "twoKRating": 80,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "malik-monk",
+    "rank": 116,
+    "allTimeRank": null,
+    "currentRank": 116,
+    "name": "Malik Monk",
+    "draftYear": 2017,
+    "position": "Guard",
+    "conference": "West",
+    "team": "Sacramento Kings",
+    "teams": [
+      {
+        "team": "Sacramento Kings",
+        "games": 0
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 75,
+    "weight": 200,
+    "games": 0,
+    "winShares": 0.0,
+    "currentWinShares": null,
+    "nbaId": 1628370,
+    "espnId": 4066262,
+    "twoKRating": 80,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "miles-bridges",
+    "rank": 117,
+    "allTimeRank": null,
+    "currentRank": 117,
+    "name": "Miles Bridges",
+    "draftYear": 2018,
+    "position": "Forward",
+    "conference": "West",
+    "team": "Phoenix Suns",
+    "teams": [
+      {
+        "team": "Phoenix Suns",
+        "games": 424
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 79,
+    "weight": 225,
+    "games": 424,
+    "winShares": 21.3,
+    "currentWinShares": 6.5,
+    "nbaId": 1628970,
+    "espnId": 4066383,
+    "twoKRating": 80,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "obi-toppin",
+    "rank": 118,
+    "allTimeRank": null,
+    "currentRank": 118,
+    "name": "Obi Toppin",
+    "draftYear": 2020,
+    "position": "Forward / Center",
+    "conference": "East",
+    "team": "Indiana Pacers",
+    "teams": [
+      {
+        "team": "Indiana Pacers",
+        "games": 0
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 81,
+    "weight": 220,
+    "games": 0,
+    "winShares": 0.0,
+    "currentWinShares": null,
+    "nbaId": 1630167,
+    "espnId": 4278355,
+    "twoKRating": 80,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "payton-pritchard",
+    "rank": 119,
+    "allTimeRank": null,
+    "currentRank": 119,
+    "name": "Payton Pritchard",
+    "draftYear": 2020,
+    "position": "Guard",
+    "conference": "East",
+    "team": "Boston Celtics",
+    "teams": [
+      {
+        "team": "Boston Celtics",
+        "games": 347
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 73,
+    "weight": 195,
+    "games": 347,
+    "winShares": 20.9,
+    "currentWinShares": 8.5,
+    "nbaId": 1630202,
+    "espnId": 4066354,
+    "twoKRating": 80,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "quentin-grimes",
+    "rank": 120,
+    "allTimeRank": null,
+    "currentRank": 120,
+    "name": "Quentin Grimes",
+    "draftYear": 2021,
+    "position": "Guard / Forward",
+    "conference": "West",
+    "team": "Los Angeles Lakers",
+    "teams": [
+      {
+        "team": "Los Angeles Lakers",
+        "games": 243
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 76,
+    "weight": 210,
+    "games": 243,
+    "winShares": 10.8,
+    "currentWinShares": 3.6,
+    "nbaId": 1629656,
+    "espnId": 4397014,
+    "twoKRating": 80,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "rui-hachimura",
+    "rank": 121,
+    "allTimeRank": null,
+    "currentRank": 121,
+    "name": "Rui Hachimura",
+    "draftYear": 2019,
+    "position": "Forward / Center",
+    "conference": "West",
+    "team": "LA Clippers",
+    "teams": [
+      {
+        "team": "LA Clippers",
+        "games": 337
+      }
+    ],
+    "nationality": "Japan",
+    "continent": "Asia",
+    "height": 80,
+    "weight": 230,
+    "games": 337,
+    "winShares": 15.6,
+    "currentWinShares": 3.2,
+    "nbaId": 1629060,
+    "espnId": 4066648,
+    "twoKRating": 80,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "tari-eason",
+    "rank": 122,
+    "allTimeRank": null,
+    "currentRank": 122,
+    "name": "Tari Eason",
+    "draftYear": 2022,
+    "position": "Forward",
+    "conference": "West",
+    "team": "Houston Rockets",
+    "teams": [
+      {
+        "team": "Houston Rockets",
+        "games": 0
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 80,
+    "weight": 215,
+    "games": 0,
+    "winShares": 0.0,
+    "currentWinShares": null,
+    "nbaId": 1631106,
+    "espnId": 4433192,
+    "twoKRating": 80,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "t-j-mcconnell",
+    "rank": 123,
+    "allTimeRank": null,
+    "currentRank": 123,
+    "name": "T.J. McConnell",
+    "draftYear": null,
+    "position": "Guard",
+    "conference": "East",
+    "team": "Indiana Pacers",
+    "teams": [
+      {
+        "team": "Indiana Pacers",
+        "games": 0
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 73,
+    "weight": 190,
+    "games": 0,
+    "winShares": 0.0,
+    "currentWinShares": null,
+    "nbaId": 204456,
+    "espnId": 2530530,
+    "twoKRating": 80,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "tobias-harris",
+    "rank": 124,
+    "allTimeRank": null,
+    "currentRank": 124,
+    "name": "Tobias Harris",
+    "draftYear": 2011,
+    "position": "Forward",
+    "conference": "West",
+    "team": "San Antonio Spurs",
+    "teams": [
+      {
+        "team": "San Antonio Spurs",
+        "games": 970
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 80,
+    "weight": 226,
+    "games": 970,
+    "winShares": 75.3,
+    "currentWinShares": 5.3,
+    "nbaId": 202699,
+    "espnId": 6440,
+    "twoKRating": 80,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "zaccharie-risacher",
+    "rank": 125,
+    "allTimeRank": null,
+    "currentRank": 125,
+    "name": "Zaccharie Risacher",
+    "draftYear": 2024,
+    "position": "Guard / Forward",
+    "conference": "West",
+    "team": "Dallas Mavericks",
+    "teams": [
+      {
+        "team": "Dallas Mavericks",
+        "games": 0
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 80,
+    "weight": 210,
+    "games": 0,
+    "winShares": 0.0,
+    "currentWinShares": null,
+    "nbaId": 1642258,
+    "espnId": 5211175,
+    "twoKRating": 80,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "bennedict-mathurin",
+    "rank": 126,
+    "allTimeRank": null,
+    "currentRank": 126,
+    "name": "Bennedict Mathurin",
+    "draftYear": 2022,
+    "position": "Guard / Forward",
+    "conference": "West",
+    "team": "LA Clippers",
+    "teams": [
+      {
+        "team": "LA Clippers",
+        "games": 0
+      }
+    ],
+    "nationality": "Canada",
+    "continent": "North America",
+    "height": 77,
+    "weight": 210,
+    "games": 0,
+    "winShares": 0.0,
+    "currentWinShares": null,
+    "nbaId": 1631097,
+    "espnId": 4683634,
+    "twoKRating": 79,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "brandin-podziemski",
+    "rank": 127,
+    "allTimeRank": null,
+    "currentRank": 127,
+    "name": "Brandin Podziemski",
+    "draftYear": 2023,
+    "position": "Guard",
+    "conference": "West",
+    "team": "Golden State Warriors",
+    "teams": [
+      {
+        "team": "Golden State Warriors",
+        "games": 138
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 76,
+    "weight": 205,
+    "games": 138,
+    "winShares": 8.3,
+    "currentWinShares": 5.1,
+    "nbaId": 1641764,
+    "espnId": 4709138,
+    "twoKRating": 79,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "cason-wallace",
+    "rank": 128,
+    "allTimeRank": null,
+    "currentRank": 128,
+    "name": "Cason Wallace",
+    "draftYear": 2023,
+    "position": "Guard",
+    "conference": "West",
+    "team": "Oklahoma City Thunder",
+    "teams": [
+      {
+        "team": "Oklahoma City Thunder",
+        "games": 150
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 75,
+    "weight": 195,
+    "games": 150,
+    "winShares": 9.2,
+    "currentWinShares": 5.2,
+    "nbaId": 1641717,
+    "espnId": 4683692,
+    "twoKRating": 79,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "deandre-ayton",
+    "rank": 129,
+    "allTimeRank": null,
+    "currentRank": 129,
+    "name": "Deandre Ayton",
+    "draftYear": 2018,
+    "position": "Center",
+    "conference": "East",
+    "team": "Washington Wizards",
+    "teams": [
+      {
+        "team": "Washington Wizards",
+        "games": 398
+      }
+    ],
+    "nationality": "Bahamas",
+    "continent": "North America",
+    "height": 84,
+    "weight": 252,
+    "games": 398,
+    "winShares": 37.6,
+    "currentWinShares": 6.2,
+    "nbaId": 1629028,
+    "espnId": 4278129,
+    "twoKRating": 79,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "dillon-brooks",
+    "rank": 130,
+    "allTimeRank": null,
+    "currentRank": 130,
+    "name": "Dillon Brooks",
+    "draftYear": 2017,
+    "position": "Forward",
+    "conference": "West",
+    "team": "Phoenix Suns",
+    "teams": [
+      {
+        "team": "Phoenix Suns",
+        "games": 0
+      }
+    ],
+    "nationality": "Canada",
+    "continent": "North America",
+    "height": 79,
+    "weight": 225,
+    "games": 0,
+    "winShares": 0.0,
+    "currentWinShares": null,
+    "nbaId": 1628415,
+    "espnId": 3155526,
+    "twoKRating": 79,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "jerami-grant",
+    "rank": 131,
+    "allTimeRank": null,
+    "currentRank": 131,
+    "name": "Jerami Grant",
+    "draftYear": 2014,
+    "position": "Forward",
+    "conference": "West",
+    "team": "Memphis Grizzlies",
+    "teams": [
+      {
+        "team": "Memphis Grizzlies",
+        "games": 719
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 79,
+    "weight": 210,
+    "games": 719,
+    "winShares": 36.6,
+    "currentWinShares": 4.0,
+    "nbaId": 203924,
+    "espnId": 2991070,
+    "twoKRating": 79,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "kel-el-ware",
+    "rank": 132,
+    "allTimeRank": null,
+    "currentRank": 132,
+    "name": "Kel'el Ware",
+    "draftYear": 2024,
+    "position": "Forward / Center",
+    "conference": "East",
+    "team": "Milwaukee Bucks",
+    "teams": [
+      {
+        "team": "Milwaukee Bucks",
+        "games": 64
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 84,
+    "weight": 230,
+    "games": 64,
+    "winShares": 4.1,
+    "currentWinShares": 6.2,
+    "nbaId": 1642276,
+    "espnId": 5105623,
+    "twoKRating": 79,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "khris-middleton",
+    "rank": 133,
+    "allTimeRank": null,
+    "currentRank": 133,
+    "name": "Khris Middleton",
+    "draftYear": 2012,
+    "position": "Guard / Forward",
+    "conference": "East",
+    "team": "Washington Wizards",
+    "teams": [
+      {
+        "team": "Washington Wizards",
+        "games": 0
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 79,
+    "weight": 222,
+    "games": 0,
+    "winShares": 0.0,
+    "currentWinShares": null,
+    "nbaId": 203114,
+    "espnId": 6609,
+    "twoKRating": 79,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "klay-thompson",
+    "rank": 134,
+    "allTimeRank": null,
+    "currentRank": 134,
+    "name": "Klay Thompson",
+    "draftYear": 2011,
+    "position": "Guard / Forward",
+    "conference": "West",
+    "team": "Dallas Mavericks",
+    "teams": [
+      {
+        "team": "Dallas Mavericks",
+        "games": 0
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 77,
+    "weight": 220,
+    "games": 0,
+    "winShares": 0.0,
+    "currentWinShares": null,
+    "nbaId": 202691,
+    "espnId": 6475,
+    "twoKRating": 79,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "mark-williams",
+    "rank": 135,
+    "allTimeRank": null,
+    "currentRank": 135,
+    "name": "Mark Williams",
+    "draftYear": 2022,
+    "position": "Center",
+    "conference": "West",
+    "team": "Phoenix Suns",
+    "teams": [
+      {
+        "team": "Phoenix Suns",
+        "games": 106
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 85,
+    "weight": 240,
+    "games": 106,
+    "winShares": 9.7,
+    "currentWinShares": 6.3,
+    "nbaId": 1631109,
+    "espnId": 4701232,
+    "twoKRating": 79,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "matas-buzelis",
+    "rank": 136,
+    "allTimeRank": null,
+    "currentRank": 136,
+    "name": "Matas Buzelis",
+    "draftYear": 2024,
+    "position": "Forward",
+    "conference": "East",
+    "team": "Chicago Bulls",
+    "teams": [
+      {
+        "team": "Chicago Bulls",
+        "games": 0
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 80,
+    "weight": 209,
+    "games": 0,
+    "winShares": 0.0,
+    "currentWinShares": null,
+    "nbaId": 1641824,
+    "espnId": 4711294,
+    "twoKRating": 79,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "nic-claxton",
+    "rank": 137,
+    "allTimeRank": null,
+    "currentRank": 137,
+    "name": "Nic Claxton",
+    "draftYear": 2019,
+    "position": "Center",
+    "conference": "East",
+    "team": "Chicago Bulls",
+    "teams": [
+      {
+        "team": "Chicago Bulls",
+        "games": 0
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 83,
+    "weight": 215,
+    "games": 0,
+    "winShares": 0.0,
+    "currentWinShares": null,
+    "nbaId": 1629651,
+    "espnId": 4278067,
+    "twoKRating": 79,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "p-j-washington",
+    "rank": 138,
+    "allTimeRank": null,
+    "currentRank": 138,
+    "name": "P.J. Washington",
+    "draftYear": 2019,
+    "position": "Forward",
+    "conference": "West",
+    "team": "Dallas Mavericks",
+    "teams": [
+      {
+        "team": "Dallas Mavericks",
+        "games": 0
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 79,
+    "weight": 230,
+    "games": 0,
+    "winShares": 0.0,
+    "currentWinShares": null,
+    "nbaId": 1629023,
+    "espnId": 4278078,
+    "twoKRating": 79,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "tim-hardaway-jr",
+    "rank": 139,
+    "allTimeRank": null,
+    "currentRank": 139,
+    "name": "Tim Hardaway Jr.",
+    "draftYear": 2013,
+    "position": "Guard / Forward",
+    "conference": "East",
+    "team": "Miami Heat",
+    "teams": [
+      {
+        "team": "Miami Heat",
+        "games": 813
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 77,
+    "weight": 205,
+    "games": 813,
+    "winShares": 33.8,
+    "currentWinShares": 4.4,
+    "nbaId": 203501,
+    "espnId": 2528210,
+    "twoKRating": 79,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "ty-jerome",
+    "rank": 140,
+    "allTimeRank": null,
+    "currentRank": 140,
+    "name": "Ty Jerome",
+    "draftYear": 2019,
+    "position": "Guard",
+    "conference": "West",
+    "team": "Memphis Grizzlies",
+    "teams": [
+      {
+        "team": "Memphis Grizzlies",
+        "games": 0
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 77,
+    "weight": 195,
+    "games": 0,
+    "winShares": 0.0,
+    "currentWinShares": null,
+    "nbaId": 1629660,
+    "espnId": 4065733,
+    "twoKRating": 79,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "yves-missi",
+    "rank": 141,
+    "allTimeRank": null,
+    "currentRank": 141,
+    "name": "Yves Missi",
+    "draftYear": 2024,
+    "position": "Forward / Center",
+    "conference": "West",
+    "team": "New Orleans Pelicans",
+    "teams": [
+      {
+        "team": "New Orleans Pelicans",
+        "games": 0
+      }
+    ],
+    "nationality": "Cameroon",
+    "continent": "Africa",
+    "height": 83,
+    "weight": 235,
+    "games": 0,
+    "winShares": 0.0,
+    "currentWinShares": null,
+    "nbaId": 1642274,
+    "espnId": 5061589,
+    "twoKRating": 79,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "zach-edey",
+    "rank": 142,
+    "allTimeRank": null,
+    "currentRank": 142,
+    "name": "Zach Edey",
+    "draftYear": 2024,
+    "position": "Center",
+    "conference": "West",
+    "team": "Memphis Grizzlies",
+    "teams": [
+      {
+        "team": "Memphis Grizzlies",
+        "games": 0
+      }
+    ],
+    "nationality": "Canada",
+    "continent": "North America",
+    "height": 87,
+    "weight": 305,
+    "games": 0,
+    "winShares": 0.0,
+    "currentWinShares": null,
+    "nbaId": 1641744,
+    "espnId": 4600663,
+    "twoKRating": 79,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "anthony-black",
+    "rank": 143,
+    "allTimeRank": null,
+    "currentRank": 143,
+    "name": "Anthony Black",
+    "draftYear": 2023,
+    "position": "Guard / Forward",
+    "conference": "East",
+    "team": "Orlando Magic",
+    "teams": [
+      {
+        "team": "Orlando Magic",
+        "games": 0
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 79,
+    "weight": 200,
+    "games": 0,
+    "winShares": 0.0,
+    "currentWinShares": null,
+    "nbaId": 1641710,
+    "espnId": 4712849,
+    "twoKRating": 78,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "bilal-coulibaly",
+    "rank": 144,
+    "allTimeRank": null,
+    "currentRank": 144,
+    "name": "Bilal Coulibaly",
+    "draftYear": 2023,
+    "position": "Guard / Forward",
+    "conference": "East",
+    "team": "Washington Wizards",
+    "teams": [
+      {
+        "team": "Washington Wizards",
+        "games": 0
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 79,
+    "weight": 195,
+    "games": 0,
+    "winShares": 0.0,
+    "currentWinShares": null,
+    "nbaId": 1641731,
+    "espnId": 5104155,
+    "twoKRating": 78,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "bogdan-bogdanovic",
+    "rank": 145,
+    "allTimeRank": null,
+    "currentRank": 145,
+    "name": "Bogdan Bogdanovic",
+    "draftYear": 2014,
+    "position": "Guard / Forward",
+    "conference": "West",
+    "team": "Houston Rockets",
+    "teams": [
+      {
+        "team": "Houston Rockets",
+        "games": 0
+      }
+    ],
+    "nationality": "Serbia",
+    "continent": "Europe",
+    "height": 77,
+    "weight": 225,
+    "games": 0,
+    "winShares": 0.0,
+    "currentWinShares": null,
+    "nbaId": 203992,
+    "espnId": 3037789,
+    "twoKRating": 78,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "caris-levert",
+    "rank": 146,
+    "allTimeRank": null,
+    "currentRank": 146,
+    "name": "Caris LeVert",
+    "draftYear": 2016,
+    "position": "Guard",
+    "conference": "East",
+    "team": "Milwaukee Bucks",
+    "teams": [
+      {
+        "team": "Milwaukee Bucks",
+        "games": 0
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 79,
+    "weight": 205,
+    "games": 0,
+    "winShares": 0.0,
+    "currentWinShares": null,
+    "nbaId": 1627747,
+    "espnId": 2991043,
+    "twoKRating": 78,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "bub-carrington",
+    "rank": 147,
+    "allTimeRank": null,
+    "currentRank": 147,
+    "name": "Bub Carrington",
+    "draftYear": 2024,
+    "position": "Guard",
+    "conference": "East",
+    "team": "Washington Wizards",
+    "teams": [
+      {
+        "team": "Washington Wizards",
+        "games": 0
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 76,
+    "weight": 190,
+    "games": 0,
+    "winShares": 0.0,
+    "currentWinShares": null,
+    "nbaId": 1642267,
+    "espnId": 4845374,
+    "twoKRating": 78,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "d-angelo-russell",
+    "rank": 148,
+    "allTimeRank": null,
+    "currentRank": 148,
+    "name": "D'Angelo Russell",
+    "draftYear": 2015,
+    "position": "Guard",
+    "conference": "West",
+    "team": "Memphis Grizzlies",
+    "teams": [
+      {
+        "team": "Memphis Grizzlies",
+        "games": 0
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 75,
+    "weight": 193,
+    "games": 0,
+    "winShares": 0.0,
+    "currentWinShares": null,
+    "nbaId": 1626156,
+    "espnId": 3136776,
+    "twoKRating": 78,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "dennis-schroder",
+    "rank": 149,
+    "allTimeRank": null,
+    "currentRank": 149,
+    "name": "Dennis Schroder",
+    "draftYear": 2013,
+    "position": "Guard",
+    "conference": "East",
+    "team": "Cleveland Cavaliers",
+    "teams": [
+      {
+        "team": "Cleveland Cavaliers",
+        "games": 0
+      }
+    ],
+    "nationality": "Germany",
+    "continent": "Europe",
+    "height": 73,
+    "weight": 175,
+    "games": 0,
+    "winShares": 0.0,
+    "currentWinShares": null,
+    "nbaId": 203471,
+    "espnId": 3032979,
+    "twoKRating": 78,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "donte-divincenzo",
+    "rank": 150,
+    "allTimeRank": null,
+    "currentRank": 150,
+    "name": "Donte DiVincenzo",
+    "draftYear": 2018,
+    "position": "Guard",
+    "conference": "West",
+    "team": "Minnesota Timberwolves",
+    "teams": [
+      {
+        "team": "Minnesota Timberwolves",
+        "games": 416
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 76,
+    "weight": 203,
+    "games": 416,
+    "winShares": 23.9,
+    "currentWinShares": 5.2,
+    "nbaId": 1628978,
+    "espnId": 3934673,
+    "twoKRating": 78,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "dylan-harper",
+    "rank": 151,
+    "allTimeRank": null,
+    "currentRank": 151,
+    "name": "Dylan Harper",
+    "draftYear": 2025,
+    "position": "Guard",
+    "conference": "West",
+    "team": "San Antonio Spurs",
+    "teams": [
+      {
+        "team": "San Antonio Spurs",
+        "games": 69
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 77,
+    "weight": 215,
+    "games": 69,
+    "winShares": 4.2,
+    "currentWinShares": 4.2,
+    "nbaId": 1642844,
+    "espnId": 5037871,
+    "twoKRating": 78,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "gradey-dick",
+    "rank": 152,
+    "allTimeRank": null,
+    "currentRank": 152,
+    "name": "Gradey Dick",
+    "draftYear": 2023,
+    "position": "Guard / Forward",
+    "conference": "East",
+    "team": "Toronto Raptors",
+    "teams": [
+      {
+        "team": "Toronto Raptors",
+        "games": 0
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 79,
+    "weight": 200,
+    "games": 0,
+    "winShares": 0.0,
+    "currentWinShares": null,
+    "nbaId": 1641711,
+    "espnId": 5106258,
+    "twoKRating": 78,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "harrison-barnes",
+    "rank": 153,
+    "allTimeRank": null,
+    "currentRank": 153,
+    "name": "Harrison Barnes",
+    "draftYear": 2012,
+    "position": "Forward",
+    "conference": "West",
+    "team": "San Antonio Spurs",
+    "teams": [
+      {
+        "team": "San Antonio Spurs",
+        "games": 993
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 79,
+    "weight": 225,
+    "games": 993,
+    "winShares": 61.6,
+    "currentWinShares": 4.8,
+    "nbaId": 203084,
+    "espnId": 6578,
+    "twoKRating": 78,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "isaiah-collier",
+    "rank": 154,
+    "allTimeRank": null,
+    "currentRank": 154,
+    "name": "Isaiah Collier",
+    "draftYear": 2024,
+    "position": "Guard",
+    "conference": "West",
+    "team": "Utah Jazz",
+    "teams": [
+      {
+        "team": "Utah Jazz",
+        "games": 0
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 76,
+    "weight": 210,
+    "games": 0,
+    "winShares": 0.0,
+    "currentWinShares": null,
+    "nbaId": 1642268,
+    "espnId": 4683766,
+    "twoKRating": 78,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "isaiah-joe",
+    "rank": 155,
+    "allTimeRank": null,
+    "currentRank": 155,
+    "name": "Isaiah Joe",
+    "draftYear": 2020,
+    "position": "Guard",
+    "conference": "East",
+    "team": "Detroit Pistons",
+    "teams": [
+      {
+        "team": "Detroit Pistons",
+        "games": 321
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 76,
+    "weight": 165,
+    "games": 321,
+    "winShares": 13.5,
+    "currentWinShares": 5.5,
+    "nbaId": 1630198,
+    "espnId": 4395702,
+    "twoKRating": 78,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "jordan-clarkson",
+    "rank": 156,
+    "allTimeRank": null,
+    "currentRank": 156,
+    "name": "Jordan Clarkson",
+    "draftYear": 2014,
+    "position": "Guard / Forward",
+    "conference": "East",
+    "team": "New York Knicks",
+    "teams": [
+      {
+        "team": "New York Knicks",
+        "games": 0
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 77,
+    "weight": 194,
+    "games": 0,
+    "winShares": 0.0,
+    "currentWinShares": null,
+    "nbaId": 203903,
+    "espnId": 2528426,
+    "twoKRating": 78,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "keldon-johnson",
+    "rank": 157,
+    "allTimeRank": null,
+    "currentRank": 157,
+    "name": "Keldon Johnson",
+    "draftYear": 2019,
+    "position": "Forward",
+    "conference": "West",
+    "team": "San Antonio Spurs",
+    "teams": [
+      {
+        "team": "San Antonio Spurs",
+        "games": 370
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 77,
+    "weight": 220,
+    "games": 370,
+    "winShares": 16.7,
+    "currentWinShares": 6.4,
+    "nbaId": 1629640,
+    "espnId": 4395723,
+    "twoKRating": 78,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "kelly-oubre-jr",
+    "rank": 158,
+    "allTimeRank": null,
+    "currentRank": 158,
+    "name": "Kelly Oubre Jr.",
+    "draftYear": 2015,
+    "position": "Forward",
+    "conference": "East",
+    "team": "Indiana Pacers",
+    "teams": [
+      {
+        "team": "Indiana Pacers",
+        "games": 0
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 80,
+    "weight": 203,
+    "games": 0,
+    "winShares": 0.0,
+    "currentWinShares": null,
+    "nbaId": 1626162,
+    "espnId": 3133603,
+    "twoKRating": 78,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "keyonte-george",
+    "rank": 159,
+    "allTimeRank": null,
+    "currentRank": 159,
+    "name": "Keyonte George",
+    "draftYear": 2023,
+    "position": "Guard",
+    "conference": "West",
+    "team": "Utah Jazz",
+    "teams": [
+      {
+        "team": "Utah Jazz",
+        "games": 142
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 76,
+    "weight": 185,
+    "games": 142,
+    "winShares": 0.7,
+    "currentWinShares": 3.3,
+    "nbaId": 1641718,
+    "espnId": 4433627,
+    "twoKRating": 78,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "kyle-filipowski",
+    "rank": 160,
+    "allTimeRank": null,
+    "currentRank": 160,
+    "name": "Kyle Filipowski",
+    "draftYear": 2024,
+    "position": "Forward / Center",
+    "conference": "West",
+    "team": "Utah Jazz",
+    "teams": [
+      {
+        "team": "Utah Jazz",
+        "games": 0
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 83,
+    "weight": 250,
+    "games": 0,
+    "winShares": 0.0,
+    "currentWinShares": null,
+    "nbaId": 1642271,
+    "espnId": 4684793,
+    "twoKRating": 78,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "marcus-smart",
+    "rank": 161,
+    "allTimeRank": null,
+    "currentRank": 161,
+    "name": "Marcus Smart",
+    "draftYear": 2014,
+    "position": "Guard",
+    "conference": "West",
+    "team": "Houston Rockets",
+    "teams": [
+      {
+        "team": "Houston Rockets",
+        "games": 0
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 75,
+    "weight": 220,
+    "games": 0,
+    "winShares": 0.0,
+    "currentWinShares": null,
+    "nbaId": 203935,
+    "espnId": 2990992,
+    "twoKRating": 78,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "mike-conley",
+    "rank": 162,
+    "allTimeRank": null,
+    "currentRank": 162,
+    "name": "Mike Conley",
+    "draftYear": 2007,
+    "position": "Guard",
+    "conference": "East",
+    "team": "Boston Celtics",
+    "teams": [
+      {
+        "team": "Boston Celtics",
+        "games": 1172
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 73,
+    "weight": 175,
+    "games": 1172,
+    "winShares": 105.7,
+    "currentWinShares": null,
+    "nbaId": 201144,
+    "espnId": 3195,
+    "twoKRating": 78,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "mitchell-robinson",
+    "rank": 163,
+    "allTimeRank": null,
+    "currentRank": 163,
+    "name": "Mitchell Robinson",
+    "draftYear": 2018,
+    "position": "Center",
+    "conference": "East",
+    "team": "Boston Celtics",
+    "teams": [
+      {
+        "team": "Boston Celtics",
+        "games": 337
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 84,
+    "weight": 240,
+    "games": 337,
+    "winShares": 35.2,
+    "currentWinShares": 5.8,
+    "nbaId": 1629011,
+    "espnId": 4351852,
+    "twoKRating": 78,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "naji-marshall",
+    "rank": 164,
+    "allTimeRank": null,
+    "currentRank": 164,
+    "name": "Naji Marshall",
+    "draftYear": null,
+    "position": "Forward",
+    "conference": "West",
+    "team": "Dallas Mavericks",
+    "teams": [
+      {
+        "team": "Dallas Mavericks",
+        "games": 299
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 78,
+    "weight": 220,
+    "games": 299,
+    "winShares": 10.3,
+    "currentWinShares": 4.3,
+    "nbaId": 1630230,
+    "espnId": 4278594,
+    "twoKRating": 78,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "nickeil-alexander-walker",
+    "rank": 165,
+    "allTimeRank": null,
+    "currentRank": 165,
+    "name": "Nickeil Alexander-Walker",
+    "draftYear": 2019,
+    "position": "Guard / Forward",
+    "conference": "East",
+    "team": "Atlanta Hawks",
+    "teams": [
+      {
+        "team": "Atlanta Hawks",
+        "games": 381
+      }
+    ],
+    "nationality": "Canada",
+    "continent": "North America",
+    "height": 77,
+    "weight": 205,
+    "games": 381,
+    "winShares": 10.2,
+    "currentWinShares": 6.3,
+    "nbaId": 1629638,
+    "espnId": 4278039,
+    "twoKRating": 78,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "robert-williams-iii",
+    "rank": 166,
+    "allTimeRank": null,
+    "currentRank": 166,
+    "name": "Robert Williams III",
+    "draftYear": 2018,
+    "position": "Forward / Center",
+    "conference": "West",
+    "team": "Portland Trail Blazers",
+    "teams": [
+      {
+        "team": "Portland Trail Blazers",
+        "games": 0
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 81,
+    "weight": 237,
+    "games": 0,
+    "winShares": 0.0,
+    "currentWinShares": null,
+    "nbaId": 1629057,
+    "espnId": 4066211,
+    "twoKRating": 78,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "santi-aldama",
+    "rank": 167,
+    "allTimeRank": null,
+    "currentRank": 167,
+    "name": "Santi Aldama",
+    "draftYear": 2021,
+    "position": "Forward",
+    "conference": "West",
+    "team": "Dallas Mavericks",
+    "teams": [
+      {
+        "team": "Dallas Mavericks",
+        "games": 0
+      }
+    ],
+    "nationality": "Spain",
+    "continent": "Europe",
+    "height": 84,
+    "weight": 215,
+    "games": 0,
+    "winShares": 0.0,
+    "currentWinShares": null,
+    "nbaId": 1630583,
+    "espnId": 4593125,
+    "twoKRating": 78,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "scoot-henderson",
+    "rank": 168,
+    "allTimeRank": null,
+    "currentRank": 168,
+    "name": "Scoot Henderson",
+    "draftYear": 2023,
+    "position": "Guard",
+    "conference": "West",
+    "team": "Portland Trail Blazers",
+    "teams": [
+      {
+        "team": "Portland Trail Blazers",
+        "games": 0
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 75,
+    "weight": 206,
+    "games": 0,
+    "winShares": 0.0,
+    "currentWinShares": null,
+    "nbaId": 1630703,
+    "espnId": 4683678,
+    "twoKRating": 78,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "wendell-carter-jr",
+    "rank": 169,
+    "allTimeRank": null,
+    "currentRank": 169,
+    "name": "Wendell Carter Jr.",
+    "draftYear": 2018,
+    "position": "Forward / Center",
+    "conference": "East",
+    "team": "Orlando Magic",
+    "teams": [
+      {
+        "team": "Orlando Magic",
+        "games": 383
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 82,
+    "weight": 270,
+    "games": 383,
+    "winShares": 27.1,
+    "currentWinShares": 6.2,
+    "nbaId": 1628976,
+    "espnId": 4277847,
+    "twoKRating": 78,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "aaron-wiggins",
+    "rank": 170,
+    "allTimeRank": null,
+    "currentRank": 170,
+    "name": "Aaron Wiggins",
+    "draftYear": 2021,
+    "position": "Forward",
+    "conference": "East",
+    "team": "Atlanta Hawks",
+    "teams": [
+      {
+        "team": "Atlanta Hawks",
+        "games": 0
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 77,
+    "weight": 190,
+    "games": 0,
+    "winShares": 0.0,
+    "currentWinShares": null,
+    "nbaId": 1630598,
+    "espnId": 4397183,
+    "twoKRating": 77,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "ace-bailey",
+    "rank": 171,
+    "allTimeRank": null,
+    "currentRank": 171,
+    "name": "Ace Bailey",
+    "draftYear": 2025,
+    "position": "Guard / Forward",
+    "conference": "West",
+    "team": "Utah Jazz",
+    "teams": [
+      {
+        "team": "Utah Jazz",
+        "games": 0
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 81,
+    "weight": 200,
+    "games": 0,
+    "winShares": 0.0,
+    "currentWinShares": null,
+    "nbaId": 1642846,
+    "espnId": 4873138,
+    "twoKRating": 77,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "buddy-hield",
+    "rank": 172,
+    "allTimeRank": null,
+    "currentRank": 172,
+    "name": "Buddy Hield",
+    "draftYear": 2016,
+    "position": "Guard / Forward",
+    "conference": "East",
+    "team": "Atlanta Hawks",
+    "teams": [
+      {
+        "team": "Atlanta Hawks",
+        "games": 0
+      }
+    ],
+    "nationality": "Bahamas",
+    "continent": "North America",
+    "height": 76,
+    "weight": 220,
+    "games": 0,
+    "winShares": 0.0,
+    "currentWinShares": null,
+    "nbaId": 1627741,
+    "espnId": 2990984,
+    "twoKRating": 77,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "clint-capela",
+    "rank": 173,
+    "allTimeRank": null,
+    "currentRank": 173,
+    "name": "Clint Capela",
+    "draftYear": 2014,
+    "position": "Center",
+    "conference": "West",
+    "team": "Houston Rockets",
+    "teams": [
+      {
+        "team": "Houston Rockets",
+        "games": 0
+      }
+    ],
+    "nationality": "Switzerland",
+    "continent": "Europe",
+    "height": 82,
+    "weight": 256,
+    "games": 0,
+    "winShares": 0.0,
+    "currentWinShares": null,
+    "nbaId": 203991,
+    "espnId": 3102529,
+    "twoKRating": 77,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "corey-kispert",
+    "rank": 174,
+    "allTimeRank": null,
+    "currentRank": 174,
+    "name": "Corey Kispert",
+    "draftYear": 2021,
+    "position": "Forward",
+    "conference": "East",
+    "team": "Atlanta Hawks",
+    "teams": [
+      {
+        "team": "Atlanta Hawks",
+        "games": 0
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 78,
+    "weight": 224,
+    "games": 0,
+    "winShares": 0.0,
+    "currentWinShares": null,
+    "nbaId": 1630557,
+    "espnId": 4280151,
+    "twoKRating": 77,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "davion-mitchell",
+    "rank": 175,
+    "allTimeRank": null,
+    "currentRank": 175,
+    "name": "Davion Mitchell",
+    "draftYear": 2021,
+    "position": "Guard",
+    "conference": "East",
+    "team": "Miami Heat",
+    "teams": [
+      {
+        "team": "Miami Heat",
+        "games": 301
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 72,
+    "weight": 202,
+    "games": 301,
+    "winShares": 6.0,
+    "currentWinShares": 4.3,
+    "nbaId": 1630558,
+    "espnId": 4278053,
+    "twoKRating": 77,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "donovan-clingan",
+    "rank": 176,
+    "allTimeRank": null,
+    "currentRank": 176,
+    "name": "Donovan Clingan",
+    "draftYear": 2024,
+    "position": "Center",
+    "conference": "West",
+    "team": "Portland Trail Blazers",
+    "teams": [
+      {
+        "team": "Portland Trail Blazers",
+        "games": 67
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 86,
+    "weight": 280,
+    "games": 67,
+    "winShares": 4.0,
+    "currentWinShares": 8.6,
+    "nbaId": 1642270,
+    "espnId": 5105565,
+    "twoKRating": 77,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "dorian-finney-smith",
+    "rank": 177,
+    "allTimeRank": null,
+    "currentRank": 177,
+    "name": "Dorian Finney-Smith",
+    "draftYear": null,
+    "position": "Forward / Center",
+    "conference": "East",
+    "team": "Charlotte Hornets",
+    "teams": [
+      {
+        "team": "Charlotte Hornets",
+        "games": 0
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 79,
+    "weight": 220,
+    "games": 0,
+    "winShares": 0.0,
+    "currentWinShares": null,
+    "nbaId": 1627827,
+    "espnId": 2578185,
+    "twoKRating": 77,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "gary-trent-jr",
+    "rank": 178,
+    "allTimeRank": null,
+    "currentRank": 178,
+    "name": "Gary Trent Jr.",
+    "draftYear": 2018,
+    "position": "Guard / Forward",
+    "conference": "East",
+    "team": "Milwaukee Bucks",
+    "teams": [
+      {
+        "team": "Milwaukee Bucks",
+        "games": 0
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 77,
+    "weight": 204,
+    "games": 0,
+    "winShares": 0.0,
+    "currentWinShares": null,
+    "nbaId": 1629018,
+    "espnId": 4277843,
+    "twoKRating": 77,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "guerschon-yabusele",
+    "rank": 179,
+    "allTimeRank": null,
+    "currentRank": 179,
+    "name": "Guerschon Yabusele",
+    "draftYear": 2016,
+    "position": "Forward / Center",
+    "conference": "East",
+    "team": "Chicago Bulls",
+    "teams": [
+      {
+        "team": "Chicago Bulls",
+        "games": 0
+      }
+    ],
+    "nationality": "France",
+    "continent": "Europe",
+    "height": 79,
+    "weight": 265,
+    "games": 0,
+    "winShares": 0.0,
+    "currentWinShares": null,
+    "nbaId": 1627824,
+    "espnId": 4017844,
+    "twoKRating": 77,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "jarred-vanderbilt",
+    "rank": 180,
+    "allTimeRank": null,
+    "currentRank": 180,
+    "name": "Jarred Vanderbilt",
+    "draftYear": 2018,
+    "position": "Forward / Center",
+    "conference": "West",
+    "team": "Los Angeles Lakers",
+    "teams": [
+      {
+        "team": "Los Angeles Lakers",
+        "games": 0
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 80,
+    "weight": 214,
+    "games": 0,
+    "winShares": 0.0,
+    "currentWinShares": null,
+    "nbaId": 1629020,
+    "espnId": 4278077,
+    "twoKRating": 77,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "jeremy-sochan",
+    "rank": 181,
+    "allTimeRank": null,
+    "currentRank": 181,
+    "name": "Jeremy Sochan",
+    "draftYear": 2022,
+    "position": "Forward / Center",
+    "conference": "West",
+    "team": "Portland Trail Blazers",
+    "teams": [
+      {
+        "team": "Portland Trail Blazers",
+        "games": 0
+      }
+    ],
+    "nationality": "England",
+    "continent": "Europe",
+    "height": 80,
+    "weight": 230,
+    "games": 0,
+    "winShares": 0.0,
+    "currentWinShares": null,
+    "nbaId": 1631110,
+    "espnId": 4610139,
+    "twoKRating": 77,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "jose-alvarado",
+    "rank": 182,
+    "allTimeRank": null,
+    "currentRank": 182,
+    "name": "Jose Alvarado",
+    "draftYear": null,
+    "position": "Guard",
+    "conference": "East",
+    "team": "New York Knicks",
+    "teams": [
+      {
+        "team": "New York Knicks",
+        "games": 0
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 72,
+    "weight": 179,
+    "games": 0,
+    "winShares": 0.0,
+    "currentWinShares": null,
+    "nbaId": 1630631,
+    "espnId": 4277869,
+    "twoKRating": 77,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "jusuf-nurkic",
+    "rank": 183,
+    "allTimeRank": null,
+    "currentRank": 183,
+    "name": "Jusuf Nurkic",
+    "draftYear": 2014,
+    "position": "Center",
+    "conference": "West",
+    "team": "Utah Jazz",
+    "teams": [
+      {
+        "team": "Utah Jazz",
+        "games": 0
+      }
+    ],
+    "nationality": "Bosnia & Herzegovina",
+    "continent": "Europe",
+    "height": 83,
+    "weight": 290,
+    "games": 0,
+    "winShares": 0.0,
+    "currentWinShares": null,
+    "nbaId": 203994,
+    "espnId": 3102530,
+    "twoKRating": 77,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "kyle-kuzma",
+    "rank": 184,
+    "allTimeRank": null,
+    "currentRank": 184,
+    "name": "Kyle Kuzma",
+    "draftYear": 2017,
+    "position": "Forward",
+    "conference": "East",
+    "team": "Milwaukee Bucks",
+    "teams": [
+      {
+        "team": "Milwaukee Bucks",
+        "games": 0
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 80,
+    "weight": 221,
+    "games": 0,
+    "winShares": 0.0,
+    "currentWinShares": null,
+    "nbaId": 1628398,
+    "espnId": 3134907,
+    "twoKRating": 77,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "kyshawn-george",
+    "rank": 185,
+    "allTimeRank": null,
+    "currentRank": 185,
+    "name": "Kyshawn George",
+    "draftYear": 2024,
+    "position": "Forward",
+    "conference": "East",
+    "team": "Washington Wizards",
+    "teams": [
+      {
+        "team": "Washington Wizards",
+        "games": 0
+      }
+    ],
+    "nationality": "Switzerland",
+    "continent": "Europe",
+    "height": 80,
+    "weight": 200,
+    "games": 0,
+    "winShares": 0.0,
+    "currentWinShares": null,
+    "nbaId": 1642273,
+    "espnId": 5174563,
+    "twoKRating": 77,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "max-strus",
+    "rank": 186,
+    "allTimeRank": null,
+    "currentRank": 186,
+    "name": "Max Strus",
+    "draftYear": null,
+    "position": "Guard / Forward",
+    "conference": "East",
+    "team": "Cleveland Cavaliers",
+    "teams": [
+      {
+        "team": "Cleveland Cavaliers",
+        "games": 0
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 77,
+    "weight": 215,
+    "games": 0,
+    "winShares": 0.0,
+    "currentWinShares": null,
+    "nbaId": 1629622,
+    "espnId": 4065778,
+    "twoKRating": 77,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "moses-moody",
+    "rank": 187,
+    "allTimeRank": null,
+    "currentRank": 187,
+    "name": "Moses Moody",
+    "draftYear": 2021,
+    "position": "Guard / Forward",
+    "conference": "West",
+    "team": "Golden State Warriors",
+    "teams": [
+      {
+        "team": "Golden State Warriors",
+        "games": 0
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 77,
+    "weight": 211,
+    "games": 0,
+    "winShares": 0.0,
+    "currentWinShares": null,
+    "nbaId": 1630541,
+    "espnId": 4432171,
+    "twoKRating": 77,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "tyus-jones",
+    "rank": 188,
+    "allTimeRank": null,
+    "currentRank": 188,
+    "name": "Tyus Jones",
+    "draftYear": 2015,
+    "position": "Guard",
+    "conference": "West",
+    "team": "Denver Nuggets",
+    "teams": [
+      {
+        "team": "Denver Nuggets",
+        "games": 0
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 72,
+    "weight": 196,
+    "games": 0,
+    "winShares": 0.0,
+    "currentWinShares": null,
+    "nbaId": 1626145,
+    "espnId": 3135046,
+    "twoKRating": 77,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "andre-drummond",
+    "rank": 189,
+    "allTimeRank": null,
+    "currentRank": 189,
+    "name": "Andre Drummond",
+    "draftYear": 2012,
+    "position": "Center",
+    "conference": "East",
+    "team": "New York Knicks",
+    "teams": [
+      {
+        "team": "New York Knicks",
+        "games": 904
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 83,
+    "weight": 279,
+    "games": 904,
+    "winShares": 76.6,
+    "currentWinShares": 3.4,
+    "nbaId": 203083,
+    "espnId": 6585,
+    "twoKRating": 76,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "ayo-dosunmu",
+    "rank": 190,
+    "allTimeRank": null,
+    "currentRank": 190,
+    "name": "Ayo Dosunmu",
+    "draftYear": 2021,
+    "position": "Guard / Forward",
+    "conference": "West",
+    "team": "Minnesota Timberwolves",
+    "teams": [
+      {
+        "team": "Minnesota Timberwolves",
+        "games": 279
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 76,
+    "weight": 200,
+    "games": 279,
+    "winShares": 12.6,
+    "currentWinShares": 4.9,
+    "nbaId": 1630245,
+    "espnId": 4397002,
+    "twoKRating": 76,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "dalton-knecht",
+    "rank": 191,
+    "allTimeRank": null,
+    "currentRank": 191,
+    "name": "Dalton Knecht",
+    "draftYear": 2024,
+    "position": "Guard / Forward",
+    "conference": "West",
+    "team": "Los Angeles Lakers",
+    "teams": [
+      {
+        "team": "Los Angeles Lakers",
+        "games": 0
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 78,
+    "weight": 215,
+    "games": 0,
+    "winShares": 0.0,
+    "currentWinShares": null,
+    "nbaId": 1642261,
+    "espnId": 4897943,
+    "twoKRating": 76,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "derrick-jones-jr",
+    "rank": 192,
+    "allTimeRank": null,
+    "currentRank": 192,
+    "name": "Derrick Jones Jr.",
+    "draftYear": null,
+    "position": "Forward / Center",
+    "conference": "West",
+    "team": "LA Clippers",
+    "teams": [
+      {
+        "team": "LA Clippers",
+        "games": 0
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 78,
+    "weight": 210,
+    "games": 0,
+    "winShares": 0.0,
+    "currentWinShares": null,
+    "nbaId": 1627884,
+    "espnId": 3936099,
+    "twoKRating": 76,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "duncan-robinson",
+    "rank": 193,
+    "allTimeRank": null,
+    "currentRank": 193,
+    "name": "Duncan Robinson",
+    "draftYear": null,
+    "position": "Guard / Forward",
+    "conference": "East",
+    "team": "Detroit Pistons",
+    "teams": [
+      {
+        "team": "Detroit Pistons",
+        "games": 423
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 79,
+    "weight": 215,
+    "games": 423,
+    "winShares": 19.9,
+    "currentWinShares": 6.1,
+    "nbaId": 1629130,
+    "espnId": 3157465,
+    "twoKRating": 76,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "grayson-allen",
+    "rank": 194,
+    "allTimeRank": null,
+    "currentRank": 194,
+    "name": "Grayson Allen",
+    "draftYear": 2018,
+    "position": "Guard / Forward",
+    "conference": "East",
+    "team": "Charlotte Hornets",
+    "teams": [
+      {
+        "team": "Charlotte Hornets",
+        "games": 403
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 75,
+    "weight": 198,
+    "games": 403,
+    "winShares": 22.6,
+    "currentWinShares": 3.9,
+    "nbaId": 1628960,
+    "espnId": 3135045,
+    "twoKRating": 76,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "jaime-jaquez-jr",
+    "rank": 195,
+    "allTimeRank": null,
+    "currentRank": 195,
+    "name": "Jaime Jaquez Jr.",
+    "draftYear": 2023,
+    "position": "Forward",
+    "conference": "East",
+    "team": "Milwaukee Bucks",
+    "teams": [
+      {
+        "team": "Milwaukee Bucks",
+        "games": 141
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 78,
+    "weight": 225,
+    "games": 141,
+    "winShares": 6.3,
+    "currentWinShares": 4.2,
+    "nbaId": 1631170,
+    "espnId": 4432848,
+    "twoKRating": 76,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "jay-huff",
+    "rank": 196,
+    "allTimeRank": null,
+    "currentRank": 196,
+    "name": "Jay Huff",
+    "draftYear": null,
+    "position": "Center",
+    "conference": "East",
+    "team": "Indiana Pacers",
+    "teams": [
+      {
+        "team": "Indiana Pacers",
+        "games": 95
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 85,
+    "weight": 240,
+    "games": 95,
+    "winShares": 3.2,
+    "currentWinShares": 3.2,
+    "nbaId": 1630643,
+    "espnId": 4065731,
+    "twoKRating": 76,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "jaylen-wells",
+    "rank": 197,
+    "allTimeRank": null,
+    "currentRank": 197,
+    "name": "Jaylen Wells",
+    "draftYear": 2024,
+    "position": "Guard / Forward",
+    "conference": "West",
+    "team": "Memphis Grizzlies",
+    "teams": [
+      {
+        "team": "Memphis Grizzlies",
+        "games": 0
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 79,
+    "weight": 205,
+    "games": 0,
+    "winShares": 0.0,
+    "currentWinShares": null,
+    "nbaId": 1642377,
+    "espnId": 5112087,
+    "twoKRating": 76,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "kenrich-williams",
+    "rank": 198,
+    "allTimeRank": null,
+    "currentRank": 198,
+    "name": "Kenrich Williams",
+    "draftYear": null,
+    "position": "Forward / Center",
+    "conference": "West",
+    "team": "Oklahoma City Thunder",
+    "teams": [
+      {
+        "team": "Oklahoma City Thunder",
+        "games": 0
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 79,
+    "weight": 210,
+    "games": 0,
+    "winShares": 0.0,
+    "currentWinShares": null,
+    "nbaId": 1629026,
+    "espnId": 3133626,
+    "twoKRating": 76,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "kentavious-caldwell-pope",
+    "rank": 199,
+    "allTimeRank": null,
+    "currentRank": 199,
+    "name": "Kentavious Caldwell-Pope",
+    "draftYear": 2013,
+    "position": "Guard / Forward",
+    "conference": "East",
+    "team": "Philadelphia 76ers",
+    "teams": [
+      {
+        "team": "Philadelphia 76ers",
+        "games": 0
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 77,
+    "weight": 204,
+    "games": 0,
+    "winShares": 0.0,
+    "currentWinShares": null,
+    "nbaId": 203484,
+    "espnId": 2581018,
+    "twoKRating": 76,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "keon-ellis",
+    "rank": 200,
+    "allTimeRank": null,
+    "currentRank": 200,
+    "name": "Keon Ellis",
+    "draftYear": null,
+    "position": "Guard",
+    "conference": "East",
+    "team": "Brooklyn Nets",
+    "teams": [
+      {
+        "team": "Brooklyn Nets",
+        "games": 0
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 76,
+    "weight": 175,
+    "games": 0,
+    "winShares": 0.0,
+    "currentWinShares": null,
+    "nbaId": 1631165,
+    "espnId": 4702177,
+    "twoKRating": 76,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "kevin-huerter",
+    "rank": 201,
+    "allTimeRank": null,
+    "currentRank": 201,
+    "name": "Kevin Huerter",
+    "draftYear": 2018,
+    "position": "Guard / Forward",
+    "conference": "East",
+    "team": "Detroit Pistons",
+    "teams": [
+      {
+        "team": "Detroit Pistons",
+        "games": 0
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 78,
+    "weight": 198,
+    "games": 0,
+    "winShares": 0.0,
+    "currentWinShares": null,
+    "nbaId": 1628989,
+    "espnId": 4066372,
+    "twoKRating": 76,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "kevin-porter-jr",
+    "rank": 202,
+    "allTimeRank": null,
+    "currentRank": 202,
+    "name": "Kevin Porter Jr.",
+    "draftYear": 2019,
+    "position": "Guard",
+    "conference": "East",
+    "team": "Milwaukee Bucks",
+    "teams": [
+      {
+        "team": "Milwaukee Bucks",
+        "games": 0
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 77,
+    "weight": 203,
+    "games": 0,
+    "winShares": 0.0,
+    "currentWinShares": null,
+    "nbaId": 1629645,
+    "espnId": 4397140,
+    "twoKRating": 76,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "kris-dunn",
+    "rank": 203,
+    "allTimeRank": null,
+    "currentRank": 203,
+    "name": "Kris Dunn",
+    "draftYear": 2016,
+    "position": "Guard",
+    "conference": "West",
+    "team": "LA Clippers",
+    "teams": [
+      {
+        "team": "LA Clippers",
+        "games": 407
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 75,
+    "weight": 205,
+    "games": 407,
+    "winShares": 11.8,
+    "currentWinShares": 4.0,
+    "nbaId": 1627739,
+    "espnId": 2991139,
+    "twoKRating": 76,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "luke-kornet",
+    "rank": 204,
+    "allTimeRank": null,
+    "currentRank": 204,
+    "name": "Luke Kornet",
+    "draftYear": null,
+    "position": "Center",
+    "conference": "West",
+    "team": "San Antonio Spurs",
+    "teams": [
+      {
+        "team": "San Antonio Spurs",
+        "games": 353
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 85,
+    "weight": 250,
+    "games": 353,
+    "winShares": 19.4,
+    "currentWinShares": 6.9,
+    "nbaId": 1628436,
+    "espnId": 3064560,
+    "twoKRating": 76,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "miles-mcbride",
+    "rank": 205,
+    "allTimeRank": null,
+    "currentRank": 205,
+    "name": "Miles McBride",
+    "draftYear": 2021,
+    "position": "Guard",
+    "conference": "East",
+    "team": "New York Knicks",
+    "teams": [
+      {
+        "team": "New York Knicks",
+        "games": 0
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 74,
+    "weight": 195,
+    "games": 0,
+    "winShares": 0.0,
+    "currentWinShares": null,
+    "nbaId": 1630540,
+    "espnId": 4431823,
+    "twoKRating": 76,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "sam-hauser",
+    "rank": 206,
+    "allTimeRank": null,
+    "currentRank": 206,
+    "name": "Sam Hauser",
+    "draftYear": null,
+    "position": "Forward",
+    "conference": "East",
+    "team": "Boston Celtics",
+    "teams": [
+      {
+        "team": "Boston Celtics",
+        "games": 256
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 79,
+    "weight": 217,
+    "games": 256,
+    "winShares": 13.2,
+    "currentWinShares": 5.0,
+    "nbaId": 1630573,
+    "espnId": 4065804,
+    "twoKRating": 76,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "scotty-pippen-jr",
+    "rank": 207,
+    "allTimeRank": null,
+    "currentRank": 207,
+    "name": "Scotty Pippen Jr.",
+    "draftYear": null,
+    "position": "Guard",
+    "conference": "West",
+    "team": "Memphis Grizzlies",
+    "teams": [
+      {
+        "team": "Memphis Grizzlies",
+        "games": 0
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 74,
+    "weight": 170,
+    "games": 0,
+    "winShares": 0.0,
+    "currentWinShares": null,
+    "nbaId": 1630590,
+    "espnId": 4431785,
+    "twoKRating": 76,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "tre-jones",
+    "rank": 208,
+    "allTimeRank": null,
+    "currentRank": 208,
+    "name": "Tre Jones",
+    "draftYear": 2020,
+    "position": "Guard",
+    "conference": "East",
+    "team": "Chicago Bulls",
+    "teams": [
+      {
+        "team": "Chicago Bulls",
+        "games": 297
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 73,
+    "weight": 185,
+    "games": 297,
+    "winShares": 14.5,
+    "currentWinShares": 5.7,
+    "nbaId": 1630200,
+    "espnId": 4395626,
+    "twoKRating": 76,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "vj-edgecombe",
+    "rank": 209,
+    "allTimeRank": null,
+    "currentRank": 209,
+    "name": "VJ Edgecombe",
+    "draftYear": 2025,
+    "position": "Guard",
+    "conference": "East",
+    "team": "Philadelphia 76ers",
+    "teams": [
+      {
+        "team": "Philadelphia 76ers",
+        "games": 75
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 76,
+    "weight": 180,
+    "games": 75,
+    "winShares": 4.4,
+    "currentWinShares": 4.4,
+    "nbaId": 1642845,
+    "espnId": 5124612,
+    "twoKRating": 76,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "brice-sensabaugh",
+    "rank": 210,
+    "allTimeRank": null,
+    "currentRank": 210,
+    "name": "Brice Sensabaugh",
+    "draftYear": 2023,
+    "position": "Forward",
+    "conference": "West",
+    "team": "Utah Jazz",
+    "teams": [
+      {
+        "team": "Utah Jazz",
+        "games": 0
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 78,
+    "weight": 235,
+    "games": 0,
+    "winShares": 0.0,
+    "currentWinShares": null,
+    "nbaId": 1641729,
+    "espnId": 5105839,
+    "twoKRating": 75,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "cam-whitmore",
+    "rank": 211,
+    "allTimeRank": null,
+    "currentRank": 211,
+    "name": "Cam Whitmore",
+    "draftYear": 2023,
+    "position": "Guard / Forward",
+    "conference": "East",
+    "team": "Washington Wizards",
+    "teams": [
+      {
+        "team": "Washington Wizards",
+        "games": 0
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 78,
+    "weight": 230,
+    "games": 0,
+    "winShares": 0.0,
+    "currentWinShares": null,
+    "nbaId": 1641715,
+    "espnId": 5105592,
+    "twoKRating": 75,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "goga-bitadze",
+    "rank": 212,
+    "allTimeRank": null,
+    "currentRank": 212,
+    "name": "Goga Bitadze",
+    "draftYear": 2019,
+    "position": "Center",
+    "conference": "East",
+    "team": "Orlando Magic",
+    "teams": [
+      {
+        "team": "Orlando Magic",
+        "games": 319
+      }
+    ],
+    "nationality": "Georgia",
+    "continent": "Asia",
+    "height": 83,
+    "weight": 250,
+    "games": 319,
+    "winShares": 14.9,
+    "currentWinShares": 4.4,
+    "nbaId": 1629048,
+    "espnId": 4348700,
+    "twoKRating": 75,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "jalen-smith",
+    "rank": 213,
+    "allTimeRank": null,
+    "currentRank": 213,
+    "name": "Jalen Smith",
+    "draftYear": 2020,
+    "position": "Forward / Center",
+    "conference": "East",
+    "team": "Chicago Bulls",
+    "teams": [
+      {
+        "team": "Chicago Bulls",
+        "games": 0
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 80,
+    "weight": 215,
+    "games": 0,
+    "winShares": 0.0,
+    "currentWinShares": null,
+    "nbaId": 1630188,
+    "espnId": 4397189,
+    "twoKRating": 75,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "jaxson-hayes",
+    "rank": 214,
+    "allTimeRank": null,
+    "currentRank": 214,
+    "name": "Jaxson Hayes",
+    "draftYear": 2019,
+    "position": "Forward / Center",
+    "conference": "West",
+    "team": "Utah Jazz",
+    "teams": [
+      {
+        "team": "Utah Jazz",
+        "games": 367
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 84,
+    "weight": 220,
+    "games": 367,
+    "winShares": 20.1,
+    "currentWinShares": 5.0,
+    "nbaId": 1629637,
+    "espnId": 4397077,
+    "twoKRating": 75,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "jaylin-williams",
+    "rank": 215,
+    "allTimeRank": null,
+    "currentRank": 215,
+    "name": "Jaylin Williams",
+    "draftYear": 2022,
+    "position": "Center",
+    "conference": "West",
+    "team": "Oklahoma City Thunder",
+    "teams": [
+      {
+        "team": "Oklahoma City Thunder",
+        "games": 165
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 81,
+    "weight": 240,
+    "games": 165,
+    "winShares": 7.6,
+    "currentWinShares": 4.1,
+    "nbaId": 1631119,
+    "espnId": 4432823,
+    "twoKRating": 75,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "josh-okogie",
+    "rank": 216,
+    "allTimeRank": null,
+    "currentRank": 216,
+    "name": "Josh Okogie",
+    "draftYear": 2018,
+    "position": "Guard / Forward",
+    "conference": "West",
+    "team": "Utah Jazz",
+    "teams": [
+      {
+        "team": "Utah Jazz",
+        "games": 0
+      }
+    ],
+    "nationality": "Nigeria",
+    "continent": "Africa",
+    "height": 76,
+    "weight": 213,
+    "games": 0,
+    "winShares": 0.0,
+    "currentWinShares": null,
+    "nbaId": 1629006,
+    "espnId": 4065663,
+    "twoKRating": 75,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "justin-edwards",
+    "rank": 217,
+    "allTimeRank": null,
+    "currentRank": 217,
+    "name": "Justin Edwards",
+    "draftYear": null,
+    "position": "Forward",
+    "conference": "East",
+    "team": "Philadelphia 76ers",
+    "teams": [
+      {
+        "team": "Philadelphia 76ers",
+        "games": 0
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 79,
+    "weight": 203,
+    "games": 0,
+    "winShares": 0.0,
+    "currentWinShares": null,
+    "nbaId": 1642348,
+    "espnId": 4711297,
+    "twoKRating": 75,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "karlo-matkovic",
+    "rank": 218,
+    "allTimeRank": null,
+    "currentRank": 218,
+    "name": "Karlo Matkovic",
+    "draftYear": 2022,
+    "position": "Forward / Center",
+    "conference": "West",
+    "team": "New Orleans Pelicans",
+    "teams": [
+      {
+        "team": "New Orleans Pelicans",
+        "games": 0
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 82,
+    "weight": 231,
+    "games": 0,
+    "winShares": 0.0,
+    "currentWinShares": null,
+    "nbaId": 1631255,
+    "espnId": 4997538,
+    "twoKRating": 75,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "kon-knueppel",
+    "rank": 219,
+    "allTimeRank": null,
+    "currentRank": 219,
+    "name": "Kon Knueppel",
+    "draftYear": 2025,
+    "position": "Guard / Forward",
+    "conference": "East",
+    "team": "Charlotte Hornets",
+    "teams": [
+      {
+        "team": "Charlotte Hornets",
+        "games": 81
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 78,
+    "weight": 217,
+    "games": 81,
+    "winShares": 8.0,
+    "currentWinShares": 8.0,
+    "nbaId": 1642851,
+    "espnId": 5061575,
+    "twoKRating": 75,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "luke-kennard",
+    "rank": 220,
+    "allTimeRank": null,
+    "currentRank": 220,
+    "name": "Luke Kennard",
+    "draftYear": 2017,
+    "position": "Guard",
+    "conference": "West",
+    "team": "Phoenix Suns",
+    "teams": [
+      {
+        "team": "Phoenix Suns",
+        "games": 460
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 77,
+    "weight": 206,
+    "games": 460,
+    "winShares": 23.6,
+    "currentWinShares": 4.5,
+    "nbaId": 1628379,
+    "espnId": 3913174,
+    "twoKRating": 75,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "matisse-thybulle",
+    "rank": 221,
+    "allTimeRank": null,
+    "currentRank": 221,
+    "name": "Matisse Thybulle",
+    "draftYear": 2019,
+    "position": "Guard / Forward",
+    "conference": "West",
+    "team": "Los Angeles Lakers",
+    "teams": [
+      {
+        "team": "Los Angeles Lakers",
+        "games": 0
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 77,
+    "weight": 201,
+    "games": 0,
+    "winShares": 0.0,
+    "currentWinShares": null,
+    "nbaId": 1629680,
+    "espnId": 3907498,
+    "twoKRating": 75,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "max-christie",
+    "rank": 222,
+    "allTimeRank": null,
+    "currentRank": 222,
+    "name": "Max Christie",
+    "draftYear": 2022,
+    "position": "Guard / Forward",
+    "conference": "West",
+    "team": "Dallas Mavericks",
+    "teams": [
+      {
+        "team": "Dallas Mavericks",
+        "games": 0
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 77,
+    "weight": 190,
+    "games": 0,
+    "winShares": 0.0,
+    "currentWinShares": null,
+    "nbaId": 1631108,
+    "espnId": 4432582,
+    "twoKRating": 75,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "moritz-wagner",
+    "rank": 223,
+    "allTimeRank": null,
+    "currentRank": 223,
+    "name": "Moritz Wagner",
+    "draftYear": 2018,
+    "position": "Forward / Center",
+    "conference": "East",
+    "team": "Brooklyn Nets",
+    "teams": [
+      {
+        "team": "Brooklyn Nets",
+        "games": 0
+      }
+    ],
+    "nationality": "Germany",
+    "continent": "Europe",
+    "height": 83,
+    "weight": 245,
+    "games": 0,
+    "winShares": 0.0,
+    "currentWinShares": null,
+    "nbaId": 1629021,
+    "espnId": 3150844,
+    "twoKRating": 75,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "nikola-jovic",
+    "rank": 224,
+    "allTimeRank": null,
+    "currentRank": 224,
+    "name": "Nikola Jovic",
+    "draftYear": 2022,
+    "position": "Forward / Center",
+    "conference": "East",
+    "team": "Miami Heat",
+    "teams": [
+      {
+        "team": "Miami Heat",
+        "games": 0
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 82,
+    "weight": 240,
+    "games": 0,
+    "winShares": 0.0,
+    "currentWinShares": null,
+    "nbaId": 1631107,
+    "espnId": 4997528,
+    "twoKRating": 75,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "patrick-williams",
+    "rank": 225,
+    "allTimeRank": null,
+    "currentRank": 225,
+    "name": "Patrick Williams",
+    "draftYear": 2020,
+    "position": "Forward",
+    "conference": "East",
+    "team": "Chicago Bulls",
+    "teams": [
+      {
+        "team": "Chicago Bulls",
+        "games": 0
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 78,
+    "weight": 215,
+    "games": 0,
+    "winShares": 0.0,
+    "currentWinShares": null,
+    "nbaId": 1630172,
+    "espnId": 4431687,
+    "twoKRating": 75,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "peyton-watson",
+    "rank": 226,
+    "allTimeRank": null,
+    "currentRank": 226,
+    "name": "Peyton Watson",
+    "draftYear": 2022,
+    "position": "Forward",
+    "conference": "West",
+    "team": "Denver Nuggets",
+    "teams": [
+      {
+        "team": "Denver Nuggets",
+        "games": 0
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 80,
+    "weight": 200,
+    "games": 0,
+    "winShares": 0.0,
+    "currentWinShares": null,
+    "nbaId": 1631212,
+    "espnId": 4576087,
+    "twoKRating": 75,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "royce-o-neale",
+    "rank": 227,
+    "allTimeRank": null,
+    "currentRank": 227,
+    "name": "Royce O'Neale",
+    "draftYear": null,
+    "position": "Forward",
+    "conference": "East",
+    "team": "Charlotte Hornets",
+    "teams": [
+      {
+        "team": "Charlotte Hornets",
+        "games": 600
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 78,
+    "weight": 226,
+    "games": 600,
+    "winShares": 30.1,
+    "currentWinShares": 4.6,
+    "nbaId": 1626220,
+    "espnId": 2583632,
+    "twoKRating": 75,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "ryan-dunn",
+    "rank": 228,
+    "allTimeRank": null,
+    "currentRank": 228,
+    "name": "Ryan Dunn",
+    "draftYear": 2024,
+    "position": "Forward",
+    "conference": "West",
+    "team": "Phoenix Suns",
+    "teams": [
+      {
+        "team": "Phoenix Suns",
+        "games": 0
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 79,
+    "weight": 216,
+    "games": 0,
+    "winShares": 0.0,
+    "currentWinShares": null,
+    "nbaId": 1642346,
+    "espnId": 4888725,
+    "twoKRating": 75,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "ryan-rollins",
+    "rank": 229,
+    "allTimeRank": null,
+    "currentRank": 229,
+    "name": "Ryan Rollins",
+    "draftYear": 2022,
+    "position": "Guard",
+    "conference": "East",
+    "team": "Milwaukee Bucks",
+    "teams": [
+      {
+        "team": "Milwaukee Bucks",
+        "games": 81
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 75,
+    "weight": 180,
+    "games": 81,
+    "winShares": 1.7,
+    "currentWinShares": 3.4,
+    "nbaId": 1631157,
+    "espnId": 4591725,
+    "twoKRating": 75,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "saddiq-bey",
+    "rank": 230,
+    "allTimeRank": null,
+    "currentRank": 230,
+    "name": "Saddiq Bey",
+    "draftYear": 2020,
+    "position": "Forward",
+    "conference": "West",
+    "team": "New Orleans Pelicans",
+    "teams": [
+      {
+        "team": "New Orleans Pelicans",
+        "games": 292
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 80,
+    "weight": 215,
+    "games": 292,
+    "winShares": 14.6,
+    "currentWinShares": 5.4,
+    "nbaId": 1630180,
+    "espnId": 4397136,
+    "twoKRating": 75,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "sandro-mamukelashvili",
+    "rank": 231,
+    "allTimeRank": null,
+    "currentRank": 231,
+    "name": "Sandro Mamukelashvili",
+    "draftYear": 2021,
+    "position": "Forward / Center",
+    "conference": "West",
+    "team": "Los Angeles Lakers",
+    "teams": [
+      {
+        "team": "Los Angeles Lakers",
+        "games": 191
+      }
+    ],
+    "nationality": "Georgia",
+    "continent": "Asia",
+    "height": 81,
+    "weight": 240,
+    "games": 191,
+    "winShares": 5.2,
+    "currentWinShares": 6.2,
+    "nbaId": 1630572,
+    "espnId": 4278580,
+    "twoKRating": 75,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "steven-adams",
+    "rank": 232,
+    "allTimeRank": null,
+    "currentRank": 232,
+    "name": "Steven Adams",
+    "draftYear": 2013,
+    "position": "Center",
+    "conference": "West",
+    "team": "Houston Rockets",
+    "teams": [
+      {
+        "team": "Houston Rockets",
+        "games": 0
+      }
+    ],
+    "nationality": "New Zealand",
+    "continent": "Oceania",
+    "height": 83,
+    "weight": 265,
+    "games": 0,
+    "winShares": 0.0,
+    "currentWinShares": null,
+    "nbaId": 203500,
+    "espnId": 2991235,
+    "twoKRating": 75,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "taurean-prince",
+    "rank": 233,
+    "allTimeRank": null,
+    "currentRank": 233,
+    "name": "Taurean Prince",
+    "draftYear": 2016,
+    "position": "Guard / Forward",
+    "conference": "East",
+    "team": "Detroit Pistons",
+    "teams": [
+      {
+        "team": "Detroit Pistons",
+        "games": 0
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 78,
+    "weight": 218,
+    "games": 0,
+    "winShares": 0.0,
+    "currentWinShares": null,
+    "nbaId": 1627752,
+    "espnId": 2990962,
+    "twoKRating": 75,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "tre-johnson",
+    "rank": 234,
+    "allTimeRank": null,
+    "currentRank": 234,
+    "name": "Tre Johnson",
+    "draftYear": 2025,
+    "position": "Guard / Forward",
+    "conference": "East",
+    "team": "Washington Wizards",
+    "teams": [
+      {
+        "team": "Washington Wizards",
+        "games": 0
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 77,
+    "weight": 210,
+    "games": 0,
+    "winShares": 0.0,
+    "currentWinShares": null,
+    "nbaId": 1642848,
+    "espnId": 5238230,
+    "twoKRating": 75,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "tre-mann",
+    "rank": 235,
+    "allTimeRank": null,
+    "currentRank": 235,
+    "name": "Tre Mann",
+    "draftYear": 2021,
+    "position": "Guard",
+    "conference": "East",
+    "team": "Charlotte Hornets",
+    "teams": [
+      {
+        "team": "Charlotte Hornets",
+        "games": 0
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 76,
+    "weight": 178,
+    "games": 0,
+    "winShares": 0.0,
+    "currentWinShares": null,
+    "nbaId": 1630544,
+    "espnId": 4432819,
+    "twoKRating": 75,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "zach-collins",
+    "rank": 236,
+    "allTimeRank": null,
+    "currentRank": 236,
+    "name": "Zach Collins",
+    "draftYear": 2017,
+    "position": "Center",
+    "conference": "East",
+    "team": "Chicago Bulls",
+    "teams": [
+      {
+        "team": "Chicago Bulls",
+        "games": 0
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 81,
+    "weight": 250,
+    "games": 0,
+    "winShares": 0.0,
+    "currentWinShares": null,
+    "nbaId": 1628380,
+    "espnId": 4066650,
+    "twoKRating": 75,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "ziaire-williams",
+    "rank": 237,
+    "allTimeRank": null,
+    "currentRank": 237,
+    "name": "Ziaire Williams",
+    "draftYear": 2021,
+    "position": "Guard / Forward",
+    "conference": "West",
+    "team": "Los Angeles Lakers",
+    "teams": [
+      {
+        "team": "Los Angeles Lakers",
+        "games": 0
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 81,
+    "weight": 185,
+    "games": 0,
+    "winShares": 0.0,
+    "currentWinShares": null,
+    "nbaId": 1630533,
+    "espnId": 4433137,
+    "twoKRating": 75,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "adem-bona",
+    "rank": 238,
+    "allTimeRank": null,
+    "currentRank": 238,
+    "name": "Adem Bona",
+    "draftYear": 2024,
+    "position": "Center",
+    "conference": "East",
+    "team": "Philadelphia 76ers",
+    "teams": [
+      {
+        "team": "Philadelphia 76ers",
+        "games": 0
+      }
+    ],
+    "nationality": "Nigeria",
+    "continent": "Africa",
+    "height": 82,
+    "weight": 235,
+    "games": 0,
+    "winShares": 0.0,
+    "currentWinShares": null,
+    "nbaId": 1641737,
+    "espnId": 5105637,
+    "twoKRating": 74,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "aj-green",
+    "rank": 239,
+    "allTimeRank": null,
+    "currentRank": 239,
+    "name": "AJ Green",
+    "draftYear": null,
+    "position": "Guard / Forward",
+    "conference": "East",
+    "team": "Milwaukee Bucks",
+    "teams": [
+      {
+        "team": "Milwaukee Bucks",
+        "games": 0
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 76,
+    "weight": 190,
+    "games": 0,
+    "winShares": 0.0,
+    "currentWinShares": null,
+    "nbaId": 1631260,
+    "espnId": 4397475,
+    "twoKRating": 74,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "aj-johnson",
+    "rank": 240,
+    "allTimeRank": null,
+    "currentRank": 240,
+    "name": "AJ Johnson",
+    "draftYear": 2024,
+    "position": "Guard / Forward",
+    "conference": "West",
+    "team": "Memphis Grizzlies",
+    "teams": [
+      {
+        "team": "Memphis Grizzlies",
+        "games": 0
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 77,
+    "weight": 160,
+    "games": 0,
+    "winShares": 0.0,
+    "currentWinShares": null,
+    "nbaId": 1642358,
+    "espnId": 5170947,
+    "twoKRating": 74,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "ben-sheppard",
+    "rank": 241,
+    "allTimeRank": null,
+    "currentRank": 241,
+    "name": "Ben Sheppard",
+    "draftYear": 2023,
+    "position": "Guard / Forward",
+    "conference": "East",
+    "team": "Indiana Pacers",
+    "teams": [
+      {
+        "team": "Indiana Pacers",
+        "games": 0
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 78,
+    "weight": 190,
+    "games": 0,
+    "winShares": 0.0,
+    "currentWinShares": null,
+    "nbaId": 1641767,
+    "espnId": 4433076,
+    "twoKRating": 74,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "caleb-martin",
+    "rank": 242,
+    "allTimeRank": null,
+    "currentRank": 242,
+    "name": "Caleb Martin",
+    "draftYear": null,
+    "position": "Forward",
+    "conference": "West",
+    "team": "Dallas Mavericks",
+    "teams": [
+      {
+        "team": "Dallas Mavericks",
+        "games": 0
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 77,
+    "weight": 205,
+    "games": 0,
+    "winShares": 0.0,
+    "currentWinShares": null,
+    "nbaId": 1628997,
+    "espnId": 3138160,
+    "twoKRating": 74,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "dean-wade",
+    "rank": 243,
+    "allTimeRank": null,
+    "currentRank": 243,
+    "name": "Dean Wade",
+    "draftYear": null,
+    "position": "Forward / Center",
+    "conference": "East",
+    "team": "Philadelphia 76ers",
+    "teams": [
+      {
+        "team": "Philadelphia 76ers",
+        "games": 0
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 81,
+    "weight": 228,
+    "games": 0,
+    "winShares": 0.0,
+    "currentWinShares": null,
+    "nbaId": 1629731,
+    "espnId": 3912848,
+    "twoKRating": 74,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "devin-carter",
+    "rank": 244,
+    "allTimeRank": null,
+    "currentRank": 244,
+    "name": "Devin Carter",
+    "draftYear": 2024,
+    "position": "Guard",
+    "conference": "East",
+    "team": "Atlanta Hawks",
+    "teams": [
+      {
+        "team": "Atlanta Hawks",
+        "games": 0
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 74,
+    "weight": 195,
+    "games": 0,
+    "winShares": 0.0,
+    "currentWinShares": null,
+    "nbaId": 1642269,
+    "espnId": 4433188,
+    "twoKRating": 74,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "gg-jackson",
+    "rank": 245,
+    "allTimeRank": null,
+    "currentRank": 245,
+    "name": "GG Jackson",
+    "draftYear": 2023,
+    "position": "Forward",
+    "conference": "West",
+    "team": "Memphis Grizzlies",
+    "teams": [
+      {
+        "team": "Memphis Grizzlies",
+        "games": 0
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 81,
+    "weight": 210,
+    "games": 0,
+    "winShares": 0.0,
+    "currentWinShares": null,
+    "nbaId": 1641713,
+    "espnId": 5105550,
+    "twoKRating": 74,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "isaac-okoro",
+    "rank": 246,
+    "allTimeRank": null,
+    "currentRank": 246,
+    "name": "Isaac Okoro",
+    "draftYear": 2020,
+    "position": "Guard / Forward",
+    "conference": "East",
+    "team": "Chicago Bulls",
+    "teams": [
+      {
+        "team": "Chicago Bulls",
+        "games": 0
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 76,
+    "weight": 225,
+    "games": 0,
+    "winShares": 0.0,
+    "currentWinShares": null,
+    "nbaId": 1630171,
+    "espnId": 4432822,
+    "twoKRating": 74,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "isaiah-stewart",
+    "rank": 247,
+    "allTimeRank": null,
+    "currentRank": 247,
+    "name": "Isaiah Stewart",
+    "draftYear": 2020,
+    "position": "Forward / Center",
+    "conference": "West",
+    "team": "Memphis Grizzlies",
+    "teams": [
+      {
+        "team": "Memphis Grizzlies",
+        "games": 0
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 80,
+    "weight": 250,
+    "games": 0,
+    "winShares": 0.0,
+    "currentWinShares": null,
+    "nbaId": 1630191,
+    "espnId": 4432810,
+    "twoKRating": 74,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "ja-kobe-walter",
+    "rank": 248,
+    "allTimeRank": null,
+    "currentRank": 248,
+    "name": "Ja'Kobe Walter",
+    "draftYear": 2024,
+    "position": "Guard / Forward",
+    "conference": "East",
+    "team": "Toronto Raptors",
+    "teams": [
+      {
+        "team": "Toronto Raptors",
+        "games": 0
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 76,
+    "weight": 180,
+    "games": 0,
+    "winShares": 0.0,
+    "currentWinShares": null,
+    "nbaId": 1642266,
+    "espnId": 4684272,
+    "twoKRating": 74,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "jake-laravia",
+    "rank": 249,
+    "allTimeRank": null,
+    "currentRank": 249,
+    "name": "Jake LaRavia",
+    "draftYear": 2022,
+    "position": "Forward",
+    "conference": "West",
+    "team": "Los Angeles Lakers",
+    "teams": [
+      {
+        "team": "Los Angeles Lakers",
+        "games": 0
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 79,
+    "weight": 235,
+    "games": 0,
+    "winShares": 0.0,
+    "currentWinShares": null,
+    "nbaId": 1631222,
+    "espnId": 4592691,
+    "twoKRating": 74,
+    "active": true,
+    "rosterSeason": "2026-27"
+  },
+  {
+    "id": "jalen-wilson",
+    "rank": 250,
+    "allTimeRank": null,
+    "currentRank": 250,
+    "name": "Jalen Wilson",
+    "draftYear": 2023,
+    "position": "Forward",
+    "conference": "East",
+    "team": "Atlanta Hawks",
+    "teams": [
+      {
+        "team": "Atlanta Hawks",
+        "games": 0
+      }
+    ],
+    "nationality": "USA",
+    "continent": "North America",
+    "height": 78,
+    "weight": 220,
+    "games": 0,
+    "winShares": 0.0,
+    "currentWinShares": null,
+    "nbaId": 1630592,
+    "espnId": 4431714,
+    "twoKRating": 74,
+    "active": true,
+    "rosterSeason": "2026-27"
+  }
+]
