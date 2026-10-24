@@ -45,6 +45,7 @@ next-env.d.ts
 /warehouse/logs/
 /warehouse/*.duckdb
 /warehouse/*.duckdb.wal
+/warehouse/.user.yml
 /.venv/
 __pycache__/
 *.py[cod]
