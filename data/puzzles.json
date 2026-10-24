@@ -1,0 +1,545 @@
+{
+  "datasetVersion": "751eed3d78532443",
+  "puzzles": [
+    {
+      "date": "2026-10-24",
+      "playerId": "gary-trent-jr",
+      "seed": "daily-roster-v1",
+      "selectionHash": "028d9b00883c0d34078c6dc7da7c91500e8916c146552c527dbe845ac215f431"
+    },
+    {
+      "date": "2026-10-25",
+      "playerId": "kawhi-leonard",
+      "seed": "daily-roster-v1",
+      "selectionHash": "007e24c53d8a308beca004c813cf2b5c35547441313007ca928aebea6a24625f"
+    },
+    {
+      "date": "2026-10-26",
+      "playerId": "mikal-bridges",
+      "seed": "daily-roster-v1",
+      "selectionHash": "0064a9d0115ecd9d30f314689811d2aeb879703513c7905a43e0d932c7fa0f84"
+    },
+    {
+      "date": "2026-10-27",
+      "playerId": "quentin-grimes",
+      "seed": "daily-roster-v1",
+      "selectionHash": "002f641d9ba35c1bd0e490b01855a0cf46f003e1efc9775dba6653a5ab12cad7"
+    },
+    {
+      "date": "2026-10-28",
+      "playerId": "herbert-jones",
+      "seed": "daily-roster-v1",
+      "selectionHash": "02e06bd08333b1890836278fb152fe150f153e13862a837dfc3a7ba275aa0a30"
+    },
+    {
+      "date": "2026-10-29",
+      "playerId": "ja-morant",
+      "seed": "daily-roster-v1",
+      "selectionHash": "007a859d3106122eb3056fe2bd03eae13192e3d660a4a81362c096175eab1af1"
+    },
+    {
+      "date": "2026-10-30",
+      "playerId": "kristaps-porzingis",
+      "seed": "daily-roster-v1",
+      "selectionHash": "004a187a1260659cb7898a85e5e3772b11737394fb77afc45e77ff9f41124885"
+    },
+    {
+      "date": "2026-10-31",
+      "playerId": "anfernee-simons",
+      "seed": "daily-roster-v1",
+      "selectionHash": "019571f14637d02c8294c2bfe5859947c31cdfdfcb875d1645159a60720498f7"
+    },
+    {
+      "date": "2026-11-01",
+      "playerId": "bogdan-bogdanovic",
+      "seed": "daily-roster-v1",
+      "selectionHash": "00dc5078d4837e2bdd5c39c817bdb56746c99d53d46c59af85ed0a1fcadde802"
+    },
+    {
+      "date": "2026-11-02",
+      "playerId": "klay-thompson",
+      "seed": "daily-roster-v1",
+      "selectionHash": "01725095cda9d53c337474b0d92e3a38a1efd69b4d2d72c813f34cb84c90d3b9"
+    },
+    {
+      "date": "2026-11-03",
+      "playerId": "jaden-mcdaniels",
+      "seed": "daily-roster-v1",
+      "selectionHash": "002f4dfe13321d9ca568d8ed0577f1ed6a87fb533578f53ba8c6569ec036877e"
+    },
+    {
+      "date": "2026-11-04",
+      "playerId": "davion-mitchell",
+      "seed": "daily-roster-v1",
+      "selectionHash": "0007c681a8de2c32f3432039dfe06dd409fbb0776d76a84ce6b975ebd7397fba"
+    },
+    {
+      "date": "2026-11-05",
+      "playerId": "shai-gilgeous-alexander",
+      "seed": "daily-roster-v1",
+      "selectionHash": "00183e71b23029e6d0274efb9f5d02adfa10f486ba6741aea20d1a7933f0fd20"
+    },
+    {
+      "date": "2026-11-06",
+      "playerId": "darius-garland",
+      "seed": "daily-roster-v1",
+      "selectionHash": "02b9cce7b50140dc0e16915230d04da2bd0646a50c2fc440b44c0537fd84eac8"
+    },
+    {
+      "date": "2026-11-07",
+      "playerId": "goga-bitadze",
+      "seed": "daily-roster-v1",
+      "selectionHash": "00fe5fdc94c9310cf4a4694c0f3d83dca6f0bbb3d1a01b486bbe66b294ee74ce"
+    },
+    {
+      "date": "2026-11-08",
+      "playerId": "anfernee-simons",
+      "seed": "daily-roster-v1",
+      "selectionHash": "02932ebea6c8322b21bd23b7ffc070b65458bb05b73dd0bb001b7e78dcbded5f"
+    },
+    {
+      "date": "2026-11-09",
+      "playerId": "zach-edey",
+      "seed": "daily-roster-v1",
+      "selectionHash": "0180f38b16da977bef861587a44269bf2bbbeb8905118d2b2ff4174ac4866c60"
+    },
+    {
+      "date": "2026-11-10",
+      "playerId": "zaccharie-risacher",
+      "seed": "daily-roster-v1",
+      "selectionHash": "033a937ed0051ac55bc652273bd2f8b9d6751b09b9e8ca81e334455d99b1a02a"
+    },
+    {
+      "date": "2026-11-11",
+      "playerId": "kevin-durant",
+      "seed": "daily-roster-v1",
+      "selectionHash": "0076a2c244e8a1c9317f36288bc649166c578d9fd4c8422ffcd0844f0c6b3174"
+    },
+    {
+      "date": "2026-11-12",
+      "playerId": "tre-johnson",
+      "seed": "daily-roster-v1",
+      "selectionHash": "0052e0dcb949739e617ef7ff6d51306baf73d0b75b6ce6524f6f4c3c3939e090"
+    },
+    {
+      "date": "2026-11-13",
+      "playerId": "anthony-davis",
+      "seed": "daily-roster-v1",
+      "selectionHash": "01061434ce32893d15ecbf2a4739fa9e0c8ca8474e142fb8389307dfceae7fba"
+    },
+    {
+      "date": "2026-11-14",
+      "playerId": "andrew-wiggins",
+      "seed": "daily-roster-v1",
+      "selectionHash": "002db2056a206c5026d021fbf7bf9d46a7a873f6fbc236dea17040e6f06d70e1"
+    },
+    {
+      "date": "2026-11-15",
+      "playerId": "kristaps-porzingis",
+      "seed": "daily-roster-v1",
+      "selectionHash": "002545daec4692e83ca96ac759953b204da7371e9a18d4d12fb4558a6c325920"
+    },
+    {
+      "date": "2026-11-16",
+      "playerId": "damian-lillard",
+      "seed": "daily-roster-v1",
+      "selectionHash": "008a3f1b34b0023f22a13eae24126c9ca75a19d7d64407ff3c3ed69fb1abd288"
+    },
+    {
+      "date": "2026-11-17",
+      "playerId": "bub-carrington",
+      "seed": "daily-roster-v1",
+      "selectionHash": "00585e6e498e2a7f4dbd1832982bcf57c7515597b7ea8eff380147394e5633f2"
+    },
+    {
+      "date": "2026-11-18",
+      "playerId": "zach-lavine",
+      "seed": "daily-roster-v1",
+      "selectionHash": "01e378ccdd0366fc6a8694fa05927dc6839c170d96b6b77b643a2896fe3523f8"
+    },
+    {
+      "date": "2026-11-19",
+      "playerId": "paolo-banchero",
+      "seed": "daily-roster-v1",
+      "selectionHash": "010c2f1d5905af36ed7d7c7e5b93ce73c91f0df61a4ac012bf16aecb06ce56c1"
+    },
+    {
+      "date": "2026-11-20",
+      "playerId": "jordan-clarkson",
+      "seed": "daily-roster-v1",
+      "selectionHash": "014f853bc2868564d72b0ca148fdc7e9f3ea95f5b381d6249e02f8a6fc887eda"
+    },
+    {
+      "date": "2026-11-21",
+      "playerId": "josh-okogie",
+      "seed": "daily-roster-v1",
+      "selectionHash": "00990294c59a3626256947dc9a36ecf1790f5c6de3c87739722d311cc33d5b1c"
+    },
+    {
+      "date": "2026-11-22",
+      "playerId": "caleb-martin",
+      "seed": "daily-roster-v1",
+      "selectionHash": "0005ea59f57c527717049ed1eb769f2f91a062acb48b62dd596a0847a83a3b47"
+    },
+    {
+      "date": "2026-11-23",
+      "playerId": "santi-aldama",
+      "seed": "daily-roster-v1",
+      "selectionHash": "00a580de169130a4ea098f37b1548fd80562eeb4fb6ba1d599936e5189d3d181"
+    },
+    {
+      "date": "2026-11-24",
+      "playerId": "matas-buzelis",
+      "seed": "daily-roster-v1",
+      "selectionHash": "003fcc6acaf1917e9aa438c1e2f00e482d7d6cf6ba9c1125c14be75e1ced08d2"
+    },
+    {
+      "date": "2026-11-25",
+      "playerId": "jalen-brunson",
+      "seed": "daily-roster-v1",
+      "selectionHash": "0008d9a43ed769166e1ba69635572293f71e9ce9c1ac952f2edf8deef2c685f4"
+    },
+    {
+      "date": "2026-11-26",
+      "playerId": "yves-missi",
+      "seed": "daily-roster-v1",
+      "selectionHash": "006e3a4cd6880532d99f9fc63b7293385a77aa624e0bc05f4635d57e3b52a178"
+    },
+    {
+      "date": "2026-11-27",
+      "playerId": "dennis-schroder",
+      "seed": "daily-roster-v1",
+      "selectionHash": "0111eb63654e940319153925b8915de16348e8b09f06f9f6bbc18a513af57e30"
+    },
+    {
+      "date": "2026-11-28",
+      "playerId": "jordan-poole",
+      "seed": "daily-roster-v1",
+      "selectionHash": "00a3e442b5ba8d8fc578de090e81e2d4c17879b731a8a83a785a83128d982a77"
+    },
+    {
+      "date": "2026-11-29",
+      "playerId": "brandon-ingram",
+      "seed": "daily-roster-v1",
+      "selectionHash": "0017b68e132165d3c684443067ac89136f93bc1cae111244823560f3923ca243"
+    },
+    {
+      "date": "2026-11-30",
+      "playerId": "caris-levert",
+      "seed": "daily-roster-v1",
+      "selectionHash": "01ee69a1dd9f64625f433e78c4d0148c7a2dfec7c9a1f70d8ec845c7a9b55e68"
+    },
+    {
+      "date": "2026-12-01",
+      "playerId": "paul-george",
+      "seed": "daily-roster-v1",
+      "selectionHash": "023c58cd00d48cc89328f28171846c5b781b531f7dbc3ba53f991fc35d3c5fa4"
+    },
+    {
+      "date": "2026-12-02",
+      "playerId": "scottie-barnes",
+      "seed": "daily-roster-v1",
+      "selectionHash": "011f75159aadd8e44044c122c1c6b4fc5d200a6d83689406d08f5930cd673074"
+    },
+    {
+      "date": "2026-12-03",
+      "playerId": "paolo-banchero",
+      "seed": "daily-roster-v1",
+      "selectionHash": "00a74533e544ef2e59efe30d715f77808e79872cdb9134d94b366038104a143d"
+    },
+    {
+      "date": "2026-12-04",
+      "playerId": "isaiah-collier",
+      "seed": "daily-roster-v1",
+      "selectionHash": "001e9668b613286bb7b0e66580290afe29747eb80ab6ece77971916e49d35c82"
+    },
+    {
+      "date": "2026-12-05",
+      "playerId": "donte-divincenzo",
+      "seed": "daily-roster-v1",
+      "selectionHash": "000afa00afa8bd34f2d666d563e9f3367b0ee860bf20df630e83c5ddc5bc5a1a"
+    },
+    {
+      "date": "2026-12-06",
+      "playerId": "jalen-williams",
+      "seed": "daily-roster-v1",
+      "selectionHash": "0029d9ccf4afc67297ca7f1106fb1f2459ff103302f02382d30f0cefe182affc"
+    },
+    {
+      "date": "2026-12-07",
+      "playerId": "miles-bridges",
+      "seed": "daily-roster-v1",
+      "selectionHash": "004a499e96db067268b2dd7f1a5c513e9f41d6f48de252df795a2bc713510fa6"
+    },
+    {
+      "date": "2026-12-08",
+      "playerId": "adem-bona",
+      "seed": "daily-roster-v1",
+      "selectionHash": "001ff5edecd21f57604fcc4c2cacdb341fc187971ef8086c59dc245e220543d7"
+    },
+    {
+      "date": "2026-12-09",
+      "playerId": "jeremy-sochan",
+      "seed": "daily-roster-v1",
+      "selectionHash": "02683a4661f825ef83db11284c3fde9e86159580e779d0546e5b6a7ad9fa508d"
+    },
+    {
+      "date": "2026-12-10",
+      "playerId": "brice-sensabaugh",
+      "seed": "daily-roster-v1",
+      "selectionHash": "01703af47998d497ed7c9b9c7a3f37ffc0fd210c41c22e9962e3eca581d8538b"
+    },
+    {
+      "date": "2026-12-11",
+      "playerId": "klay-thompson",
+      "seed": "daily-roster-v1",
+      "selectionHash": "02172c041db6f6ea1a4339af761c7e15de5ce976b56d7f46a494d00e1d838908"
+    },
+    {
+      "date": "2026-12-12",
+      "playerId": "tre-jones",
+      "seed": "daily-roster-v1",
+      "selectionHash": "00e65b6898e25dbb145e2ddcd6d1ef9eb520f2e9debeaa50ba730fa52ae7ef7e"
+    },
+    {
+      "date": "2026-12-13",
+      "playerId": "josh-okogie",
+      "seed": "daily-roster-v1",
+      "selectionHash": "0210a6727ac32d8d152b9b7f3c5aabef2f81ca52b0c41fa69f4829e616d90b81"
+    },
+    {
+      "date": "2026-12-14",
+      "playerId": "moritz-wagner",
+      "seed": "daily-roster-v1",
+      "selectionHash": "02ff48a537207534114e2fe8253fae51ea619a12e03ba14c0754484068ec498d"
+    },
+    {
+      "date": "2026-12-15",
+      "playerId": "aj-green",
+      "seed": "daily-roster-v1",
+      "selectionHash": "0329e479fd9507998befcbbe6d2f7cb6736bb59389b23963cdf7cad8d1c97d04"
+    },
+    {
+      "date": "2026-12-16",
+      "playerId": "nikola-vucevic",
+      "seed": "daily-roster-v1",
+      "selectionHash": "009a333ae43f9bd0c1e2cd942d741efbe7491021d1d8198e896d481f877d0248"
+    },
+    {
+      "date": "2026-12-17",
+      "playerId": "cooper-flagg",
+      "seed": "daily-roster-v1",
+      "selectionHash": "032318f23fc6f2f78f8a35d4f4103c08dc1041202cfe59047aac979111923734"
+    },
+    {
+      "date": "2026-12-18",
+      "playerId": "deni-avdija",
+      "seed": "daily-roster-v1",
+      "selectionHash": "007369c6d26eae0ec2f35b168ecdac5a591ec2460fc6eea63356caf4b230b8ea"
+    },
+    {
+      "date": "2026-12-19",
+      "playerId": "alex-sarr",
+      "seed": "daily-roster-v1",
+      "selectionHash": "02ec05588a8457dfaf13c1dd01d9c9214a476fcbb6ea1832e6e6157ac127b13c"
+    },
+    {
+      "date": "2026-12-20",
+      "playerId": "anthony-davis",
+      "seed": "daily-roster-v1",
+      "selectionHash": "011d91e7d97aeb2f31a0ad6cb3b8eeefa573b4f9537b6404be00e89289d9a8f5"
+    },
+    {
+      "date": "2026-12-21",
+      "playerId": "cason-wallace",
+      "seed": "daily-roster-v1",
+      "selectionHash": "01ceaba1dae916f27e03b2be48a81904091b79622ac6bbbb4be7505e3a0b61d8"
+    },
+    {
+      "date": "2026-12-22",
+      "playerId": "de-andre-hunter",
+      "seed": "daily-roster-v1",
+      "selectionHash": "00271098e5c211d88babcf1d5986d7c3ade476c098da9d44c91b788c82093083"
+    },
+    {
+      "date": "2026-12-23",
+      "playerId": "nickeil-alexander-walker",
+      "seed": "daily-roster-v1",
+      "selectionHash": "01475d967aba8ca2ea187a508f840af408b0e57ce8c0d85210e844297084a637"
+    },
+    {
+      "date": "2026-12-24",
+      "playerId": "pascal-siakam",
+      "seed": "daily-roster-v1",
+      "selectionHash": "000d354bb689d661b02118750071ed691eda77114254790c50611278562e1773"
+    },
+    {
+      "date": "2026-12-25",
+      "playerId": "aaron-nesmith",
+      "seed": "daily-roster-v1",
+      "selectionHash": "01191f7b157dddee7f2f1d15a20d7c19a2a1f4fea089da37140417682713f5c6"
+    },
+    {
+      "date": "2026-12-26",
+      "playerId": "andrew-nembhard",
+      "seed": "daily-roster-v1",
+      "selectionHash": "0054bd333016379d19598e0f9f8842f44807665597a77dd6ab379c83102b0c18"
+    },
+    {
+      "date": "2026-12-27",
+      "playerId": "khris-middleton",
+      "seed": "daily-roster-v1",
+      "selectionHash": "006e5edd4126c4c5956369e432404192fa7af851bbc45729f9a86d2eead50c8d"
+    },
+    {
+      "date": "2026-12-28",
+      "playerId": "brandon-miller",
+      "seed": "daily-roster-v1",
+      "selectionHash": "00467618528524ee5ea82683623211181f91c858e3a557c051136436781c2926"
+    },
+    {
+      "date": "2026-12-29",
+      "playerId": "paolo-banchero",
+      "seed": "daily-roster-v1",
+      "selectionHash": "00c2db5af8c72556e3e8c59339d99fe2806602601d73cb98f3ef4ac60c631200"
+    },
+    {
+      "date": "2026-12-30",
+      "playerId": "keyonte-george",
+      "seed": "daily-roster-v1",
+      "selectionHash": "0154b4d01c0bdbf0bd3308f93428ce6ea18cffed40d1b61aa8ca80ec920add15"
+    },
+    {
+      "date": "2026-12-31",
+      "playerId": "aj-green",
+      "seed": "daily-roster-v1",
+      "selectionHash": "05580aa4e557b8665763d14f3be462565d187e8a5acd343bd673a7f897cd0688"
+    },
+    {
+      "date": "2027-01-01",
+      "playerId": "goga-bitadze",
+      "seed": "daily-roster-v1",
+      "selectionHash": "00b695522d6c63242f3f1d8f0420fd452c0b7af6064ea6562f0f1a6e0057e8c3"
+    },
+    {
+      "date": "2027-01-02",
+      "playerId": "sandro-mamukelashvili",
+      "seed": "daily-roster-v1",
+      "selectionHash": "016cdcfa5e40ef17a4d5133b4bd82f97f0f682108717f364131dddb8f4d7fc17"
+    },
+    {
+      "date": "2027-01-03",
+      "playerId": "nikola-vucevic",
+      "seed": "daily-roster-v1",
+      "selectionHash": "01083b0a1cce7f366f7cd521a88406fadd5399105fa68a530e8f80b97e6ce13a"
+    },
+    {
+      "date": "2027-01-04",
+      "playerId": "naz-reid",
+      "seed": "daily-roster-v1",
+      "selectionHash": "04b69186dd94bb04e88f28a07bd3d79cbe33a5f8b0bce8ad79045422752e976e"
+    },
+    {
+      "date": "2027-01-05",
+      "playerId": "patrick-williams",
+      "seed": "daily-roster-v1",
+      "selectionHash": "0197618385bcfe1358a76e84579e8274e0f5078b0c4a6c5600c92517525bfcf3"
+    },
+    {
+      "date": "2027-01-06",
+      "playerId": "cason-wallace",
+      "seed": "daily-roster-v1",
+      "selectionHash": "03cf2266fcff3dec14e11061592bc4e2f04aeb2c67d9dec30adc4ed58d3a1c7c"
+    },
+    {
+      "date": "2027-01-07",
+      "playerId": "keegan-murray",
+      "seed": "daily-roster-v1",
+      "selectionHash": "00afeaf2e85d852f98c733ab0fd7089b301bec00def52ca6b6460965cdc228f1"
+    },
+    {
+      "date": "2027-01-08",
+      "playerId": "devin-vassell",
+      "seed": "daily-roster-v1",
+      "selectionHash": "024080b1b3f750bf8b5e87c7698dfca4502d9b4bbf0f3c63475d77c8523acf86"
+    },
+    {
+      "date": "2027-01-09",
+      "playerId": "kevin-porter-jr",
+      "seed": "daily-roster-v1",
+      "selectionHash": "01db4b53d4280a74c31fb906565963eb768cae43e123a4b402abe72884878187"
+    },
+    {
+      "date": "2027-01-10",
+      "playerId": "jaylen-wells",
+      "seed": "daily-roster-v1",
+      "selectionHash": "00cee0c98d5e730223708356e2bb2411612028f9796eecfdb7ee3eab16a4a61a"
+    },
+    {
+      "date": "2027-01-11",
+      "playerId": "jose-alvarado",
+      "seed": "daily-roster-v1",
+      "selectionHash": "005cab3b5305a8f24c3d5e988c89204f4b90e3f7b9a0f4c5b5b02354286c18c5"
+    },
+    {
+      "date": "2027-01-12",
+      "playerId": "karlo-matkovic",
+      "seed": "daily-roster-v1",
+      "selectionHash": "0156f811429d39e0b077c72fa4aebe9750a2750f49ae06a49a333d349bdfafb7"
+    },
+    {
+      "date": "2027-01-13",
+      "playerId": "jusuf-nurkic",
+      "seed": "daily-roster-v1",
+      "selectionHash": "000baae6f01c3ce024e3d54babb03a733f16d9bbbf332e3e4af42b7fe67a9841"
+    },
+    {
+      "date": "2027-01-14",
+      "playerId": "tim-hardaway-jr",
+      "seed": "daily-roster-v1",
+      "selectionHash": "016c5715f1ac1499ecc154325d4476bc4f72a55daae482c85dfdceff7fde98a1"
+    },
+    {
+      "date": "2027-01-15",
+      "playerId": "yves-missi",
+      "seed": "daily-roster-v1",
+      "selectionHash": "0093ce576d556b4650b4a95cf8e30abbcf04849de1412f542ee8709c8476d769"
+    },
+    {
+      "date": "2027-01-16",
+      "playerId": "jordan-poole",
+      "seed": "daily-roster-v1",
+      "selectionHash": "01c62d548d79aef09d711be549d5efd60273bd44101079bd9c60177a779a09d4"
+    },
+    {
+      "date": "2027-01-17",
+      "playerId": "cam-whitmore",
+      "seed": "daily-roster-v1",
+      "selectionHash": "01458e8e89365841245241d22e62a3b6f863a4808ce0c69e4b3b0d0e2635df21"
+    },
+    {
+      "date": "2027-01-18",
+      "playerId": "tyus-jones",
+      "seed": "daily-roster-v1",
+      "selectionHash": "029acdc94c527d6b9b4e7f38424283c7d7ca2e4bb36ab5219d67c5f5cc087493"
+    },
+    {
+      "date": "2027-01-19",
+      "playerId": "ryan-dunn",
+      "seed": "daily-roster-v1",
+      "selectionHash": "02676532be7b8bfbef11986054757b51f1b7a8f5f2fc6721a521e3157a8c23c8"
+    },
+    {
+      "date": "2027-01-20",
+      "playerId": "kevin-durant",
+      "seed": "daily-roster-v1",
+      "selectionHash": "0064003e685cf945de35ad4f45162fdf3f16598f27114e621a609395049be209"
+    },
+    {
+      "date": "2027-01-21",
+      "playerId": "jay-huff",
+      "seed": "daily-roster-v1",
+      "selectionHash": "00869220d83fe6ff8f55a8fde5299791ae0b2f9275092d05098a5f7f55effe06"
+    }
+  ]
+}
