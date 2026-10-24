@@ -34,6 +34,7 @@ SCHEMA_VERSION = 1
 TEAM_ALIASES = {
     "la clippers": "LA Clippers",
     "los angeles clippers": "LA Clippers",
+    "philadelphia 76ers": "Philadelphia 76ers",
     "philadelphia sixers": "Philadelphia 76ers",
     "philly 76ers": "Philadelphia 76ers",
     "portland trailblazers": "Portland Trail Blazers",
@@ -311,11 +312,12 @@ def validate_record(record: dict[str, Any]) -> list[str]:
 
 
 def source_identifiers(record: dict[str, Any]) -> list[tuple[str, str]]:
-    identifiers = [("fixture", str(record.get("id", "")))]
+    identifiers: list[tuple[str, str]] = []
     if record.get("nbaId") is not None:
         identifiers.append(("nba_id", str(record["nbaId"])))
     if record.get("espnId") is not None:
         identifiers.append(("espn_id", str(record["espnId"])))
+    identifiers.append(("fixture", str(record.get("id", ""))))
     return [(source, value) for source, value in identifiers if value]
 
 
@@ -337,6 +339,12 @@ def resolve_identity(connection: duckdb.DuckDBPyConnection, record: dict[str, An
         return str(exact[0][0]), "normalized_exact", 0.99, None
     if len(exact) > 1:
         return None, "ambiguous_exact", 0.5, "multiple players share normalized name"
+
+    identifiers = source_identifiers(record)
+    if identifiers:
+        source, identifier = identifiers[0]
+        player_id = str(uuid.uuid5(NAMESPACE, f"player:{source}:{identifier}"))
+        return player_id, "new_source_identity", 1.0, None
 
     candidates = connection.execute("SELECT player_id, normalized_name FROM core.player_identity").fetchall()
     if not candidates:
