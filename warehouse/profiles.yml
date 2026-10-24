@@ -3,6 +3,6 @@ daily_roster_warehouse:
   outputs:
     dev:
       type: duckdb
-      path: "{{ env_var('DAILY_ROSTER_DB_PATH', '../warehouse/daily_roster.duckdb') }}"
+      path: "{{ env_var('DAILY_ROSTER_DB_PATH', 'warehouse/daily_roster.duckdb') }}"
       schema: analytics
       threads: 4
