@@ -519,8 +519,20 @@ def run_dbt(db_path: Path, select: str | None = None) -> dict[str, int]:
     environment["DAILY_ROSTER_DB_PATH"] = str(db_path.resolve())
     run_command(command, f"dbt_build{':' + select if select else ''}", environment)
     run_results = json.loads((ROOT / "warehouse" / "target" / "run_results.json").read_text(encoding="utf-8"))
-    statuses = [item.get("status") for item in run_results.get("results", [])]
-    return {"passed": sum(status in {"success", "pass"} for status in statuses), "failed": sum(status in {"error", "fail"} for status in statuses)}
+    test_results = [
+        item for item in run_results.get("results", [])
+        if str(item.get("unique_id", "")).startswith("test.")
+    ]
+    model_results = [
+        item for item in run_results.get("results", [])
+        if str(item.get("unique_id", "")).startswith("model.")
+    ]
+    statuses = [item.get("status") for item in test_results]
+    return {
+        "passed": sum(status in {"success", "pass"} for status in statuses),
+        "failed": sum(status in {"error", "fail"} for status in statuses),
+        "models_built": sum(item.get("status") == "success" for item in model_results),
+    }
 
 
 def deterministic_puzzles(connection: duckdb.DuckDBPyConnection, start: date, days: int, seed: str, run_id: str, dataset_version: str) -> None:
@@ -635,6 +647,7 @@ def run_pipeline(snapshot_paths: Iterable[Path], db_path: Path, puzzle_start: da
         dbt_result = run_dbt(db_path)
         metrics.tests_passed += dbt_result["passed"]
         metrics.tests_failed += dbt_result["failed"]
+        metrics.extra["dbt_models_built"] = dbt_result["models_built"]
         connection = duckdb.connect(str(db_path))
         provisional = content_hash(connection.execute("SELECT player_id, content_hash FROM core.player_history WHERE is_current ORDER BY player_id").fetchall())[:16]
         deterministic_puzzles(connection, puzzle_start, puzzle_days, seed, run_id, provisional)
@@ -654,6 +667,10 @@ def run_pipeline(snapshot_paths: Iterable[Path], db_path: Path, puzzle_start: da
             run_command([str(npm), "test"], "game_tests", environment)
             metrics.extra["game_tests"] = "passed"
         complete_run(connection, run_id, "success", metrics, started)
+        connection.close()
+        run_dbt(db_path, "fact_pipeline_run fact_daily_puzzle")
+        connection = duckdb.connect(str(db_path))
+        export_products(connection, DEFAULT_PLAYERS, DEFAULT_PUZZLES, DEFAULT_REPORT)
         LOG.info(canonical_json({"event": "pipeline_completed", "run_id": run_id, **metrics.as_dict()}))
         return metrics
     except Exception as error:
