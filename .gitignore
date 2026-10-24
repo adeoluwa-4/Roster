@@ -46,6 +46,8 @@ next-env.d.ts
 /warehouse/*.duckdb
 /warehouse/*.duckdb.wal
 /.venv/
+__pycache__/
+*.py[cod]
 
 # These exports are reproducible pipeline products and remain versioned because
 # the public game imports them during a clean build.
