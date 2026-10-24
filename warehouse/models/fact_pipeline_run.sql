@@ -1,0 +1,22 @@
+select
+    run_id,
+    started_at,
+    completed_at,
+    status,
+    source_name,
+    snapshot_id,
+    metrics,
+    dataset_version,
+    error_message,
+    runtime_seconds,
+    schema_version,
+    try_cast(metrics ->> 'records_fetched' as integer) as records_fetched,
+    try_cast(metrics ->> 'records_added' as integer) as records_added,
+    try_cast(metrics ->> 'records_updated' as integer) as records_updated,
+    try_cast(metrics ->> 'records_unchanged' as integer) as records_unchanged,
+    try_cast(metrics ->> 'duplicates_removed' as integer) as duplicates_removed,
+    try_cast(metrics ->> 'unresolved_identities' as integer) as unresolved_identities,
+    try_cast(metrics ->> 'quarantined_records' as integer) as quarantined_records,
+    try_cast(metrics ->> 'tests_passed' as integer) as tests_passed,
+    try_cast(metrics ->> 'tests_failed' as integer) as tests_failed
+from {{ source('ops', 'pipeline_run') }}
