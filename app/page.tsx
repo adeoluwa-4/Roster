@@ -3,11 +3,13 @@
 import { FormEvent, useEffect, useMemo, useRef, useState } from "react";
 import type { CSSProperties } from "react";
 import playerData from "../data/players.json";
+import puzzleData from "../data/puzzles.json";
 
 type Player = { id: string; rank: number; allTimeRank: number | null; currentRank: number | null; name: string; draftYear: number | null; position: string; conference: "East" | "West"; team: string; teams: Array<{ team: string; games: number }>; nationality: string; continent: string; height: number; weight: number; games: number; winShares: number; currentWinShares: number | null; nbaId: number | null; espnId: number | null; twoKRating: number; active: boolean; rosterSeason: string | null };
 type Match = "exact" | "close" | "miss";
 
 const players = playerData as Player[];
+const scheduledPlayerByDate = new Map(puzzleData.puzzles.map(puzzle => [puzzle.date, puzzle.playerId]));
 const storageKeys = {
   game: (date: string) => `guess-athlete-v5-game-${date}`,
   done: (date: string) => `guess-athlete-v5-done-${date}`,
@@ -19,7 +21,11 @@ const initials = (name: string) => name.split(/[ -]/).filter(Boolean).map(word =
 const height = (value: number) => `${Math.floor(value / 12)}'${value % 12}\"`;
 const todayKey = () => new Date().toISOString().slice(0,10);
 const puzzleNumberForDate = (date: string) => Math.floor((Date.parse(`${date}T00:00:00Z`) - Date.UTC(2026,0,1)) / 86400000) + 1;
-const answerForDate = (date: string) => players[(puzzleNumberForDate(date) - 1 + players.length) % players.length];
+const answerForDate = (date: string) => {
+  const scheduledPlayer = scheduledPlayerByDate.get(date);
+  return players.find(player => player.id === scheduledPlayer)
+    ?? players[(puzzleNumberForDate(date) - 1 + players.length) % players.length];
+};
 const numeric = (guess: number, answer: number, range: number) => ({ state: (guess === answer ? "exact" : Math.abs(guess-answer) <= range ? "close" : "miss") as Match, arrow: guess === answer ? "" : answer > guess ? "↑" : "↓" });
 const position = (guess: string, answer: string): Match => guess === answer ? "exact" : answer.split(" / ").some(part => guess.split(" / ").includes(part)) ? "close" : "miss";
 const confettiPieces = Array.from({length:60},(_,index) => ({
