@@ -7,6 +7,7 @@ import argparse
 import hashlib
 import json
 import logging
+import os
 import re
 import subprocess
 import sys
@@ -487,9 +488,9 @@ def load_snapshot(connection: duckdb.DuckDBPyConnection, snapshot_path: Path, me
     return snapshot_id, source_name, effective_date
 
 
-def run_command(command: list[str], label: str) -> subprocess.CompletedProcess[str]:
+def run_command(command: list[str], label: str, env: dict[str, str] | None = None) -> subprocess.CompletedProcess[str]:
     LOG.info(canonical_json({"event": "command_started", "label": label, "command": command}))
-    result = subprocess.run(command, cwd=ROOT, text=True, capture_output=True)
+    result = subprocess.run(command, cwd=ROOT, text=True, capture_output=True, env=env)
     if result.returncode:
         LOG.error(canonical_json({"event": "command_failed", "label": label, "stdout": result.stdout[-4000:], "stderr": result.stderr[-4000:]}))
         raise RuntimeError(f"{label} failed with exit code {result.returncode}")
@@ -497,11 +498,13 @@ def run_command(command: list[str], label: str) -> subprocess.CompletedProcess[s
     return result
 
 
-def run_dbt(select: str | None = None) -> dict[str, int]:
+def run_dbt(db_path: Path, select: str | None = None) -> dict[str, int]:
     command = [str(ROOT / ".venv" / "bin" / "dbt"), "build", "--project-dir", "warehouse", "--profiles-dir", "warehouse"]
     if select:
         command.extend(["--select", select])
-    run_command(command, f"dbt_build{':' + select if select else ''}")
+    environment = os.environ.copy()
+    environment["DAILY_ROSTER_DB_PATH"] = str(db_path.resolve())
+    run_command(command, f"dbt_build{':' + select if select else ''}", environment)
     run_results = json.loads((ROOT / "warehouse" / "target" / "run_results.json").read_text(encoding="utf-8"))
     statuses = [item.get("status") for item in run_results.get("results", [])]
     return {"passed": sum(status in {"success", "pass"} for status in statuses), "failed": sum(status in {"error", "fail"} for status in statuses)}
@@ -616,7 +619,7 @@ def run_pipeline(snapshot_paths: Iterable[Path], db_path: Path, puzzle_start: da
         connection.execute("UPDATE ops.pipeline_run SET snapshot_id = ? WHERE run_id = ?", [last_snapshot_id, run_id])
         connection.close()
 
-        dbt_result = run_dbt()
+        dbt_result = run_dbt(db_path)
         metrics.tests_passed += dbt_result["passed"]
         metrics.tests_failed += dbt_result["failed"]
         connection = duckdb.connect(str(db_path))
@@ -624,7 +627,7 @@ def run_pipeline(snapshot_paths: Iterable[Path], db_path: Path, puzzle_start: da
         deterministic_puzzles(connection, puzzle_start, puzzle_days, seed, run_id, provisional)
         connection.close()
 
-        puzzle_result = run_dbt("fact_daily_puzzle")
+        puzzle_result = run_dbt(db_path, "fact_daily_puzzle")
         metrics.tests_passed += puzzle_result["passed"]
         metrics.tests_failed += puzzle_result["failed"]
         connection = duckdb.connect(str(db_path))
@@ -633,13 +636,18 @@ def run_pipeline(snapshot_paths: Iterable[Path], db_path: Path, puzzle_start: da
         if run_game_tests:
             node_bin = Path.home() / ".nvm" / "versions" / "node" / "v24.14.1" / "bin"
             npm = node_bin / "npm"
-            run_command([str(npm), "test"], "game_tests")
+            environment = os.environ.copy()
+            environment["PATH"] = f"{node_bin}:{environment.get('PATH', '')}"
+            run_command([str(npm), "test"], "game_tests", environment)
             metrics.extra["game_tests"] = "passed"
         complete_run(connection, run_id, "success", metrics, started)
         LOG.info(canonical_json({"event": "pipeline_completed", "run_id": run_id, **metrics.as_dict()}))
         return metrics
     except Exception as error:
-        if getattr(connection, "execute", None):
+        try:
+            complete_run(connection, run_id, "failed", metrics, started, str(error))
+        except duckdb.ConnectionException:
+            connection = duckdb.connect(str(db_path))
             complete_run(connection, run_id, "failed", metrics, started, str(error))
         LOG.exception(canonical_json({"event": "pipeline_failed", "run_id": run_id, "error": str(error)}))
         raise
