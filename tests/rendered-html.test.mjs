@@ -42,6 +42,8 @@ test("uses six athlete clues, draft years, and victory confetti", async () => {
   assert.match(page, /status === "won" && <VictoryConfetti\/>/);
   assert.match(page, /guess\.draftYear === null \? "Undrafted"/);
   assert.match(page, /const puzzleNumber = useMemo\(\(\) => puzzleNumberForDate\(today\),\[today\]\)/);
+  assert.match(page, /import puzzleData from "\.\.\/data\/puzzles\.json"/);
+  assert.match(page, /scheduledPlayerByDate\.get\(date\)/);
   assert.match(page, /const text = `\$\{title\} #\$\{puzzleNumber\} \$\{score\}\/10\\n\$\{rows\.join\("\\n"\)\}`/);
   assert.match(page, /typeof navigator\.share === "function"/);
   assert.match(page, /await navigator\.share\(\{ title, text, url \}\)/);
@@ -96,4 +98,16 @@ test("uses the ESPN-current NBA 2K top 250 players", async () => {
     assert.ok(Number.isInteger(player.weight) && player.weight > 100);
     assert.ok(Number.isInteger(player.twoKRating) && player.twoKRating >= 74);
   }
+});
+
+test("uses a deterministic warehouse-generated daily puzzle schedule", async () => {
+  const players = JSON.parse(await readFile(new URL("../data/players.json", import.meta.url), "utf8"));
+  const schedule = JSON.parse(await readFile(new URL("../data/puzzles.json", import.meta.url), "utf8"));
+  assert.match(schedule.datasetVersion, /^[a-f0-9]{16}$/);
+  assert.equal(schedule.puzzles.length, 90);
+  assert.equal(new Set(schedule.puzzles.map(puzzle => puzzle.date)).size, schedule.puzzles.length);
+  assert.ok(schedule.puzzles.every(puzzle => puzzle.seed === "daily-roster-v1"));
+  assert.ok(schedule.puzzles.every(puzzle => /^[a-f0-9]{64}$/.test(puzzle.selectionHash)));
+  const playerIds = new Set(players.map(player => player.id));
+  assert.ok(schedule.puzzles.every(puzzle => playerIds.has(puzzle.playerId)));
 });
