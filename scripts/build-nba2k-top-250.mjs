@@ -2,6 +2,13 @@
 
 import { readFile, writeFile } from "node:fs/promises";
 
+if (process.env.DAILY_ROSTER_ALLOW_UNVERIFIED_LEGACY_SOURCE !== "1") {
+  throw new Error(
+    "Legacy network collection is disabled: NBA2KLab and ESPN endpoints are not approved pipeline sources. " +
+      "Use `python -m pipeline.daily_roster run` with reviewed stored snapshots; see data/SOURCE_POLICY.md.",
+  );
+}
+
 const NBA_2K_ROSTER = "https://www.nba2klab.com/.netlify/functions/player-roster";
 const NBA_PLAYERS = "https://raw.githubusercontent.com/swar/nba_api/master/src/nba_api/stats/library/data.py";
 const ESPN_TEAMS = "https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams?limit=100";
