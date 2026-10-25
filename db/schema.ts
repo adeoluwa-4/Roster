@@ -1,4 +1,4 @@
-// Intentionally empty by default.
-// Add Drizzle tables here when the site actually needs a database.
-// See examples/d1/db/schema.ts for an opt-in example.
+// The deployed game does not require a request-time application database.
+// Its generated JSON comes from the DuckDB + dbt warehouse under /warehouse.
+// Add Drizzle/D1 tables here only if a future product feature needs transactional state.
 export {};
