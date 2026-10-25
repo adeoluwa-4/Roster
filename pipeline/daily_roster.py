@@ -517,6 +517,7 @@ def run_dbt(db_path: Path, select: str | None = None) -> dict[str, int]:
         command.extend(["--select", select])
     environment = os.environ.copy()
     environment["DAILY_ROSTER_DB_PATH"] = str(db_path.resolve())
+    environment["DBT_SEND_ANONYMOUS_USAGE_STATS"] = "false"
     run_command(command, f"dbt_build{':' + select if select else ''}", environment)
     run_results = json.loads((ROOT / "warehouse" / "target" / "run_results.json").read_text(encoding="utf-8"))
     test_results = [
@@ -594,7 +595,41 @@ def export_products(connection: duckdb.DuckDBPyConnection, players_path: Path, p
     """).fetchone()
     freshness = connection.execute("SELECT MAX(captured_at), COUNT(*), SUM(record_count) FROM raw.source_snapshot").fetchone()
     confidence = connection.execute("SELECT ROUND(AVG(confidence), 4), SUM(CASE WHEN resolution_status = 'quarantined' THEN 1 ELSE 0 END) FROM core.identity_resolution_event").fetchone()
+    latest_metrics = connection.execute("""
+        SELECT metrics, runtime_seconds, schema_version
+        FROM ops.pipeline_run
+        WHERE status = 'success'
+        ORDER BY completed_at DESC
+        LIMIT 1
+    """).fetchone()
+    run_metrics = json.loads(latest_metrics[0]) if latest_metrics else {}
+    source_freshness = connection.execute("""
+        SELECT source_name, MAX(captured_at), MAX(effective_date), COUNT(*), SUM(record_count)
+        FROM raw.source_snapshot GROUP BY 1 ORDER BY 1
+    """).fetchall()
+    resolution_quality = connection.execute("""
+        SELECT match_method, resolution_status, COUNT(*), ROUND(AVG(confidence), 4)
+        FROM core.identity_resolution_event GROUP BY 1, 2 ORDER BY 1, 2
+    """).fetchall()
+    roster_history = connection.execute("""
+        SELECT season_label, COUNT(*),
+               SUM(CASE WHEN valid_to IS NOT NULL THEN 1 ELSE 0 END)
+        FROM analytics_analytics.fact_roster_membership
+        GROUP BY 1 ORDER BY 1
+    """).fetchall()
+    rating_history = connection.execute("""
+        SELECT CAST(valid_from AS VARCHAR), COUNT(*), ROUND(AVG(rating_value), 2),
+               SUM(CASE WHEN rating_change IS NOT NULL AND rating_change <> 0 THEN 1 ELSE 0 END)
+        FROM analytics_analytics.fact_player_rating
+        GROUP BY 1 ORDER BY 1
+    """).fetchall()
+    by_team = connection.execute("SELECT team_name, COUNT(*) FROM analytics_analytics.mart_current_player_pool GROUP BY 1 ORDER BY 2 DESC, 1").fetchall()
+    by_country = connection.execute("SELECT country, COUNT(*) FROM analytics_analytics.mart_current_player_pool GROUP BY 1 ORDER BY 2 DESC, 1").fetchall()
     by_position = connection.execute("SELECT position, COUNT(*) FROM analytics_analytics.mart_current_player_pool GROUP BY 1 ORDER BY 2 DESC, 1").fetchall()
+    puzzle_coverage = connection.execute("""
+        SELECT MIN(puzzle_date), MAX(puzzle_date), COUNT(*), COUNT(DISTINCT player_id)
+        FROM analytics_analytics.fact_daily_puzzle
+    """).fetchone()
     report = [
         "# Daily Roster pipeline report", "",
         f"Generated: {utc_now().isoformat()}", "",
@@ -608,10 +643,45 @@ def export_products(connection: duckdb.DuckDBPyConnection, players_path: Path, p
         f"- Mean identity confidence: {confidence[0] or 0}",
         f"- Quarantined identity events: {confidence[1] or 0}",
         f"- Current player pool: {len(players)}", f"- Scheduled puzzles: {len(puzzles)}",
-        f"- Dataset version: `{version}`", "", "## Players by position", "",
+        f"- Dataset version: `{version}`",
+        f"- Latest runtime (seconds): {latest_metrics[1] if latest_metrics else 'n/a'}",
+        f"- Warehouse schema version: {latest_metrics[2] if latest_metrics else SCHEMA_VERSION}", "",
+        "## Latest successful run", "",
+        "| Metric | Count |", "|---|---:|",
+        *[f"| {label} | {run_metrics.get(key, 0)} |" for key, label in (
+            ("records_fetched", "Records fetched"), ("records_added", "Records added"),
+            ("records_updated", "Records updated"), ("records_unchanged", "Records unchanged"),
+            ("duplicates_removed", "Duplicates removed"), ("unresolved_identities", "Unresolved identities"),
+            ("quarantined_records", "Quarantined records"), ("tests_passed", "dbt tests passed"),
+            ("tests_failed", "dbt tests failed"),
+        )], "",
+        "## Source freshness", "",
+        "| Source | Latest capture | Effective date | Snapshots | Records |", "|---|---|---|---:|---:|",
+        *[f"| {source} | {captured} | {effective} | {snapshots} | {records} |" for source, captured, effective, snapshots, records in source_freshness], "",
+        "## Identity resolution confidence", "",
+        "| Match method | Status | Records | Mean confidence |", "|---|---|---:|---:|",
+        *[f"| {method} | {status} | {count} | {mean_confidence} |" for method, status, count, mean_confidence in resolution_quality], "",
+        "## Roster changes by season", "",
+        "| Season | Membership versions | Closed versions |", "|---|---:|---:|",
+        *[f"| {season} | {versions} | {closed or 0} |" for season, versions, closed in roster_history], "",
+        "## Rating changes over time", "",
+        "| Effective date | Rating versions | Mean rating | Changed ratings |", "|---|---:|---:|---:|",
+        *[f"| {effective} | {versions} | {mean_rating} | {changes or 0} |" for effective, versions, mean_rating, changes in rating_history], "",
+        "## Players by team", "",
+        "| Team | Players |", "|---|---:|",
+        *[f"| {team} | {count} |" for team, count in by_team], "",
+        "## Players by country", "",
+        "| Country | Players |", "|---|---:|",
+        *[f"| {country} | {count} |" for country, count in by_country], "",
+        "## Players by position", "",
         "| Position | Players |", "|---|---:|",
         *[f"| {position} | {count} |" for position, count in by_position], "",
-        "The report is generated from DuckDB after dbt tests pass. Team, country, seasonal roster, rating-change, and puzzle-coverage detail remains queryable in the documented marts.",
+        "## Daily puzzle coverage", "",
+        f"- First scheduled date: {puzzle_coverage[0]}",
+        f"- Last scheduled date: {puzzle_coverage[1]}",
+        f"- Scheduled dates: {puzzle_coverage[2]}",
+        f"- Distinct featured players: {puzzle_coverage[3]}", "",
+        "This report is generated from DuckDB only after dbt tests and the application test suite pass.",
     ]
     report_path.parent.mkdir(parents=True, exist_ok=True)
     report_path.write_text("\n".join(report) + "\n", encoding="utf-8")
