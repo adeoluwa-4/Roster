@@ -1,20 +1,43 @@
-# NBA player database
+# Daily Roster data products
 
-`players.json` is the local game pool for Guess the NBA Player. It contains the 250 highest-rated active NBA players in the NBA 2K26 roster snapshot.
+This directory contains the reviewed raw input and the generated JSON consumed by the game. Neither application file is maintained by hand.
 
-## Sources
+## Files
 
-- [NBA2KLab NBA 2K26 player ratings](https://www.nba2klab.com/nba2k-player-ratings): the ranking, NBA 2K overall rating, and position for the full player pool.
-- [NBA2KLab NBA 2K26 team rosters](https://www.nba2klab.com/teams): the NBA 2K-listed player weights.
-- [ESPN NBA team rosters](https://www.espn.com/nba/teams): the current player pool, height, and current team. Public player-profile metadata also retains draft year, nationality, and player-photo fallback identifiers.
+- `source_snapshots/stored_daily_roster_2026-08-14.json` is the immutable, schema-versioned raw fixture currently approved for pipeline runs.
+- `players.json` is exported from `mart_current_player_pool` after dbt tests pass.
+- `puzzles.json` is exported from `fact_daily_puzzle`; each date is selected deterministically from the eligible player mart.
+- `SOURCE_POLICY.md` documents approved and prohibited source use.
 
-## Game rules
+The current input has 250 player records. Its 2026-08-14 effective date is source freshness metadata, not a claim that the roster is current today.
 
-- The game pool is exactly 250 players on ESPN’s current NBA rosters, sorted by NBA 2K overall rating. Ties are sorted by player name so the daily puzzle order is stable.
-- `twoKRating` records the overall rating that selected each player for the pool.
-- `height` and `team` are ESPN current-roster values. `position` and `weight` are NBA 2K values. Height is stored in inches and weight in pounds.
-- `conference` follows the player’s ESPN current team; `teams` retains that current team as the first entry for compatibility with the game.
-- `draftYear` is the NBA draft year. It is `null` for undrafted players, which the game displays as “Undrafted.”
-- `active` is always `true` and `rosterSeason` records the ESPN roster season used by the build.
+## Lineage
 
-Regenerate the file with `node scripts/build-nba2k-top-250.mjs`. The script downloads the public NBA 2K roster feed and supplements only the non-physical game metadata.
+```text
+stored source snapshot
+  -> raw.source_snapshot + raw.player_record
+  -> identity resolution + quarantine
+  -> SCD player, roster, and rating history
+  -> dbt dimensions, facts, and marts
+  -> players.json + puzzles.json
+  -> Next.js game
+```
+
+Every raw snapshot receives a checksum. Player identities use stable internal UUIDs while NBA, ESPN, fixture, and future source identifiers remain aliases. Accepted fuzzy matches retain a confidence score; ambiguous matches go to quarantine.
+
+## Regeneration
+
+From the repository root:
+
+```bash
+python3 -m venv .venv
+.venv/bin/pip install -r requirements.txt
+npm ci
+.venv/bin/python -m pipeline.daily_roster run \
+  --puzzle-start 2026-10-25 \
+  --puzzle-days 90
+```
+
+For a bounded historical reload, add `--start YYYY-MM-DD` and/or `--end YYYY-MM-DD`. Reprocessing the same snapshot is idempotent: identical content does not create another history version.
+
+Do not use `scripts/build-nba2k-top-250.mjs` for scheduled production collection. It is a guarded legacy research script whose remote endpoints are not approved pipeline sources.
