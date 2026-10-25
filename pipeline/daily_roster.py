@@ -732,13 +732,17 @@ def run_pipeline(snapshot_paths: Iterable[Path], db_path: Path, puzzle_start: da
         connection.execute("UPDATE ops.daily_puzzle SET dataset_version = ? WHERE source_run_id = ?", [metrics.dataset_version, run_id])
         if run_game_tests:
             npm = shutil.which("npm")
-            if npm is None:
-                local_npm = Path.home() / ".nvm" / "versions" / "node" / "v24.14.1" / "bin" / "npm"
+            node = shutil.which("node")
+            if npm is None or node is None:
+                local_node_bin = Path.home() / ".nvm" / "versions" / "node" / "v24.14.1" / "bin"
+                local_npm = local_node_bin / "npm"
+                local_node = local_node_bin / "node"
                 npm = str(local_npm) if local_npm.exists() else None
-            if npm is None:
-                raise RuntimeError("npm was not found; install Node.js 22 or newer before running game tests")
+                node = str(local_node) if local_node.exists() else None
+            if npm is None or node is None:
+                raise RuntimeError("a working Node.js and npm pair was not found; install Node.js 22 or newer before running game tests")
             environment = os.environ.copy()
-            environment["PATH"] = f"{Path(npm).parent}:{environment.get('PATH', '')}"
+            environment["PATH"] = f"{Path(node).parent}:{Path(npm).parent}:{environment.get('PATH', '')}"
             run_command([npm, "test"], "game_tests", environment)
             metrics.extra["game_tests"] = "passed"
         complete_run(connection, run_id, "success", metrics, started)
