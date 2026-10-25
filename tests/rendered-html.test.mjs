@@ -59,7 +59,7 @@ test("uses six athlete clues, draft years, and victory confetti", async () => {
   await access(new URL("../public/guess-the-athlete-icon.png", import.meta.url));
 });
 
-test("uses the ESPN-current NBA 2K top 250 players", async () => {
+test("uses the warehouse-generated 250-player fixture", async () => {
   const players = JSON.parse(await readFile(new URL("../data/players.json", import.meta.url), "utf8"));
   assert.equal(players.length, 250);
   assert.equal(new Set(players.map(player => player.id)).size, players.length);
