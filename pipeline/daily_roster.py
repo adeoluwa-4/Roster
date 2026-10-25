@@ -9,6 +9,7 @@ import json
 import logging
 import os
 import re
+import shutil
 import subprocess
 import sys
 import time
@@ -730,11 +731,15 @@ def run_pipeline(snapshot_paths: Iterable[Path], db_path: Path, puzzle_start: da
         metrics.dataset_version = export_products(connection, DEFAULT_PLAYERS, DEFAULT_PUZZLES, DEFAULT_REPORT)
         connection.execute("UPDATE ops.daily_puzzle SET dataset_version = ? WHERE source_run_id = ?", [metrics.dataset_version, run_id])
         if run_game_tests:
-            node_bin = Path.home() / ".nvm" / "versions" / "node" / "v24.14.1" / "bin"
-            npm = node_bin / "npm"
+            npm = shutil.which("npm")
+            if npm is None:
+                local_npm = Path.home() / ".nvm" / "versions" / "node" / "v24.14.1" / "bin" / "npm"
+                npm = str(local_npm) if local_npm.exists() else None
+            if npm is None:
+                raise RuntimeError("npm was not found; install Node.js 22 or newer before running game tests")
             environment = os.environ.copy()
-            environment["PATH"] = f"{node_bin}:{environment.get('PATH', '')}"
-            run_command([str(npm), "test"], "game_tests", environment)
+            environment["PATH"] = f"{Path(npm).parent}:{environment.get('PATH', '')}"
+            run_command([npm, "test"], "game_tests", environment)
             metrics.extra["game_tests"] = "passed"
         complete_run(connection, run_id, "success", metrics, started)
         connection.close()
