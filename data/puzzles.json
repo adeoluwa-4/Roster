@@ -2,12 +2,6 @@
   "datasetVersion": "751eed3d78532443",
   "puzzles": [
     {
-      "date": "2026-10-24",
-      "playerId": "gary-trent-jr",
-      "seed": "daily-roster-v1",
-      "selectionHash": "028d9b00883c0d34078c6dc7da7c91500e8916c146552c527dbe845ac215f431"
-    },
-    {
       "date": "2026-10-25",
       "playerId": "kawhi-leonard",
       "seed": "daily-roster-v1",
@@ -540,6 +534,12 @@
       "playerId": "jay-huff",
       "seed": "daily-roster-v1",
       "selectionHash": "00869220d83fe6ff8f55a8fde5299791ae0b2f9275092d05098a5f7f55effe06"
+    },
+    {
+      "date": "2027-01-22",
+      "playerId": "ja-kobe-walter",
+      "seed": "daily-roster-v1",
+      "selectionHash": "04228727fe323fc09f30989ee960cbb35e63a4886f04ffbbfe884861fee2c105"
     }
   ]
 }
