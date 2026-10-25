@@ -1,0 +1,77 @@
+name: Daily Roster data pipeline
+
+on:
+  workflow_dispatch:
+    inputs:
+      puzzle_start:
+        description: First puzzle date (YYYY-MM-DD); defaults to the UTC run date
+        required: false
+        type: string
+  schedule:
+    - cron: "17 9 * * 1"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: daily-roster-data-pipeline
+  cancel-in-progress: false
+
+jobs:
+  build-warehouse:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      DBT_SEND_ANONYMOUS_USAGE_STATS: "false"
+      PYTHONUNBUFFERED: "1"
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+
+      - name: Install dependencies
+        run: |
+          python -m venv .venv
+          .venv/bin/pip install -r requirements.txt
+          npm ci
+
+      - name: Run data validation tests
+        run: .venv/bin/python -m unittest tests.test_data_pipeline -v
+
+      - name: Build warehouse, puzzles, and game export
+        env:
+          REQUESTED_START: ${{ inputs.puzzle_start }}
+        run: |
+          puzzle_start="${REQUESTED_START:-$(date -u +%F)}"
+          for attempt in 1 2 3; do
+            echo "pipeline attempt ${attempt} for ${puzzle_start}"
+            if .venv/bin/python -m pipeline.daily_roster run --puzzle-start "$puzzle_start" --puzzle-days 90; then
+              exit 0
+            fi
+            if [ "$attempt" -lt 3 ]; then sleep $((attempt * 5)); fi
+          done
+          exit 1
+
+      - name: Upload run evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: daily-roster-pipeline-evidence
+          if-no-files-found: ignore
+          retention-days: 14
+          path: |
+            data/players.json
+            data/puzzles.json
+            analytics/pipeline_report.md
+            warehouse/daily_roster.duckdb
+            warehouse/logs/dbt.log
+            warehouse/target/run_results.json
